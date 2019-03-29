@@ -1,11 +1,11 @@
 ---
 published: true
 layout: single
-title: "Tensor #1. Intro"
+title: "Tensor #1. Elementary Vector Space"
 use_math: true
 category: "Note"
 tags: 
-    - "tensor"
+    - "Tensor"
 ---
 XylyXylyX의 [What is Tensor](https://www.youtube.com/watch?v=_pKxbNyjNe8&list=PLRlVmXqzHjUQARA37r4Qw3SHPqVXgqO6c) 강의를 정리한 노트입니다.
 
