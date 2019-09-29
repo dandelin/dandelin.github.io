@@ -1,15 +1,12 @@
 ---
-published: true
-layout: single
+layout: post
 title: "Tensor #2. Einstien Notation and Maps"
-use_math: true
-category: "Note"
-tags: 
-    - "Tensor"
+date: 2019-03-30
+comments: true
 ---
 XylyXylyX의 [What is Tensor](https://www.youtube.com/watch?v=_pKxbNyjNe8&list=PLRlVmXqzHjUQARA37r4Qw3SHPqVXgqO6c) 강의를 정리한 노트입니다.
 
-## Einstien Notation
+### Einstien Notation
 [지난 편]({% post_url 2019-03-28-tensor_1_elementary_vector_space %})에서 벡터 스페이스 $\newcommand{\V}{\mathcal{V}} \newcommand{\R}{\mathbb{R}} (\V, +, \R)$와 차원에 대해서 설명했습니다. 차원을 곁들여서 이제 벡터 스페이스를 $\newcommand{\d}{\mathbf{d}} \newcommand{\VBa}[1]{(\V, +, \R, #1)} \newcommand{\VBb}[1]{(\mathcal{W}, +, \R, #1)} \VBa{\d}$라고 쓰겠습니다. $\d$는 벡터 스페이스의 차원을 의미합니다.
 
 $\d = 4$라고 생각하고, 4차원 실수 벡터 공간 $\VBa{4}$를 생각해봅시다[^1]. 그럼 $m \in {\VBa{4}}$은 기저 벡터<sub>basis vector</sub>[^2] $w, v, p, g$와 적절한 스칼라들 $a, b, c, d$의 선형 결합 $m = aw + bv + cp + dg$로 나타낼 수 있을 것입니다.
@@ -18,7 +15,7 @@ $\d = 4$라고 생각하고, 4차원 실수 벡터 공간 $\VBa{4}$를 생각해
 
 임의의 4차원 벡터 $a$는 아인슈타인 표기로는 $\newcommand{\a}{A^{\mu}e_{\mu}} \a$라고 표기하며, 여기서 $\mu$는 더미 인덱스<sub>dummy index</sub>로, 위 첨자와 아래 첨자에 동시에 등장한다면 반복하며 곱해서 더하라는 뜻을 가집니다. 다시 말해 4차원 벡터일 경우 $\a = \sum_{i}A^ie_i = A^0e_0 + A^1e_1 + A^2e_2 + A^3e_3$입니다.
 
-## Map
+### Map
 두 벡터 스페이스 $\VBa{4}$와 $\VBb{10}$ 사이의 관계를 정의할 수 있을까요? 물론 가능하고, 그걸 우리는 맵<sub>map</sub>이라고 부를 것입니다. 맵은 굉장히 여러 군데에서 쓰여서 그 표기도 다양한데요. 예를 몇 개 들면, $\VBa{4}$에서 $\VBb{10}$로 가는 맵 $\Lambda : \mathcal{V} \rightarrow \mathcal{W}$를 아래와 같이 표현할 수 있습니다.
 
 - operator form: $\Lambda v \rightarrow w$
@@ -37,7 +34,7 @@ $\d = 4$라고 생각하고, 4차원 실수 벡터 공간 $\VBa{4}$를 생각해
 
 위의 네 가지 맵핑이 임의로 작성된 것은 충분히 느껴지실 겁니다. 네, 아무렇게나 작성할 수 있습니다. $f_j$의 차수가 1승이기만 한다면요. 이와 같은 맵을 선형 변환<sub>linear map</sub>이라고 합니다. 선형 변환은 아래와 같은 특징을 가집니다. 당연히.. 선형성이죠.
 
-### 선형성<sub>Linearity</sub>
+#### 선형성<sub>Linearity</sub>
 - $\map{\Lambda}{v+p} = \map{\Lambda}{v} + \map{\Lambda}{p}$
 - $\map{\Lambda}{av+bp} = a\map{\Lambda}{v} + b\map{\Lambda}{p}$
 
