@@ -67,8 +67,8 @@
     {% if entry.arxiv %}
     [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
     {% endif %}
-    {% if entry.html %}
-    [<a href="{{ entry.html }}" target="_blank">HTML</a>]
+    {% if entry.paper %}
+    [<a href="{{ entry.paper }}" target="_blank">paper</a>]
     {% endif %}
     {% if entry.pdf %}
     [<a href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
