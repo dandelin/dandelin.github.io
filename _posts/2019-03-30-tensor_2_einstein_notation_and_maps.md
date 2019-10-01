@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Tensor #2. Einstien Notation and Maps"
+title: "Tensor #2. Einstein Notation and Maps"
 date: 2019-03-30
 comments: true
 ---
 XylyXylyX의 [What is Tensor](https://www.youtube.com/watch?v=_pKxbNyjNe8&list=PLRlVmXqzHjUQARA37r4Qw3SHPqVXgqO6c) 강의를 정리한 노트입니다.
 
-### Einstien Notation
+### Einstein Notation
 [지난 편]({% post_url 2019-03-28-tensor_1_elementary_vector_space %})에서 벡터 스페이스 $\newcommand{\V}{\mathcal{V}} \newcommand{\R}{\mathbb{R}} (\V, +, \R)$와 차원에 대해서 설명했습니다. 차원을 곁들여서 이제 벡터 스페이스를 $\newcommand{\d}{\mathbf{d}} \newcommand{\VBa}[1]{(\V, +, \R, #1)} \newcommand{\VBb}[1]{(\mathcal{W}, +, \R, #1)} \VBa{\d}$라고 쓰겠습니다. $\d$는 벡터 스페이스의 차원을 의미합니다.
 
 $\d = 4$라고 생각하고, 4차원 실수 벡터 공간 $\VBa{4}$를 생각해봅시다[^1]. 그럼 $m \in {\VBa{4}}$은 기저 벡터<sub>basis vector</sub>[^2] $w, v, p, g$와 적절한 스칼라들 $a, b, c, d$의 선형 결합 $m = aw + bv + cp + dg$로 나타낼 수 있을 것입니다.
