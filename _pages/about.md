@@ -20,7 +20,8 @@ I completed my M.Sc. and B.Sc. in <a href="https://cse.snu.ac.kr/en">computer sc
 I study anything that is necessary to connect humans and machines more closely; I am interested in the following research topics for that:
 
 - Human-Computer Interaction (HCI)
-- Interpretable neural models
+- Interpretable Neural Models
+- Representation Learning
 - Acquisition of semantic concepts from raw data
   - Vision: Detection and Segmentation
   - Language: LM and various downstream tasks
