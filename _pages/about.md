@@ -17,12 +17,20 @@ social: true
 Hi! I am research scientist at <a href="https://www.kakaocorp.com/?lang=en">Kakao corporation</a>. 
 I completed my M.Sc. and B.Sc. in <a href="https://cse.snu.ac.kr/en">computer science and engineering</a> at Seoul National University.
 
-I study anything that is necessary to connect humans and machines more closely; I am interested in the following research topics for that:
+I am interested in the following research topics:
 
-- Human-Computer Interaction (HCI)
-- Interpretable Neural Models
+- Cross- and Multi- Modal Learning
+  - Visual Question Answering
+  - Cross-modal Retrieval
+  - Image (Dense) Captioning
+- Interpretable Neural Networks
+  - Feature Visualization
+  - Interpretable Attention Mechanism
 - Representation Learning
-- Acquisition of semantic concepts from raw data
-  - Vision: Detection and Segmentation
-  - Language: LM and various downstream tasks
-  - Both: Cross-modal retrieval, VQA, Dense captioning
+  - Contrastive Visual Representation Learning
+  - Language Model
+- Visual Recognition
+  - Object Detection
+  - Instance Segmentation
+- Human-Computer Interaction
+  - Information Visualization
