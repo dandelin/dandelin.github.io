@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          TeX: {
+            equationNumbers: {
+              autoNumber: "AMS"
+            }
+          },
+          tex2jax: {
+          inlineMath: [ ['$', '$'] ],
+          displayMath: [ ['$$', '$$'] ],
+          processEscapes: true,
+        }
+      });
+      MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+            alert("Math Processing Error: "+message[1]);
+          });
+      MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+            alert("Math Processing Error: "+message[1]);
+          });
+      </script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Wonjae Kim | Tensor #1. Elementary Vector Space</title>
+  <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2019/tensor_1_elementary_vector_space/">
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    
+    <span class="site-title">
+      
+      <strong>Wonjae</strong> Kim
+    </span>
+    
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- About -->
+        <a class="page-link" href="/">about</a>
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- Pages -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <a class="page-link" href="/publications/">publications</a>
+        
+        
+        
+        
+        <a class="page-link" href="https://www.dropbox.com/s/qzvhx3coh9yx3tl/cv.pdf?dl=0">CV</a>
+
+        <!-- CV link -->
+        <!-- <a class="page-link" href="/assets/pdf/CV.pdf">vitae</a> -->
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Tensor #1. Elementary Vector Space</h1>
+    <p class="post-meta">March 28, 2019</p>
+  </header>
+
+  <article class="post-content">
+    <p>XylyXylyX의 <a href="https://www.youtube.com/watch?v=_pKxbNyjNe8&amp;list=PLRlVmXqzHjUQARA37r4Qw3SHPqVXgqO6c">What is Tensor</a> 강의를 정리한 노트입니다.</p>
+
+<h3 id="vector는-특수한-조건condition을-가진-집합입니다">Vector는 특수한 조건<sub>condition</sub>을 가진 집합입니다.</h3>
+<ol>
+  <li>Addition<br />
+Vector Space $\newcommand{\V}{\mathcal{V}} \V$에 대해서 $\newcommand{\and}{\;\&amp;\;} x \in \V \and y \in \V \rightarrow (x + y) \in \V$</li>
+  <li>Scalar Multiplication<br />
+$\newcommand{\R}{\mathbb{R}} a \in \R, v \in \V \rightarrow ax \in \V$, 여기서 $\R$은 실수 체<sub>field</sub>이며, 다른 어떠한 필드도 가능합니다. (복소수, 사원수<sub>quaternion</sub>, 팔원수<sub>octonion</sub> 등..)</li>
+</ol>
+
+<p>이 정의에 필수적인 요소들을 모아서 이렇게 씁시다 : $\newcommand{\VBa}{(\V, +, \R)} \VBa$<br />
+각각 집합 $\V$, Addition $+$, Scalar Field (이 경우에는 실수체) $\R$을 의미합니다.</p>
+
+<p>여기서 추가적으로 주의해야 할 것은 $\VBa$의 $+$와 $\newcommand{\VBb}{(\mathcal{W}, +, \R)} \VBb$의 $+$가 다르다는 점입니다. 다시 말해서 $w \in \VBa, q \in \VBa$일 때 $w + q$의 $+$와 $r \in \VBb, s \in \VBb$일 때 $r + s$의 $+$가 같지 않다는 거죠. $w + s$와 같은 $+$는 <strong>정의되지 않았습니다.</strong></p>
+
+<h3 id="벡터는-아래와-같은-성질property을-가집니다">벡터는 아래와 같은 성질<sub>property</sub>을 가집니다.</h3>
+<ol>
+  <li>Linearity<br />
+$x \in \V, y \in \V, a \in \R \rightarrow ax + ay = a(x+y) \in \V$</li>
+  <li>Opposite<br />
+$-1 \in \R, x \in \V \rightarrow -x \in \V \and x + (-x) = 0$</li>
+</ol>
+
+<blockquote>
+
+  <p>Q1. 벡터 스페이스의 종류는 그럼 어떻게 결정되나요?<br />
+A1. Scalar Field의 종류에 의해 결정됩니다. $\R$이라면 실수 벡터, $\mathbb{C}$라면 복소수 벡터, 이런 식이죠.</p>
+</blockquote>
+
+<blockquote>
+
+  <p>Q2. 만약 두 벡터 스페이스 $\VBa$와 $\VBb$가 있다면, 두 벡터 스페이스는 이름 말고 뭐가 다를 수 있나요?<br />
+A2. 심볼릭하게는, 다른 점이 없습니다. 아마도 차원<sub>dimension</sub>이 있다면 그들을 구분지을 수 있겠네요.</p>
+</blockquote>
+
+<h3 id="차원이-뭘까요">차원이 뭘까요?</h3>
+<p>$q \in \VBa$를 만들 수 있는 벡터의 최소 집합<sub>minimal set</sub>의 크기를 차원이라고 합니다. $q$가 $\VBa$의 벡터 원소인 $w, p, n, o \in \V$와 스칼라 원소인 $a, b, c, d \in \R$의 결합 $q = aw + bp + cn + do$로 표현되어질 수 있고, 이것보다 더 적은 수의 벡터 원소로는 표현될 수 없다면, $\VBa$의 차원은 4차원이겠네요.</p>
+
+<p>만약 두 벡터 스페이스의 스칼라 필드의 종류가 같고, 차원이 같다면 두 벡터 스페이스는 <em>Isomorphic</em>하다고 합니다.</p>
+
+<h3 id="기초적인elementary-벡터-스페이스">기초적인<sub>elementary</sub> 벡터 스페이스</h3>
+<p>여기까지의 정의로 얻어진 벡터 스페이스를 <em>Elementary Vector Space</em>라고 하겠습니다. 우리가 기존에 벡터를 배울 때 같이 따라왔던 내적<sub>inner product</sub>, 데카르트 곱<sub>cartesian product</sub>, 노름<sub>norm</sub>등은 정의되어있지 않습니다. 이러한 성질들이 없어도, 벡터 스페이스는 벡터 스페이스입니다. 이러한 성질들을 추가로 가진 벡터 스페이스들은 <em>Advanced Vector Space</em>라고 하겠습니다. 이후에 Tensor Product를 설명하면서 데카르트 곱, Metric Tensor를 설명하면서 내적과 노름이 자연스럽게 정의되게 됩니다.</p>
+
+  </article>
+
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'dandelin';
+      var disqus_identifier = '/blog/2019/tensor_1_elementary_vector_space';
+      var disqus_title      = "Tensor #1. Elementary Vector Space";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+
+</div>
+
+    </div>
+  </div>
+
+  <footer>
+
+  <div class="wrapper">
+    &copy; Copyright 2020 Wonjae Kim.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+  </div>
+
+</footer>
+
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-47120899-4', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+
+</html>
