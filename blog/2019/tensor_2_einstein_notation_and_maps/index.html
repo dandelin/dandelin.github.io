@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          TeX: {
+            equationNumbers: {
+              autoNumber: "AMS"
+            }
+          },
+          tex2jax: {
+          inlineMath: [ ['$', '$'] ],
+          displayMath: [ ['$$', '$$'] ],
+          processEscapes: true,
+        }
+      });
+      MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+            alert("Math Processing Error: "+message[1]);
+          });
+      MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+            alert("Math Processing Error: "+message[1]);
+          });
+      </script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Wonjae Kim | Tensor #2. Einstein Notation and Maps</title>
+  <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2019/tensor_2_einstein_notation_and_maps/">
+</head>
+
+<body>
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    
+    <span class="site-title">
+      
+      <strong>Wonjae</strong> Kim
+    </span>
+    
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path fill="#424242"
+              d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+            <path fill="#424242"
+              d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+            <path fill="#424242"
+              d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+        <!-- About -->
+        <a class="page-link" href="/">about</a>
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- Pages -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <a class="page-link" href="/publications/">publications</a>
+        
+        
+        
+        
+        <a class="page-link" href="https://www.dropbox.com/s/qzvhx3coh9yx3tl/cv.pdf?dl=0">CV</a>
+
+        <!-- CV link -->
+        <!-- <a class="page-link" href="/assets/pdf/CV.pdf">vitae</a> -->
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Tensor #2. Einstein Notation and Maps</h1>
+    <p class="post-meta">March 30, 2019</p>
+  </header>
+
+  <article class="post-content">
+    <p>XylyXylyX의 <a href="https://www.youtube.com/watch?v=_pKxbNyjNe8&amp;list=PLRlVmXqzHjUQARA37r4Qw3SHPqVXgqO6c">What is Tensor</a> 강의를 정리한 노트입니다.</p>
+
+<h3 id="einstein-notation">Einstein Notation</h3>
+<p><a href="/blog/2019/tensor_1_elementary_vector_space/">지난 편</a>에서 벡터 스페이스 $\newcommand{\V}{\mathcal{V}} \newcommand{\R}{\mathbb{R}} (\V, +, \R)$와 차원에 대해서 설명했습니다. 차원을 곁들여서 이제 벡터 스페이스를 $\newcommand{\d}{\mathbf{d}} \newcommand{\VBa}[1]{(\V, +, \R, #1)} \newcommand{\VBb}[1]{(\mathcal{W}, +, \R, #1)} \VBa{\d}$라고 쓰겠습니다. $\d$는 벡터 스페이스의 차원을 의미합니다.</p>
+
+<p>$\d = 4$라고 생각하고, 4차원 실수 벡터 공간 $\VBa{4}$를 생각해봅시다<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. 그럼 $m \in {\VBa{4}}$은 기저 벡터<sub>basis vector</sub><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> $w, v, p, g$와 적절한 스칼라들 $a, b, c, d$의 선형 결합 $m = aw + bv + cp + dg$로 나타낼 수 있을 것입니다.</p>
+
+<p>늘 이런 적당한 알파벳을 찾는 것은 귀찮을 뿐더러 헷갈리기까지 합니다. 따라서 인덱싱<sub>indexing</sub>을 통해서 이 과정을 단순화하고자 합니다. 하나의 벡터를 완전히 표현하는데는 언제나 기저와 적당한 스칼라들의 곱과 합이 필요하기 때문에, 이것을 잘 나타내주는 표현이 필요한데요. 그 표기법을 아인슈타인 표기<sub>Einstein notation</sub>이라고 하겠습니다.</p>
+
+<p>임의의 4차원 벡터 $a$는 아인슈타인 표기로는 $\newcommand{\a}{A^{\mu}e_{\mu}} \a$라고 표기하며, 여기서 $\mu$는 더미 인덱스<sub>dummy index</sub>로, 위 첨자와 아래 첨자에 동시에 등장한다면 반복하며 곱해서 더하라는 뜻을 가집니다. 다시 말해 4차원 벡터일 경우 $\a = \sum_{i}A^ie_i = A^0e_0 + A^1e_1 + A^2e_2 + A^3e_3$입니다.</p>
+
+<h3 id="map">Map</h3>
+<p>두 벡터 스페이스 $\VBa{4}$와 $\VBb{10}$ 사이의 관계를 정의할 수 있을까요? 물론 가능하고, 그걸 우리는 맵<sub>map</sub>이라고 부를 것입니다. 맵은 굉장히 여러 군데에서 쓰여서 그 표기도 다양한데요. 예를 몇 개 들면, $\VBa{4}$에서 $\VBb{10}$로 가는 맵 $\Lambda : \mathcal{V} \rightarrow \mathcal{W}$를 아래와 같이 표현할 수 있습니다.</p>
+
+<ul>
+  <li>operator form: $\Lambda v \rightarrow w$</li>
+  <li>function form: $\Lambda(v) \rightarrow w$</li>
+  <li>operator와 function 사이 어딘가: $\langle\Lambda, v\rangle \rightarrow w$
+    <ul>
+      <li>이 경우 $\langle\Lambda,\;\rangle$는 operator 처럼 작용하게 됩니다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>앞으로 모든 노트에서는 $\newcommand{\map}[2]{\langle#1,#2\rangle} \map{\;}{\;}$을 사용하게 될 텐데, 그 편리함과 이유는 차차 나오게 됩니다.</p>
+
+<p>그럼 두 벡터 스페이스 $\VBa{4}$와 $\VBb{10}$ 사이의 관계를 정의해볼까요? $\VBa{4}$의 모든 원소를 $\VBb{10}$에 대응시키기 위해선, 기저들의 관계만 정의해주면 됩니다. 왜냐하면 스칼라 필드는 둘 다 공유하고 있기 때문이죠 (실수). $\VBa{4}$의 기저 벡터를 $e_i$라고 하고 $\VBb{10}$의 기저 벡터를 $f_j$라고 한다면. 아래와 같은 꼴로 그 관계를 정의할 수 있을 겁니다.</p>
+
+<ul>
+  <li>$\map{\Lambda}{e_0} = 3f_1 + 2f_4 + f_{10}$</li>
+  <li>$\map{\Lambda}{e_1} = \pi f_3 + e^{17}f_0$</li>
+  <li>$\map{\Lambda}{e_2} = f_2$</li>
+  <li>$\map{\Lambda}{e_3} = f_3 + f_5 + f_7 + f_9$</li>
+</ul>
+
+<p>위의 네 가지 맵핑이 임의로 작성된 것은 충분히 느껴지실 겁니다. 네, 아무렇게나 작성할 수 있습니다. $f_j$의 차수가 1승이기만 한다면요. 이와 같은 맵을 선형 변환<sub>linear map</sub>이라고 합니다. 선형 변환은 아래와 같은 특징을 가집니다. 당연히.. 선형성이죠.</p>
+
+<h4 id="선형성linearity">선형성<sub>Linearity</sub></h4>
+<ul>
+  <li>$\map{\Lambda}{v+p} = \map{\Lambda}{v} + \map{\Lambda}{p}$</li>
+  <li>$\map{\Lambda}{av+bp} = a\map{\Lambda}{v} + b\map{\Lambda}{p}$</li>
+</ul>
+
+<p><a href="/blog/2019/tensor_1_elementary_vector_space/">지난 편</a>에서 두 벡터 스페이스 $\VBa{4}$와 $\VBb{4}$의 $+$는 서로 다르다고 했고, 두 공간에서 각각 뽑은 벡터 사이의 $+$는 <strong>정의되어 있지 않았다</strong>고 했는데요. 위 식에서 $+$는 그 조건을 잘 만족합니다. 좌변의 $+$는 $\mathcal{V}$의 $+$고, 우변의 $+$는 $\mathcal{W}$의 $+$입니다.</p>
+
+<p>이를 임의의 벡터 $a = \a$에 대해서 적어보면, $\map{\Lambda}{\a} = A^0\map{\Lambda}{e_0} + A^1\map{\Lambda}{e_1} + \ldots$가 될 것입니다. 물론 $\map{\Lambda}{e_i}$는 정의된 후겠죠.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>한국어와 영어를 혼용해서 쓸 것입니다. 이해 부탁드립니다. 😅 <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>기저 벡터란 벡터 공간을 생성<sub>span</sub>할 벡터들을 의미합니다, 그저 그 뿐입니다. 이 경우 4차원 공간이니 기저 벡터도 4개겠죠. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'dandelin';
+      var disqus_identifier = '/blog/2019/tensor_2_einstein_notation_and_maps';
+      var disqus_title      = "Tensor #2. Einstein Notation and Maps";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+
+</div>
+
+    </div>
+  </div>
+
+  <footer>
+
+  <div class="wrapper">
+    &copy; Copyright 2020 Wonjae Kim.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+  </div>
+
+</footer>
+
+
+  <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-47120899-4', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+
+</html>
