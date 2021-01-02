@@ -4,4 +4,4 @@ date: 2019-09-03
 inline: true
 ---
 
-<a href="https://arxiv.org/abs/1905.11666">A paper</a> was accepted by NeurIPS-2019.
+<a href="https://arxiv.org/abs/1905.11666">DAFT</a> was accepted by NeurIPS-2019.
