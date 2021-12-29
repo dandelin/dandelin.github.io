@@ -4,4 +4,4 @@ date: 2019-09-03
 inline: true
 ---
 
-<a href="https://arxiv.org/abs/1905.11666">DAFT</a> was accepted by NeurIPS-2019.
+One NeurIPS-2019 paper: <a href="https://arxiv.org/abs/1905.11666">Dynamics of Attention for Focus Transition (DAFT)</a>.
