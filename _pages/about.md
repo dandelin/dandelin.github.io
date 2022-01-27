@@ -21,8 +21,7 @@ I completed my <a href="http://hcil.snu.ac.kr/people/wonjae-kim">M.Sc.</a> and <
 
 I am interested in the following research topics:
 
-- Multimodal Learning
-- Interpretable ML
-- Representation Learning
-- Visual Recognition
+- Multimodal (Vision-and-Language) Representation Learning
+- Self-supervised Representation Learning
 - Human-Computer Interaction
+- Information Visualization
