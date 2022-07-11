@@ -96,15 +96,16 @@
   abstract     = {Periodic signals play an important role in daily lives. Although conventional sequential models have shown remarkable success in various fields, they still come short in modeling periodicity; they either collapse, diverge or ignore details. In this paper, we introduce a novel framework inspired by Fourier series to generate periodic signals. We first decompose the given signals into multiple sines and cosines and then conditionally generate periodic signals with the output components. We have shown our model efficacy on three tasks: reconstruction, imputation and conditional generation. Our model outperforms baselines in all tasks and shows more stable and refined results.}
 }
 
-@article{song2021vidt,
-  title    = {ViDT: An Efficient and Effective Fully Transformer-based Object Detector},
-  author   = {Song, Hwanjun and Sun, Deqing and Chun, Sanghyuk and Jampani, Varun and Han, Dongyoon and Heo, Byeongho and Kim, Wonjae and Yang, Ming-Hsuan},
-  journal  = {In ICLR 2022, to appear},
-  year     = {2022},
-  arxiv    = {2110.03921},
-  code     = {https://github.com/naver-ai/vidt},
-  abbr     = {ICLR},
-  abstract = {Transformers are transforming the landscape of computer vision, especially for recognition tasks. Detection transformers are the first fully end-to-end learning systems for object detection, while vision transformers are the first fully transformer-based architecture for image classification. In this paper, we integrate Vision and Detection Transformers (ViDT) to build an effective and efficient object detector. ViDT introduces a reconfigured attention module to extend the recent Swin Transformer to be a standalone object detector, followed by a computationally efficient transformer decoder that exploits multi-scale features and auxiliary techniques essential to boost the detection performance without much increase in computational load. Extensive evaluation results on the Microsoft COCO benchmark dataset demonstrate that ViDT obtains the best AP and latency trade-off among existing fully transformer-based object detectors, and achieves 49.2AP owing to its high scalability for large models. We will release the code and trained models at https://github.com/naver-ai/vidt.}
+
+@inproceedings{song2021vidt,
+  title     = {ViDT: An Efficient and Effective Fully Transformer-based Object Detector},
+  author    = {Song, Hwanjun and Sun, Deqing and Chun, Sanghyuk and Jampani, Varun and Han, Dongyoon and Heo, Byeongho and Kim, Wonjae and Yang, Ming-Hsuan},
+  booktitle = {International Conference on Learning Representations},
+  year      = {2022},
+  arxiv     = {2110.03921},
+  code      = {https://github.com/naver-ai/vidt},
+  abbr      = {ICLR},
+  abstract  = {Transformers are transforming the landscape of computer vision, especially for recognition tasks. Detection transformers are the first fully end-to-end learning systems for object detection, while vision transformers are the first fully transformer-based architecture for image classification. In this paper, we integrate Vision and Detection Transformers (ViDT) to build an effective and efficient object detector. ViDT introduces a reconfigured attention module to extend the recent Swin Transformer to be a standalone object detector, followed by a computationally efficient transformer decoder that exploits multi-scale features and auxiliary techniques essential to boost the detection performance without much increase in computational load. Extensive evaluation results on the Microsoft COCO benchmark dataset demonstrate that ViDT obtains the best AP and latency trade-off among existing fully transformer-based object detectors, and achieves 49.2AP owing to its high scalability for large models. We will release the code and trained models at https://github.com/naver-ai/vidt.}
 }
 
 @inproceedings{moon2022speeding,
@@ -130,7 +131,7 @@
   abbr     = {ECCV},
   title    = {ECCV Caption: Correcting False Negatives by Collecting Machine-and-Human-verified Image-Caption Associations for MS-COCO},
   author   = {Chun, Sanghyuk and Kim, Wonjae and Park, Song and Chang, Minsuk and Oh, Seong Joon},
-  journal  = {arXiv preprint arXiv:2204.03359},
+  journal  = {In ECCV 2022, to appear},
   year     = {2022},
   arxiv    = {2204.03359},
   abstract = {Image-Test matching (ITM) is a common task for evaluating the quality of Vision and Language (VL) models. However, existing ITM benchmarks have a significant limitation. They have many missing correspondences, originating from the data construction process itself. For example, a caption is only matched with one image although the caption can be matched with other similar images, and vice versa. To correct the massive false negatives, we construct the Extended COCO Validation (ECCV) Caption dataset by supplying the missing associations with machine and human annotators. We employ five state-of-the-art ITM models with diverse properties for our annotation process. Our dataset provides x3.6 positive image-to-caption associations and x8.5 caption-to-image associations compared to the original MS-COCO. We also propose to use an informative ranking-based metric, rather than the popular Recall@K(R@K). We re-evaluate the existing 25 VL models on existing and proposed benchmarks. Our findings are that the existing benchmarks, such as COCO 1K R@K, COCO 5K R@K, CxC R@1 are highly correlated with each other, while the rankings change when we shift to the ECCV mAP. Lastly, we delve into the effect of the bias introduced by the choice of machine annotator. Source code and dataset are available in https://github.com/naver-ai/eccv-caption.}
