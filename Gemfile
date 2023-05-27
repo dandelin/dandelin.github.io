@@ -10,3 +10,6 @@ group :jekyll_plugins do
     gem 'jemoji'
     gem 'unicode_utils'
 end
+
+gem "faraday-retry", "~> 2.1"
+gem "nokogiri", "~> 1.10.0"
