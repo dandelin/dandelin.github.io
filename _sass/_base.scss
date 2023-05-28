@@ -4,16 +4,29 @@
 
 // Typography
 
-p, h1, h2, h3, h4, h5, h6, em, div, span, strong {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+div,
+span,
+strong {
   color: var(--global-text-color);
 }
 
-a, table.table a {
+a,
+table.table a {
   color: var(--global-theme-color);
+
   &:hover {
     color: var(--global-theme-color);
     text-decoration: underline;
   }
+
   &:hover:after {
     width: 100%;
   }
@@ -47,6 +60,7 @@ a, table.table a {
     margin-top: 5px;
     font-family: monospace;
     font-size: 1.2rem;
+
     p {
       display: inline-block;
       margin: 0;
@@ -57,8 +71,11 @@ a, table.table a {
 @media (min-width: 576px) {
   .profile {
     width: 30%;
+
     .address {
-      p { display: block; }
+      p {
+        display: block;
+      }
     }
   }
 }
@@ -66,8 +83,10 @@ a, table.table a {
 .post-description {
   margin-bottom: 2rem;
   font-size: 0.875rem;
+
   a {
     color: inherit;
+
     &:hover {
       color: var(--global-theme-color);
       text-decoration: none;
@@ -84,32 +103,41 @@ a, table.table a {
   opacity: 0.95;
   background-color: var(--global-bg-color);
 }
+
 .navbar.navbar-light {
+
   // Remove link decoration
   a {
     &:hover {
       text-decoration: none;
     }
   }
+
   .navbar-brand {
     color: var(--global-text-color);
   }
+
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+
     &:hover {
       color: var(--global-hover-color);
     }
   }
+
   .navbar-nav .nav-item.active>.nav-link {
-      background-color: inherit;
-      font-weight: bolder;
-      color: var(--global-theme-color);
-      &:hover {
-        color: var(--global-hover-color);
-      }
+    background-color: inherit;
+    font-weight: bolder;
+    color: var(--global-theme-color);
+
+    &:hover {
+      color: var(--global-hover-color);
+    }
   }
+
   .contact-icon {
     font-size: 2rem;
+
     a {
       &:hover {
         color: var(--global-hover-color);
@@ -123,18 +151,21 @@ a, table.table a {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: $grey-color-dark;
+    background-color: var(--global-text-color);
     border-radius: 1px;
     margin-bottom: 4px;
     transition: all 0.2s;
   }
+
   .top-bar {
     transform: rotate(45deg);
     transform-origin: 10% 10%;
   }
+
   .middle-bar {
     opacity: 0;
   }
+
   .bottom-bar {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
@@ -145,9 +176,11 @@ a, table.table a {
   .top-bar {
     transform: rotate(0);
   }
+
   .middle-bar {
     opacity: 1;
   }
+
   .bottom-bar {
     transform: rotate(0);
   }
@@ -169,15 +202,19 @@ a, table.table a {
 
 .social {
   text-align: center;
+
   .contact-icon {
     font-size: 4rem;
+
     a {
       color: var(--global-icon-color);
+
       &:hover {
         color: var(--global-theme-color);
       }
     }
   }
+
   .contact-note {
     font-size: 0.8rem;
   }
@@ -188,13 +225,16 @@ a, table.table a {
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
+
   .container {
     color: var(--global-footer-text-color);
     padding-top: 9px;
     padding-bottom: 8px;
   }
+
   a {
     color: var(--global-footer-link-color);
+
     &:hover {
       color: pink;
       text-decoration: none;
@@ -217,6 +257,7 @@ footer.sticky-bottom {
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 5rem;
+
   h1 {
     color: var(--global-theme-color);
     font-size: 5rem;
@@ -227,19 +268,23 @@ footer.sticky-bottom {
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
+
   li {
     border-bottom: 1px solid $grey-color-light;
     list-style: none;
     padding-top: 2rem;
     padding-bottom: 2rem;
+
     .post-meta {
       color: $grey-color;
       font-size: 0.875rem;
       margin-bottom: 0;
     }
+
     a {
       color: var(--global-text-color);
       text-decoration: none;
+
       &:hover {
         color: var(--global-theme-color);
       }
@@ -251,12 +296,15 @@ footer.sticky-bottom {
   .page-item {
     .page-link {
       color: var(--global-text-color);
+
       &:hover {
         color: $black-color;
       }
     }
+
     &.active .page-link {
       background-color: var(--global-theme-color);
+
       &:hover {
         background-color: var(--global-theme-color);
       }
@@ -281,14 +329,17 @@ footer.sticky-bottom {
   .grid-item {
     width: 250px;
     margin-bottom: 10px;
+
     a {
       color: black;
       text-decoration: none;
+
       &:hover {
         color: var(--global-theme-color);
       }
     }
   }
+
   .card img {
     width: 100%;
   }
@@ -299,6 +350,7 @@ footer.sticky-bottom {
 
 .publications {
   margin-top: 2rem;
+
   h1 {
     color: var(--global-theme-color);
     font-size: 2rem;
@@ -306,12 +358,15 @@ footer.sticky-bottom {
     margin-top: 1em;
     margin-bottom: 1em;
   }
+
   h2 {
     margin-bottom: 1rem;
+
     span {
       font-size: 1.5rem;
     }
   }
+
   h2.year {
     color: $grey-color-light;
     border-top: 1px solid $grey-color-light;
@@ -320,6 +375,7 @@ footer.sticky-bottom {
     margin-bottom: -2rem;
     text-align: right;
   }
+
   ol.bibliography {
     list-style: none;
     padding: 0;
@@ -327,42 +383,52 @@ footer.sticky-bottom {
 
     li {
       margin-bottom: 1rem;
+
       .abbr {
         height: 2rem;
         margin-bottom: 0.5rem;
+
         abbr {
           display: inline-block;
           background-color: var(--global-theme-color);
           padding-left: 1rem;
           padding-right: 1rem;
+
           a {
             color: white;
+
             &:hover {
               text-decoration: none;
             }
           }
         }
+
         .award {
           color: var(--global-theme-color) !important;
           border: 1px solid var(--global-theme-color);
         }
       }
+
       .title {
         font-weight: bolder;
       }
+
       .author {
         a {
           border-bottom: 1px dashed var(--global-theme-color);
+
           &:hover {
-              border-bottom-style: solid;
-              text-decoration: none;
+            border-bottom-style: solid;
+            text-decoration: none;
           }
         }
-        > em {
+
+        >em {
           border-bottom: 1px solid;
           font-style: normal;
         }
       }
+
       .links {
         a.btn {
           color: var(--global-text-color);
@@ -371,12 +437,14 @@ footer.sticky-bottom {
           padding-right: 1rem;
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
+
           &:hover {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);
           }
         }
       }
+
       .hidden {
         font-size: 0.875rem;
         max-height: 0px;
@@ -392,12 +460,14 @@ footer.sticky-bottom {
           line-height: 1.4em;
           margin: 10px;
         }
+
         pre {
           font-size: 1em;
           line-height: 1.4em;
           padding: 10px;
         }
       }
+
       .hidden.open {
         max-height: 100em;
         -webkit-transition: 0.15s ease;
@@ -406,9 +476,11 @@ footer.sticky-bottom {
         -o-transition: 0.15s ease;
         transition: all 0.15s ease;
       }
+
       div.abstract.hidden {
         border: dashed 1px var(--global-bg-color);
       }
+
       div.abstract.hidden.open {
         border-color: var(--global-text-color);
       }
@@ -420,6 +492,7 @@ footer.sticky-bottom {
 code {
   color: var(--global-theme-color);
 }
+
 // Transitioning Themes
 html.transition,
 html.transition *,
