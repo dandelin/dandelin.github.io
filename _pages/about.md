@@ -6,7 +6,7 @@ description: ML/HCI Research Scientist
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic2.jpg
   address: >
     <br/>
 
