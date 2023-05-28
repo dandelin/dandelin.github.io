@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: Wonjae Kim # the website title (if blank, full name will be used instead)
 first_name: Wonjae
 middle_name: 
 last_name: Kim
@@ -50,8 +50,7 @@ research_gate_profile: # your profile on ResearchGate
 blogger_url: # your blogger URL
 keybase_username: # your keybase user name
 
-contact_note: >
-  Feel free to contact me! The best way is via e-mail :)
+contact_note:
 
 google_analytics: UA-47120899-4 # out your google-analytics code
 
@@ -152,7 +151,7 @@ enable_google_analytics:  true
 enable_mansory:           true
 enable_math:              true
 enable_tooltips:          false
-enable_darkmode:          false
+enable_darkmode:          true
 show_social_icons:        false
 
 # -----------------------------------------------------------------------------
