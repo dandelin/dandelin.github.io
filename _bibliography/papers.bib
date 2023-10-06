@@ -46,7 +46,7 @@
   html      = {https://proceedings.neurips.cc/paper/2019/hash/ae3539867aaeec609a4260c6feb725f4-Abstract.html},
   code      = {https://github.com/kakao/DAFT},
   abstract  = {Without relevant human priors, neural networks may learn uninterpretable features. We propose Dynamics of Attention for Focus Transition (DAFT) as a human prior for machine reasoning. DAFT is a novel method that regularizes attention-based reasoning by modelling it as a continuous dynamical system using neural ordinary differential equations. As a proof of concept, we augment a state-of-the-art visual reasoning model with DAFT. Our experiments reveal that applying DAFT yields similar performance to the original model while using fewer reasoning steps, showing that it implicitly learns to skip unnecessary steps. We also propose a new metric, Total Length of Transition (TLT), which represents the effective reasoning step size by quantifying how much a given model's focus drifts while reasoning about a question. We show that adding DAFT results in lower TLT, demonstrating that our method indeed obeys the human prior towards shorter reasoning paths in addition to producing more interpretable attention maps. Our code is available at https://github.com/kakao/DAFT.},
-  selected = {true},
+  selected  = {true}
 }
 
 @article{e24040501,
@@ -92,11 +92,11 @@
   month     = {18--24 Jul},
   publisher = {PMLR},
   arxiv     = {2102.03334},
-  video = {https://icml.cc/virtual/2021/oral/9492},
+  video     = {https://icml.cc/virtual/2021/oral/9492},
   code      = {https://github.com/dandelin/vilt},
   html      = {https://proceedings.mlr.press/v139/kim21k.html},
   abstract  = {Vision-and-Language Pre-training (VLP) has improved performance on various joint vision-and-language downstream tasks. Current approaches to VLP heavily rely on image feature extraction processes, most of which involve region supervision (e.g., object detection) and the convolutional architecture (e.g., ResNet). Although disregarded in the literature, we find it problematic in terms of both (1) efficiency/speed, that simply extracting input features requires much more computation than the multimodal interaction steps; and (2) expressive power, as it is upper bounded to the expressive power of the visual embedder and its predefined visual vocabulary. In this paper, we present a minimal VLP model, Vision-and-Language Transformer (ViLT), monolithic in the sense that the processing of visual inputs is drastically simplified to just the same convolution-free manner that we process textual inputs. We show that ViLT is up to tens of times faster than previous VLP models, yet with competitive or better downstream task performance. Our code and pre-trained weights are available at https://github.com/dandelin/vilt.},
-  selected = {true},
+  selected  = {true}
 }
 
 @inproceedings{lee2021conditional,
@@ -234,32 +234,44 @@
 }
 
 @misc{park2023seit,
-      title={SeiT: Storage-Efficient Vision Training with Tokens Using 1% of Pixel Storage}, 
-      author={Song Park and Sanghyuk Chun and Byeongho Heo and Wonjae Kim and Sangdoo Yun},
-      year={2023},
-      arxiv={2303.11114},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      abstract = {We need billion-scale images to achieve more generalizable and ground-breaking vision models, as well as massive dataset storage to ship the images (e.g., the LAION-4B dataset needs 240TB storage space). However, it has become challenging to deal with unlimited dataset storage with limited storage infrastructure. A number of storage-efficient training methods have been proposed to tackle the problem, but they are rarely scalable or suffer from severe damage to performance. In this paper, we propose a storage-efficient training strategy for vision classifiers for large-scale datasets (e.g., ImageNet) that only uses 1024 tokens per instance without using the raw level pixels; our token storage only needs <1% of the original JPEG-compressed raw pixels. We also propose token augmentations and a Stem-adaptor module to make our approach able to use the same architecture as pixel-based approaches with only minimal modifications on the stem layer and the carefully tuned optimization settings. Our experimental results on ImageNet-1k show that our method significantly outperforms other storage-efficient training methods with a large gap. We further show the effectiveness of our method in other practical scenarios, storage-efficient pre-training, and continual learning. Code is available at https://github.com/naver-ai/seit}
+  title         = {SeiT: Storage-Efficient Vision Training with Tokens Using 1% of Pixel Storage},
+  author        = {Song Park and Sanghyuk Chun and Byeongho Heo and Wonjae Kim and Sangdoo Yun},
+  year          = {2023},
+  arxiv         = {2303.11114},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  abbr          = {ICCV},
+  abstract      = {We need billion-scale images to achieve more generalizable and ground-breaking vision models, as well as massive dataset storage to ship the images (e.g., the LAION-4B dataset needs 240TB storage space). However, it has become challenging to deal with unlimited dataset storage with limited storage infrastructure. A number of storage-efficient training methods have been proposed to tackle the problem, but they are rarely scalable or suffer from severe damage to performance. In this paper, we propose a storage-efficient training strategy for vision classifiers for large-scale datasets (e.g., ImageNet) that only uses 1024 tokens per instance without using the raw level pixels; our token storage only needs <1% of the original JPEG-compressed raw pixels. We also propose token augmentations and a Stem-adaptor module to make our approach able to use the same architecture as pixel-based approaches with only minimal modifications on the stem layer and the carefully tuned optimization settings. Our experimental results on ImageNet-1k show that our method significantly outperforms other storage-efficient training methods with a large gap. We further show the effectiveness of our method in other practical scenarios, storage-efficient pre-training, and continual learning. Code is available at https://github.com/naver-ai/seit}
 }
 
 @misc{lee2023unixgen,
-      title={UniXGen: A Unified Vision-Language Model for Multi-View Chest X-ray Generation and Report Generation}, 
-      author={Hyungyung Lee and Da Young Lee and Wonjae Kim and Jin-Hwa Kim and Tackeun Kim and Jihang Kim and Leonard Sunwoo and Edward Choi},
-      year={2023},
-      arxiv={2302.12172},
-      archivePrefix={arXiv},
-      primaryClass={eess.IV},
-      abstract={Generated synthetic data in medical research can substitute privacy and security-sensitive data with a large-scale curated dataset, reducing data collection and annotation costs. As part of this effort, we propose UniXGen, a unified chest X-ray and report generation model, with the following contributions. First, we design a unified model for bidirectional chest X-ray and report generation by adopting a vector quantization method to discretize chest X-rays into discrete visual tokens and formulating both tasks as sequence generation tasks. Second, we introduce several special tokens to generate chest X-rays with specific views that can be useful when the desired views are unavailable. Furthermore, UniXGen can flexibly take various inputs from single to multiple views to take advantage of the additional findings available in other X-ray views. We adopt an efficient transformer for computational and memory efficiency to handle the long-range input sequence of multi-view chest X-rays with high resolution and long paragraph reports. In extensive experiments, we show that our unified model has a synergistic effect on both generation tasks, as opposed to training only the task-specific models. We also find that view-specific special tokens can distinguish between different views and properly generate specific views even if they do not exist in the dataset, and utilizing multi-view chest X-rays can faithfully capture the abnormal findings in the additional X-rays. The source code is publicly available at: https://github.com/ttumyche/UniXGen},
-      code = {https://github.com/ttumyche/UniXGen},
+  title         = {UniXGen: A Unified Vision-Language Model for Multi-View Chest X-ray Generation and Report Generation},
+  author        = {Hyungyung Lee and Da Young Lee and Wonjae Kim and Jin-Hwa Kim and Tackeun Kim and Jihang Kim and Leonard Sunwoo and Edward Choi},
+  year          = {2023},
+  arxiv         = {2302.12172},
+  archiveprefix = {arXiv},
+  primaryclass  = {eess.IV},
+  abstract      = {Generated synthetic data in medical research can substitute privacy and security-sensitive data with a large-scale curated dataset, reducing data collection and annotation costs. As part of this effort, we propose UniXGen, a unified chest X-ray and report generation model, with the following contributions. First, we design a unified model for bidirectional chest X-ray and report generation by adopting a vector quantization method to discretize chest X-rays into discrete visual tokens and formulating both tasks as sequence generation tasks. Second, we introduce several special tokens to generate chest X-rays with specific views that can be useful when the desired views are unavailable. Furthermore, UniXGen can flexibly take various inputs from single to multiple views to take advantage of the additional findings available in other X-ray views. We adopt an efficient transformer for computational and memory efficiency to handle the long-range input sequence of multi-view chest X-rays with high resolution and long paragraph reports. In extensive experiments, we show that our unified model has a synergistic effect on both generation tasks, as opposed to training only the task-specific models. We also find that view-specific special tokens can distinguish between different views and properly generate specific views even if they do not exist in the dataset, and utilizing multi-view chest X-rays can faithfully capture the abnormal findings in the additional X-rays. The source code is publicly available at: https://github.com/ttumyche/UniXGen},
+  code          = {https://github.com/ttumyche/UniXGen}
 }
 
 @misc{ko2022group,
-      title={Group Generalized Mean Pooling for Vision Transformer}, 
-      author={Byungsoo Ko and Han-Gyu Kim and Byeongho Heo and Sangdoo Yun and Sanghyuk Chun and Geonmo Gu and Wonjae Kim},
-      year={2022},
-      arxiv={2212.04114},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      abstract={Vision Transformer (ViT) extracts the final representation from either class token or an average of all patch tokens, following the architecture of Transformer in Natural Language Processing (NLP) or Convolutional Neural Networks (CNNs) in computer vision. However, studies for the best way of aggregating the patch tokens are still limited to average pooling, while widely-used pooling strategies, such as max and GeM pooling, can be considered. Despite their effectiveness, the existing pooling strategies do not consider the architecture of ViT and the channel-wise difference in the activation maps, aggregating the crucial and trivial channels with the same importance. In this paper, we present Group Generalized Mean (GGeM) pooling as a simple yet powerful pooling strategy for ViT. GGeM divides the channels into groups and computes GeM pooling with a shared pooling parameter per group. As ViT groups the channels via a multi-head attention mechanism, grouping the channels by GGeM leads to lower head-wise dependence while amplifying important channels on the activation maps. Exploiting GGeM shows 0.1%p to 0.7%p performance boosts compared to the baselines and achieves state-of-the-art performance for ViT-Base and ViT-Large models in ImageNet-1K classification task. Moreover, GGeM outperforms the existing pooling strategies on image retrieval and multi-modal representation learning tasks, demonstrating the superiority of GGeM for a variety of tasks. GGeM is a simple algorithm in that only a few lines of code are necessary for implementation.},
+  title         = {Group Generalized Mean Pooling for Vision Transformer},
+  author        = {Byungsoo Ko and Han-Gyu Kim and Byeongho Heo and Sangdoo Yun and Sanghyuk Chun and Geonmo Gu and Wonjae Kim},
+  year          = {2022},
+  arxiv         = {2212.04114},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  abstract      = {Vision Transformer (ViT) extracts the final representation from either class token or an average of all patch tokens, following the architecture of Transformer in Natural Language Processing (NLP) or Convolutional Neural Networks (CNNs) in computer vision. However, studies for the best way of aggregating the patch tokens are still limited to average pooling, while widely-used pooling strategies, such as max and GeM pooling, can be considered. Despite their effectiveness, the existing pooling strategies do not consider the architecture of ViT and the channel-wise difference in the activation maps, aggregating the crucial and trivial channels with the same importance. In this paper, we present Group Generalized Mean (GGeM) pooling as a simple yet powerful pooling strategy for ViT. GGeM divides the channels into groups and computes GeM pooling with a shared pooling parameter per group. As ViT groups the channels via a multi-head attention mechanism, grouping the channels by GGeM leads to lower head-wise dependence while amplifying important channels on the activation maps. Exploiting GGeM shows 0.1%p to 0.7%p performance boosts compared to the baselines and achieves state-of-the-art performance for ViT-Base and ViT-Large models in ImageNet-1K classification task. Moreover, GGeM outperforms the existing pooling strategies on image retrieval and multi-modal representation learning tasks, demonstrating the superiority of GGeM for a variety of tasks. GGeM is a simple algorithm in that only a few lines of code are necessary for implementation.}
+}
+
+@misc{park2023computational,
+  title         = {Computational Approaches for App-to-App Retrieval and Design Consistency Check},
+  author        = {Seokhyeon Park and Wonjae Kim and Young-Ho Kim and Jinwook Seo},
+  year          = {2023},
+  eprint        = {2309.10328},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.HC},
+  abbr          = {ICML-W},
+  abstract      = {Extracting semantic representations from mobile user interfaces (UI) and using the representations for designers' decision-making processes have shown the potential to be effective computational design support tools. Current approaches rely on machine learning models trained on small-sized mobile UI datasets to extract semantic vectors and use screenshot-to-screenshot comparison to retrieve similar-looking UIs given query screenshots. However, the usability of these methods is limited because they are often not open-sourced and have complex training pipelines for practitioners to follow, and are unable to perform screenshot set-to-set (i.e., app-to-app) retrieval. To this end, we (1) employ visual models trained with large web-scale images and test whether they could extract a UI representation in a zero-shot way and outperform existing specialized models, and (2) use mathematically founded methods to enable app-to-app retrieval and design consistency analysis. Our experiments show that our methods not only improve upon previous retrieval models but also enable multiple new applications.}
 }
