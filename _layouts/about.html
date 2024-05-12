@@ -7,7 +7,8 @@ layout: default
   <header class="post-header">
     <h1 class="post-title">
       {% if site.title == blank %}{{ site.title }}{% else %}<span class="font-weight-bold">{{ site.first_name }}</span>
-      {{ site.middle_name }} {{ site.last_name }}{% endif %}
+      {{ site.middle_name }} {{ site.last_name }}<sup>en</sup>{% endif %} / 김<span
+        class="font-weight-bold">원재</span><sup>ko</sup>
     </h1>
     <p class="desc">{{ page.description }}</p>
   </header>
