@@ -199,18 +199,6 @@
   abstract  = {Recently, dense contrastive learning has shown superior performance on dense prediction tasks compared to instance-level contrastive learning. Despite its supremacy, the properties of dense contrastive representations have not yet been carefully studied. Therefore, we analyze the theoretical ideas of dense contrastive learning using a standard CNN and straightforward feature matching scheme rather than propose a new complex method. Inspired by the analysis of the properties of instance-level contrastive representations through the lens of alignment and uniformity on the hypersphere, we employ and extend the same lens for the dense contrastive representations to analyze their underexplored properties. We discover the core principle in constructing a positive pair of dense features and empirically proved its validity. Also, we introduces a new scalar metric that summarizes the correlation between alignment-and-uniformity and downstream performance. Using this metric, we study various facets of densely learned contrastive representations such as how the correlation changes over single- and multi-object datasets or linear evaluation and dense prediction tasks.}
 }
 
-@inproceedings{park2023what,
-  title     = {What Do Self-Supervised Vision Transformers Learn?},
-  author    = {Namuk Park and Wonjae Kim and Byeongho Heo and Taekyung Kim and Sangdoo Yun},
-  booktitle = {11th International Conference on Learning Representations (ICLR 2023)},
-  year      = {2023},
-  html      = {https://openreview.net/forum?id=azCKuYyS74},
-  code      = {https://github.com/naver-ai/cl-vs-mim},
-  arxiv     = {2305.00729},
-  abbr      = {ICLR},
-  abstract  = {We present a comparative study on how and why contrastive learning (CL) and masked image modeling (MIM) differ in their representations and in their performance of downstream tasks. In particular, we demonstrate that self-supervised Vision Transformers (ViTs) have the following properties: (1) CL trains self-attentions to capture longer-range global patterns than MIM, such as the shape of an object, especially in the later layers of the ViT architecture. This CL property helps ViTs linearly separate images in their representation spaces. However, it also makes the self-attentions collapse into homogeneity for all query tokens and heads. Such homogeneity of self-attention reduces the diversity of representations, worsening scalability and dense prediction performance. (2) CL utilizes the low-frequency signals of the representations, but MIM utilizes high-frequencies. Since low- and high-frequency information respectively represent shapes and textures, CL is more shape-oriented and MIM more texture-oriented. (3) CL plays a crucial role in the later layers, while MIM mainly focuses on the early layers. Upon these analyses, we find that CL and MIM can complement each other and observe that even the simplest harmonization can help leverage the advantages of both methods. The code is available at https://github.com/naver-ai/cl-vs-mim.}
-}
-
 @inproceedings{shin2023pivotal,
   title         = {Pivotal Role of Language Modeling in Recommender Systems: Enriching Task-specific and Task-agnostic Representation Learning},
   author        = {Kyuyong Shin and Hanock Kwak and Wonjae Kim and Jisu Jeong and Seungjae Jung and Kyung-Min Kim and Jung-Woo Ha and Sang-Woo Lee},
@@ -223,39 +211,6 @@
   abstract      = {Recent studies have proposed unified user modeling frameworks that leverage user behavior data from various applications. Many of them benefit from utilizing users' behavior sequences as plain texts, representing rich information in any domain or system without losing generality. Hence, a question arises: Can language modeling for user history corpus help improve recommender systems? While its versatile usability has been widely investigated in many domains, its applications to recommender systems still remain underexplored. We show that language modeling applied directly to task-specific user histories achieves excellent results on diverse recommendation tasks. Also, leveraging additional task-agnostic user histories delivers significant performance benefits. We further demonstrate that our approach can provide promising transfer learning capabilities for a broad spectrum of real-world recommender systems, even on unseen domains and services.}
 }
 
-@misc{gu2023compodiff,
-  title         = {CompoDiff: Versatile Composed Image Retrieval With Latent Diffusion},
-  author        = {Geonmo Gu and Sanghyuk Chun and Wonjae Kim and HeeJae Jun and Yoohoon Kang and Sangdoo Yun},
-  year          = {2024},
-  arxiv         = {2303.11916},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.CV},
-  abbr          = {CVPR-W},
-  abstract      = {This paper proposes a novel diffusion-based model, CompoDiff, for solving Composed Image Retrieval (CIR) with latent diffusion and presents a newly created dataset of 18 million reference images, conditions, and corresponding target image triplets to train the model. CompoDiff not only achieves a new zero-shot state-of-the-art on a CIR benchmark such as FashionIQ but also enables a more versatile CIR by accepting various conditions, such as negative text and image mask conditions, which are unavailable with existing CIR methods. In addition, the CompoDiff features are on the intact CLIP embedding space so that they can be directly used for all existing models exploiting the CLIP space. The code and dataset used for the training, and the pre-trained weights are available at https://github.com/navervision/CompoDiff}
-}
-
-@misc{park2023seit,
-  title         = {SeiT: Storage-Efficient Vision Training with Tokens Using 1% of Pixel Storage},
-  author        = {Song Park and Sanghyuk Chun and Byeongho Heo and Wonjae Kim and Sangdoo Yun},
-  year          = {2023},
-  arxiv         = {2303.11114},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.CV},
-  abbr          = {ICCV},
-  abstract      = {We need billion-scale images to achieve more generalizable and ground-breaking vision models, as well as massive dataset storage to ship the images (e.g., the LAION-4B dataset needs 240TB storage space). However, it has become challenging to deal with unlimited dataset storage with limited storage infrastructure. A number of storage-efficient training methods have been proposed to tackle the problem, but they are rarely scalable or suffer from severe damage to performance. In this paper, we propose a storage-efficient training strategy for vision classifiers for large-scale datasets (e.g., ImageNet) that only uses 1024 tokens per instance without using the raw level pixels; our token storage only needs <1% of the original JPEG-compressed raw pixels. We also propose token augmentations and a Stem-adaptor module to make our approach able to use the same architecture as pixel-based approaches with only minimal modifications on the stem layer and the carefully tuned optimization settings. Our experimental results on ImageNet-1k show that our method significantly outperforms other storage-efficient training methods with a large gap. We further show the effectiveness of our method in other practical scenarios, storage-efficient pre-training, and continual learning. Code is available at https://github.com/naver-ai/seit}
-}
-
-@misc{lee2023unixgen,
-  title         = {Vision-Language Generative Model for View-Specific Chest X-ray Generation},
-  author        = {Hyungyung Lee and Da Young Lee and Wonjae Kim and Jin-Hwa Kim and Tackeun Kim and Jihang Kim and Leonard Sunwoo and Edward Choi},
-  year          = {2024},
-  arxiv         = {2302.12172},
-  archiveprefix = {arXiv},
-  primaryclass  = {eess.IV},
-  abbr          = {CHIL},
-  abstract      = {Generated synthetic data in medical research can substitute privacy and security-sensitive data with a large-scale curated dataset, reducing data collection and annotation costs. As part of this effort, we propose UniXGen, a unified chest X-ray and report generation model, with the following contributions. First, we design a unified model for bidirectional chest X-ray and report generation by adopting a vector quantization method to discretize chest X-rays into discrete visual tokens and formulating both tasks as sequence generation tasks. Second, we introduce several special tokens to generate chest X-rays with specific views that can be useful when the desired views are unavailable. Furthermore, UniXGen can flexibly take various inputs from single to multiple views to take advantage of the additional findings available in other X-ray views. We adopt an efficient transformer for computational and memory efficiency to handle the long-range input sequence of multi-view chest X-rays with high resolution and long paragraph reports. In extensive experiments, we show that our unified model has a synergistic effect on both generation tasks, as opposed to training only the task-specific models. We also find that view-specific special tokens can distinguish between different views and properly generate specific views even if they do not exist in the dataset, and utilizing multi-view chest X-rays can faithfully capture the abnormal findings in the additional X-rays. The source code is publicly available at: https://github.com/ttumyche/UniXGen},
-  code          = {https://github.com/ttumyche/UniXGen}
-}
 
 @misc{ko2022group,
   title         = {Group Generalized Mean Pooling for Vision Transformer},
@@ -267,6 +222,56 @@
   abstract      = {Vision Transformer (ViT) extracts the final representation from either class token or an average of all patch tokens, following the architecture of Transformer in Natural Language Processing (NLP) or Convolutional Neural Networks (CNNs) in computer vision. However, studies for the best way of aggregating the patch tokens are still limited to average pooling, while widely-used pooling strategies, such as max and GeM pooling, can be considered. Despite their effectiveness, the existing pooling strategies do not consider the architecture of ViT and the channel-wise difference in the activation maps, aggregating the crucial and trivial channels with the same importance. In this paper, we present Group Generalized Mean (GGeM) pooling as a simple yet powerful pooling strategy for ViT. GGeM divides the channels into groups and computes GeM pooling with a shared pooling parameter per group. As ViT groups the channels via a multi-head attention mechanism, grouping the channels by GGeM leads to lower head-wise dependence while amplifying important channels on the activation maps. Exploiting GGeM shows 0.1%p to 0.7%p performance boosts compared to the baselines and achieves state-of-the-art performance for ViT-Base and ViT-Large models in ImageNet-1K classification task. Moreover, GGeM outperforms the existing pooling strategies on image retrieval and multi-modal representation learning tasks, demonstrating the superiority of GGeM for a variety of tasks. GGeM is a simple algorithm in that only a few lines of code are necessary for implementation.}
 }
 
+@misc{lee2023unixgen,
+  title         = {Vision-Language Generative Model for View-Specific Chest X-ray Generation},
+  author        = {Hyungyung Lee and Da Young Lee and Wonjae Kim and Jin-Hwa Kim and Tackeun Kim and Jihang Kim and Leonard Sunwoo and Edward Choi},
+  year          = {2024},
+  arxiv         = {2302.12172},
+  archiveprefix = {arXiv},
+  primaryclass  = {eess.IV},
+  abbr          = {CHIL},
+  booktitle     = {The 5th Annual Conference on Health, Inference, and Learning (CHIL 2024)},
+  abstract      = {Generated synthetic data in medical research can substitute privacy and security-sensitive data with a large-scale curated dataset, reducing data collection and annotation costs. As part of this effort, we propose UniXGen, a unified chest X-ray and report generation model, with the following contributions. First, we design a unified model for bidirectional chest X-ray and report generation by adopting a vector quantization method to discretize chest X-rays into discrete visual tokens and formulating both tasks as sequence generation tasks. Second, we introduce several special tokens to generate chest X-rays with specific views that can be useful when the desired views are unavailable. Furthermore, UniXGen can flexibly take various inputs from single to multiple views to take advantage of the additional findings available in other X-ray views. We adopt an efficient transformer for computational and memory efficiency to handle the long-range input sequence of multi-view chest X-rays with high resolution and long paragraph reports. In extensive experiments, we show that our unified model has a synergistic effect on both generation tasks, as opposed to training only the task-specific models. We also find that view-specific special tokens can distinguish between different views and properly generate specific views even if they do not exist in the dataset, and utilizing multi-view chest X-rays can faithfully capture the abnormal findings in the additional X-rays. The source code is publicly available at: https://github.com/ttumyche/UniXGen},
+  code          = {https://github.com/ttumyche/UniXGen}
+}
+
+@misc{park2023seit,
+  title         = {SeiT: Storage-Efficient Vision Training with Tokens Using 1% of Pixel Storage},
+  author        = {Song Park and Sanghyuk Chun and Byeongho Heo and Wonjae Kim and Sangdoo Yun},
+  year          = {2023},
+  arxiv         = {2303.11114},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  abbr          = {ICCV},
+  booktitle     = {19th International Conference on Computer Vision (ICCV 2023)},
+  abstract      = {We need billion-scale images to achieve more generalizable and ground-breaking vision models, as well as massive dataset storage to ship the images (e.g., the LAION-4B dataset needs 240TB storage space). However, it has become challenging to deal with unlimited dataset storage with limited storage infrastructure. A number of storage-efficient training methods have been proposed to tackle the problem, but they are rarely scalable or suffer from severe damage to performance. In this paper, we propose a storage-efficient training strategy for vision classifiers for large-scale datasets (e.g., ImageNet) that only uses 1024 tokens per instance without using the raw level pixels; our token storage only needs <1% of the original JPEG-compressed raw pixels. We also propose token augmentations and a Stem-adaptor module to make our approach able to use the same architecture as pixel-based approaches with only minimal modifications on the stem layer and the carefully tuned optimization settings. Our experimental results on ImageNet-1k show that our method significantly outperforms other storage-efficient training methods with a large gap. We further show the effectiveness of our method in other practical scenarios, storage-efficient pre-training, and continual learning. Code is available at https://github.com/naver-ai/seit}
+}
+
+
+@misc{gu2023compodiff,
+  title         = {CompoDiff: Versatile Composed Image Retrieval With Latent Diffusion},
+  author        = {Geonmo Gu and Sanghyuk Chun and Wonjae Kim and HeeJae Jun and Yoohoon Kang and Sangdoo Yun},
+  year          = {2024},
+  arxiv         = {2303.11916},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  abbr          = {CVPR-W},
+  booktitle     = {41st Conference on Computer Vision and Pattern Recognition (CVPR 2024, Workshop on Synthetic Data for Computer Vision)},
+  abstract      = {This paper proposes a novel diffusion-based model, CompoDiff, for solving Composed Image Retrieval (CIR) with latent diffusion and presents a newly created dataset of 18 million reference images, conditions, and corresponding target image triplets to train the model. CompoDiff not only achieves a new zero-shot state-of-the-art on a CIR benchmark such as FashionIQ but also enables a more versatile CIR by accepting various conditions, such as negative text and image mask conditions, which are unavailable with existing CIR methods. In addition, the CompoDiff features are on the intact CLIP embedding space so that they can be directly used for all existing models exploiting the CLIP space. The code and dataset used for the training, and the pre-trained weights are available at https://github.com/navervision/CompoDiff}
+}
+
+@inproceedings{park2023what,
+  title     = {What Do Self-Supervised Vision Transformers Learn?},
+  author    = {Namuk Park and Wonjae Kim and Byeongho Heo and Taekyung Kim and Sangdoo Yun},
+  booktitle = {11th International Conference on Learning Representations (ICLR 2023)},
+  year      = {2023},
+  html      = {https://openreview.net/forum?id=azCKuYyS74},
+  code      = {https://github.com/naver-ai/cl-vs-mim},
+  arxiv     = {2305.00729},
+  abbr      = {ICLR},
+  abstract  = {We present a comparative study on how and why contrastive learning (CL) and masked image modeling (MIM) differ in their representations and in their performance of downstream tasks. In particular, we demonstrate that self-supervised Vision Transformers (ViTs) have the following properties: (1) CL trains self-attentions to capture longer-range global patterns than MIM, such as the shape of an object, especially in the later layers of the ViT architecture. This CL property helps ViTs linearly separate images in their representation spaces. However, it also makes the self-attentions collapse into homogeneity for all query tokens and heads. Such homogeneity of self-attention reduces the diversity of representations, worsening scalability and dense prediction performance. (2) CL utilizes the low-frequency signals of the representations, but MIM utilizes high-frequencies. Since low- and high-frequency information respectively represent shapes and textures, CL is more shape-oriented and MIM more texture-oriented. (3) CL plays a crucial role in the later layers, while MIM mainly focuses on the early layers. Upon these analyses, we find that CL and MIM can complement each other and observe that even the simplest harmonization can help leverage the advantages of both methods. The code is available at https://github.com/naver-ai/cl-vs-mim.}
+}
+
 @misc{park2023computational,
   title         = {Computational Approaches for App-to-App Retrieval and Design Consistency Check},
   author        = {Seokhyeon Park and Wonjae Kim and Young-Ho Kim and Jinwook Seo},
@@ -275,18 +280,10 @@
   archiveprefix = {arXiv},
   primaryclass  = {cs.HC},
   abbr          = {ICML-W},
+  booktitle     = {40th International Conference on Machine Learnings (ICML 2023, Workshop on Artificial Intelligence & Human Computer Interaction)},
   abstract      = {Extracting semantic representations from mobile user interfaces (UI) and using the representations for designers' decision-making processes have shown the potential to be effective computational design support tools. Current approaches rely on machine learning models trained on small-sized mobile UI datasets to extract semantic vectors and use screenshot-to-screenshot comparison to retrieve similar-looking UIs given query screenshots. However, the usability of these methods is limited because they are often not open-sourced and have complex training pipelines for practitioners to follow, and are unable to perform screenshot set-to-set (i.e., app-to-app) retrieval. To this end, we (1) employ visual models trained with large web-scale images and test whether they could extract a UI representation in a zero-shot way and outperform existing specialized models, and (2) use mathematically founded methods to enable app-to-app retrieval and design consistency analysis. Our experiments show that our methods not only improve upon previous retrieval models but also enable multiple new applications.}
 }
 
-@misc{kim2024hype,
-  title         = {HYPE: Hyperbolic Entailment Filtering for Underspecified Images and Texts},
-  author        = {Wonjae Kim and Sanghyuk Chun and Taekyung Kim and Dongyoon Han and Sangdoo Yun},
-  year          = {2024},
-  arxiv         = {2404.17507},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.CV},
-  abstract      = {In an era where the volume of data drives the effectiveness of self-supervised learning, the specificity and clarity of data semantics play a crucial role in model training. Addressing this, we introduce HYPerbolic Entailment filtering (HYPE), a novel methodology designed to meticulously extract modality-wise meaningful and well-aligned data from extensive, noisy image-text pair datasets. Our approach leverages hyperbolic embeddings and the concept of entailment cones to evaluate and filter out samples with meaningless or underspecified semantics, focusing on enhancing the specificity of each data sample. HYPE not only demonstrates a significant improvement in filtering efficiency but also sets a new state-of-the-art in the DataComp benchmark when combined with existing filtering techniques. This breakthrough showcases the potential of HYPE to refine the data selection process, thereby contributing to the development of more accurate and efficient self-supervised learning models. Additionally, the image specificity ϵi can be independently applied to induce an image-only dataset from an image-text or image-only data pool for training image-only self-supervised models and showed superior performance when compared to the dataset induced by CLIP score.}
-}
 
 @misc{lee2024stella,
   title         = {STELLA: Continual Audio-Video Pre-training with Spatio-Temporal Localized Alignment},
@@ -296,6 +293,7 @@
   archiveprefix = {arXiv},
   primaryclass  = {cs.CV},
   abbr          = {ICML},
+  booktitle     = {41st International Conference on Machine Learnings (ICML 2024)},
   abstract      = {Continuously learning a variety of audio-video semantics over time is crucial for audio-related reasoning tasks in our ever-evolving world. However, this is a nontrivial problem and poses two critical challenges: sparse spatio-temporal correlation between audio-video pairs and multimodal correlation overwriting that forgets audio-video relations. To tackle this problem, we propose a new continual audio-video pre-training method with two novel ideas: (1) Localized Patch Importance Scoring: we introduce a multimodal encoder to determine the importance score for each patch, emphasizing semantically intertwined audio-video patches. (2) Replay-guided Correlation Assessment: to reduce the corruption of previously learned audiovisual knowledge due to drift, we propose to assess the correlation of the current patches on the past steps to identify the patches exhibiting high correlations with the past steps. Based on the results from the two ideas, we perform probabilistic patch selection for effective continual audio-video pre-training. Experimental validation on multiple benchmarks shows that our method achieves a 3.69%p of relative performance gain in zero-shot retrieval tasks compared to strong continual learning baselines, while reducing memory consumption by ~45%.}
 }
 
@@ -307,5 +305,16 @@
   archiveprefix = {arXiv},
   primaryclass  = {cs.CV},
   abbr          = {CVPR},
+  booktitle     = {41st Conference on Computer Vision and Pattern Recognition (CVPR 2024)},
   abstract      = {Composed image retrieval (CIR) task takes a composed query of image and text, aiming to search relative images for both conditions. Conventional CIR approaches need a training dataset composed of triplets of query image, query text, and target image, which is very expensive to collect. Several recent works have worked on the zero-shot (ZS) CIR paradigm to tackle the issue without using pre-collected triplets. However, the existing ZS-CIR methods show limited backbone scalability and generalizability due to the lack of diversity of the input texts during training. We propose a novel CIR framework, only using language for its training. Our LinCIR (Language-only training for CIR) can be trained only with text datasets by a novel self-supervision named self-masking projection (SMP). We project the text latent embedding to the token embedding space and construct a new text by replacing the keyword tokens of the original text. Then, we let the new and original texts have the same latent embedding vector. With this simple strategy, LinCIR is surprisingly efficient and highly effective; LinCIR with CLIP ViT-G backbone is trained in 48 minutes and shows the best ZS-CIR performances on four different CIR benchmarks, CIRCO, GeneCIS, FashionIQ, and CIRR, even outperforming supervised method on FashionIQ. Code is available at https://github.com/navervision/lincir}
+}
+
+@misc{kim2024hype,
+  title         = {HYPE: Hyperbolic Entailment Filtering for Underspecified Images and Texts},
+  author        = {Wonjae Kim and Sanghyuk Chun and Taekyung Kim and Dongyoon Han and Sangdoo Yun},
+  year          = {2024},
+  arxiv         = {2404.17507},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  abstract      = {In an era where the volume of data drives the effectiveness of self-supervised learning, the specificity and clarity of data semantics play a crucial role in model training. Addressing this, we introduce HYPerbolic Entailment filtering (HYPE), a novel methodology designed to meticulously extract modality-wise meaningful and well-aligned data from extensive, noisy image-text pair datasets. Our approach leverages hyperbolic embeddings and the concept of entailment cones to evaluate and filter out samples with meaningless or underspecified semantics, focusing on enhancing the specificity of each data sample. HYPE not only demonstrates a significant improvement in filtering efficiency but also sets a new state-of-the-art in the DataComp benchmark when combined with existing filtering techniques. This breakthrough showcases the potential of HYPE to refine the data selection process, thereby contributing to the development of more accurate and efficient self-supervised learning models. Additionally, the image specificity ϵi can be independently applied to induce an image-only dataset from an image-text or image-only data pool for training image-only self-supervised models and showed superior performance when compared to the dataset induced by CLIP score.}
 }
