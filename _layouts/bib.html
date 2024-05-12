@@ -18,49 +18,76 @@
     {% else %}
     <div class="title">{{entry.title}}</div>
     <div class="author">
+      {% assign equal_contribution = false %}
       {% for author in entry.author_array %}
       {% assign author_is_self = false %}
-      {% if author.last == site.scholar.last_name%}
-      {% if site.scholar.first_name contains author.first%}
+      {% assign has_asterisk = false %}
+
+      {% if author.first contains "*" %}
+      {% assign equal_contribution = true %}
+      {% assign has_asterisk = true %}
+      {% assign author_first = author.first | remove: "*" | remove: "," %}
+      {% else %}
+      {% assign author_first = author.first %}
+      {% endif %}
+
+      {% if author.last contains "*" %}
+      {% assign equal_contribution = true %}
+      {% assign has_asterisk = true %}
+      {% assign author_last = author.last | remove: "*" | remove: "," %}
+      {% else %}
+      {% assign author_last = author.last %}
+      {% endif %}
+
+      {% if site.scholar.last_name contains author_last %}
+      {% if site.scholar.first_name contains author_first %}
       {% assign author_is_self = true %}
       {% endif %}
       {% endif %}
+
       {% if forloop.length == 1 %}
       {% if author_is_self %}
-      <em>{{author.last}}, {{author.first}}</em>
+      <em>{{site.scholar.first_name}} {{author.last}}{% if has_asterisk %}<sup>*</sup>{% endif %}</em>
       {% else %}
-      {{author.last}}, {{author.first}}
+      {{author_first}} {{author_last}}{% if has_asterisk %}<sup>*</sup>{% endif %}
       {% endif %}
       {% else %}
       {% unless forloop.last %}
       {% if author_is_self %}
-      <em>{{author.last}}, {{author.first}}</em>,
+      <em>{{site.scholar.first_name}} {{author.last}}{% if has_asterisk %}<sup>*</sup>{% endif %}</em>,
       {% else %}
       {% if site.data.coauthors[author.last] %}
-      <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>,
+      <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author_first}} {{author_last}}{% if
+        has_asterisk %}<sup>*</sup>{% endif %}</a>,
       {% else %}
-      {{author.last}}, {{author.first}},
+      {{author_first}} {{author_last}}{% if has_asterisk %}<sup>*</sup>{% endif %},
       {% endif %}
       {% endif %}
       {% else %}
       {% if author_is_self %}
-      and <em>{{author.last}}, {{author.first}}</em>
+      and <em>{{site.scholar.first_name}} {{author.last}}{% if has_asterisk %}<sup>*</sup>{% endif %}</em>
       {% else %}
       {% if site.data.coauthors[author.last] %}
-      and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>
+      and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author_first}} {{author_last}}{% if
+        has_asterisk %}<sup>*</sup>{% endif %}</a>
       {% else %}
-      and {{author.last}}, {{author.first}}
+      and {{author_first}} {{author_last}}{% if has_asterisk %}<sup>*</sup>{% endif %}
       {% endif %}
       {% endif %}
       {% endunless %}
       {% endif %}
       {% endfor %}
+      {% if equal_contribution %}
+      <br><sup>*</sup>Equal contribution
+      {% endif %}
     </div>
 
     <div class="periodical">
       {% if entry.type == "article" %}
       <em>{{entry.journal}}</em>
       {% elsif entry.type == "inproceedings" %}
+      <em>{{entry.booktitle}}</em>
+      {% else %}
       <em>{{entry.booktitle}}</em>
       {% endif %}
       <!-- {% if entry.year %}
