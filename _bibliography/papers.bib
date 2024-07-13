@@ -256,7 +256,7 @@
   arxiv         = {2303.11916},
   archiveprefix = {arXiv},
   primaryclass  = {cs.CV},
-  abbr          = {CVPR-W},
+  abbr          = {TMLR},
   booktitle     = {41st Conference on Computer Vision and Pattern Recognition (CVPR 2024, Workshop on Synthetic Data for Computer Vision)},
   abstract      = {This paper proposes a novel diffusion-based model, CompoDiff, for solving Composed Image Retrieval (CIR) with latent diffusion and presents a newly created dataset of 18 million reference images, conditions, and corresponding target image triplets to train the model. CompoDiff not only achieves a new zero-shot state-of-the-art on a CIR benchmark such as FashionIQ but also enables a more versatile CIR by accepting various conditions, such as negative text and image mask conditions, which are unavailable with existing CIR methods. In addition, the CompoDiff features are on the intact CLIP embedding space so that they can be directly used for all existing models exploiting the CLIP space. The code and dataset used for the training, and the pre-trained weights are available at https://github.com/navervision/CompoDiff},
   code          = {https://github.com/navervision/CompoDiff}
@@ -319,7 +319,21 @@
   author        = {Wonjae Kim and Sanghyuk Chun and Taekyung Kim and Dongyoon Han and Sangdoo Yun},
   year          = {2024},
   arxiv         = {2404.17507},
+  booktitle     = {19th European Conference on Computer Vision (ECCV 2024)},
   archiveprefix = {arXiv},
   primaryclass  = {cs.CV},
+  abbr          = {ECCV},
+  selected      = {true},
   abstract      = {In an era where the volume of data drives the effectiveness of self-supervised learning, the specificity and clarity of data semantics play a crucial role in model training. Addressing this, we introduce HYPerbolic Entailment filtering (HYPE), a novel methodology designed to meticulously extract modality-wise meaningful and well-aligned data from extensive, noisy image-text pair datasets. Our approach leverages hyperbolic embeddings and the concept of entailment cones to evaluate and filter out samples with meaningless or underspecified semantics, focusing on enhancing the specificity of each data sample. HYPE not only demonstrates a significant improvement in filtering efficiency but also sets a new state-of-the-art in the DataComp benchmark when combined with existing filtering techniques. This breakthrough showcases the potential of HYPE to refine the data selection process, thereby contributing to the development of more accurate and efficient self-supervised learning models. Additionally, the image specificity ϵi can be independently applied to induce an image-only dataset from an image-text or image-only data pool for training image-only self-supervised models and showed superior performance when compared to the dataset induced by CLIP score.}
+}
+
+@misc{byun2024reducingtaskdiscrepancytext,
+  title         = {Reducing Task Discrepancy of Text Encoders for Zero-Shot Composed Image Retrieval},
+  author        = {Jaeseok Byun and Seokhyeon Jeong and Wonjae Kim and Sanghyuk Chun and Taesup Moon},
+  year          = {2024},
+  arxiv         = {2406.09188},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2406.09188},
+  abstract      = {Composed Image Retrieval (CIR) aims to retrieve a target image based on a reference image and conditioning text, enabling controllable searches. Due to the expensive dataset construction cost for CIR triplets, a zero-shot (ZS) CIR setting has been actively studied to eliminate the need for human-collected triplet datasets. The mainstream of ZS-CIR employs an efficient projection module that projects a CLIP image embedding to the CLIP text token embedding space, while fixing the CLIP encoders. Using the projected image embedding, these methods generate image-text composed features by using the pre-trained text encoder. However, their CLIP image and text encoders suffer from the task discrepancy between the pre-training task (text ↔ image) and the target CIR task (image + text ↔ image). Conceptually, we need expensive triplet samples to reduce the discrepancy, but we use cheap text triplets instead and update the text encoder. To that end, we introduce the Reducing Task Discrepancy of text encoders for Composed Image Retrieval (RTD), a plug-and-play training scheme for the text encoder that enhances its capability using a novel target-anchored text contrastive learning. We also propose two additional techniques to improve the proposed learning scheme: a hard negatives-based refined batch sampling strategy and a sophisticated concatenation scheme. Integrating RTD into the state-of-the-art projection-based ZS-CIR methods significantly improves performance across various datasets and backbones, demonstrating its efficiency and generalizability.}
 }
