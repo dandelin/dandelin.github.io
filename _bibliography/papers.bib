@@ -9,6 +9,7 @@
   pages        = {6706--6717},
   year         = {2017},
   organization = {ACM},
+  pdf          = {papers/chartsense.pdf},
   html         = {https://dl.acm.org/doi/abs/10.1145/3025453.3025957},
   abstract     = {Charts are commonly used to present data in digital documents such as web pages, research papers, or presentation slides. When the underlying data is not available, it is necessary to extract the data from a chart image to utilize the data for further analysis or improve the chart for more accurate perception. In this paper, we present ChartSense, an interactive chart data extraction system. ChartSense first determines the chart type of a given chart image using a deep learning based classifier, and then extracts underlying data from the chart image using semi-automatic, interactive extraction algorithms optimized for each chart type. To evaluate chart type classification accuracy, we compared ChartSense with ReVision, a system with the state-of-the-art chart type classifier. We found that ChartSense was more accurate than ReVision. In addition, to evaluate data extraction performance, we conducted a user study, comparing ChartSense with WebPlotDigitizer, one of the most effective chart data extraction tools among publicly accessible ones. Our results showed that ChartSense was better than WebPlotDigitizer in terms of task completion time, error rate, and subjective preference.}
 }
@@ -21,6 +22,7 @@
   pages        = {131--140},
   year         = {2017},
   organization = {IEEE},
+  pdf          = {papers/swifttuna.pdf},
   html         = {https://ieeexplore.ieee.org/document/8031587},
   abstract     = {For interactive exploration of large-scale data, a preprocessing scheme (e.g., data cubes) has often been used to summarize the data and provide low-latency responses. However, such a scheme suffers from a prohibitively large amount of memory footprint as more dimensions are involved in querying, and a strong prerequisite that specific data structures have to be built from the data before querying. In this paper, we present SwiftTuna, a holistic system that streamlines the visual information seeking process on large-scale multidimensional data. SwiftTuna exploits an in-memory computing engine, Apache Spark, to achieve both scalability and performance without building precomputed data structures. We also present a novel interactive visualization technique, tailed charts, to facilitate large-scale multidimensional data exploration. To support responsive querying on large-scale data, SwiftTuna leverages an incremental processing approach, providing immediate low-fidelity responses (i.e., prompt responses) as well as delayed high-fidelity responses (i.e., incremental responses). Our performance evaluation demonstrates that SwiftTuna allows data exploration of a real-world dataset with four billion records while preserving the latency between incremental responses within a few seconds.}
 }
@@ -31,6 +33,7 @@
   year     = {2018},
   journal  = {Seoul National University},
   abbr     = {Thesis},
+  pdf      = {papers/thesis.pdf},
   html     = {https://snu-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=82SNU_INST21605864550002591&vid=82SNU&search_scope=THESIS&tab=thesis&lang=ko_KR&context=L},
   abstract = {Visualization (vis) idioms define the way visual representations are created and manipulated. Well-known vis idioms include familiar charts such as bar charts and pie charts. Vis research and applications require thorough understanding of vis idioms. As a medium to understand vis idioms, I suggest a novel approach that employs deep visualization. Deep visualization is a collective name of methods for visualizing the characteristics of neurons in deep neural networks by generating their preferred stimuli (images). In this paper, I present two neural networks, one classifying the type of vis idioms, and one generating images of given idiom type. By applying deep visualization on the neural classifier through the neural generator, I examine how deep visualization can help vis researchers understand diverse aspects of vis idioms in novel ways and potentially derive unexplored idioms.}
 }
@@ -43,6 +46,7 @@
   pages     = {6019--6030},
   year      = {2019},
   arxiv     = {1905.11666},
+  pdf       = {papers/daft.pdf},
   html      = {https://proceedings.neurips.cc/paper/2019/hash/ae3539867aaeec609a4260c6feb725f4-Abstract.html},
   code      = {https://github.com/kakao/DAFT},
   abstract  = {Without relevant human priors, neural networks may learn uninterpretable features. We propose Dynamics of Attention for Focus Transition (DAFT) as a human prior for machine reasoning. DAFT is a novel method that regularizes attention-based reasoning by modelling it as a continuous dynamical system using neural ordinary differential equations. As a proof of concept, we augment a state-of-the-art visual reasoning model with DAFT. Our experiments reveal that applying DAFT yields similar performance to the original model while using fewer reasoning steps, showing that it implicitly learns to skip unnecessary steps. We also propose a new metric, Total Length of Transition (TLT), which represents the effective reasoning step size by quantifying how much a given model's focus drifts while reasoning about a question. We show that adding DAFT results in lower TLT, demonstrating that our method indeed obeys the human prior towards shorter reasoning paths in addition to producing more interpretable attention maps. Our code is available at https://github.com/kakao/DAFT.},
@@ -62,6 +66,7 @@
   pubmedid       = {35455164},
   issn           = {1099-4300},
   arxiv          = {1905.11656},
+  pdf            = {papers/dimco.pdf},
   abstract       = {For high-dimensional data such as images, learning an encoder that can output a compact yet informative representation is a key task on its own, in addition to facilitating subsequent processing of data. We present a model that produces discrete infomax codes (DIMCO); we train a probabilistic encoder that yields k-way d-dimensional codes associated with input data. Our model maximizes the mutual information between codes and ground-truth class labels, with a regularization which encourages entries of a codeword to be statistically independent. In this context, we show that the infomax principle also justifies existing loss functions, such as cross-entropy as its special cases. Our analysis also shows that using shorter codes reduces overfitting in the context of few-shot classification, and our various experiments show this implicit task-level regularization effect of DIMCO. Furthermore, we show that the codes learned by DIMCO are efficient in terms of both memory and retrieval time compared to prior methods.},
   doi            = {10.3390/e24040501}
 }
@@ -75,6 +80,7 @@
   organization = {Springer},
   abbr         = {ECCV-W},
   arxiv        = {2009.04170},
+  pdf          = {papers/dm2.pdf},
   html         = {https://link.springer.com/chapter/10.1007/978-3-030-66415-2_49},
   abstract     = {Mutual learning is an ensemble training strategy to improve generalization by transferring individual knowledge to each other while simultaneously training multiple models. In this work, we propose an effective mutual learning method for deep metric learning, called Diversified Mutual Metric Learning, which enhances embedding models with diversified mutual learning. We transfer relational knowledge for deep metric learning by leveraging three kinds of diversities in mutual learning: (1) model diversity from different initializations of models, (2) temporal diversity from different frequencies of parameter update, and (3) view diversity from different augmentations of inputs. Our method is particularly adequate for inductive transfer learning at the lack of large-scale data, where the embedding model is initialized with a pretrained model and then fine-tuned on a target dataset. Extensive experiments show that our method significantly improves individual models as well as their ensemble. Finally, the proposed method with a conventional triplet loss achieves the state-of-the-art performance of Recall@1 on standard datasets: 69.9 on CUB-200-2011 and 89.1 on CARS-196.}
 }
@@ -92,6 +98,7 @@
   month     = {18--24 Jul},
   publisher = {PMLR},
   arxiv     = {2102.03334},
+  pdf       = {papers/vilt.pdf},
   video     = {https://icml.cc/virtual/2021/oral/9492},
   code      = {https://github.com/dandelin/vilt},
   html      = {https://proceedings.mlr.press/v139/kim21k.html},
@@ -106,6 +113,7 @@
   booksubtitle = {Deep Generative Models and Downstream Applications Workshop},
   year         = {2021},
   arxiv        = {2110.12365},
+  pdf          = {papers/periodic.pdf},
   html         = {https://openreview.net/forum?id=y9Sxt1Lpyw},
   code         = {https://github.com/jiyounglee-0523/FourierDecoder},
   abbr         = {NeurIPS-W},
@@ -120,6 +128,7 @@
   year      = {2022},
   arxiv     = {2110.03921},
   code      = {https://github.com/naver-ai/vidt},
+  pdf       = {papers/vidt.pdf},
   abbr      = {ICLR},
   html      = {https://openreview.net/forum?id=w4cXZDDib1H},
   abstract  = {Transformers are transforming the landscape of computer vision, especially for recognition tasks. Detection transformers are the first fully end-to-end learning systems for object detection, while vision transformers are the first fully transformer-based architecture for image classification. In this paper, we integrate Vision and Detection Transformers (ViDT) to build an effective and efficient object detector. ViDT introduces a reconfigured attention module to extend the recent Swin Transformer to be a standalone object detector, followed by a computationally efficient transformer decoder that exploits multi-scale features and auxiliary techniques essential to boost the detection performance without much increase in computational load. Extensive evaluation results on the Microsoft COCO benchmark dataset demonstrate that ViDT obtains the best AP and latency trade-off among existing fully transformer-based object detectors, and achieves 49.2AP owing to its high scalability for large models. We will release the code and trained models at https://github.com/naver-ai/vidt.}
@@ -132,6 +141,7 @@
   eprint        = {2204.07962},
   archiveprefix = {arXiv},
   primaryclass  = {cs.CV},
+  pdf           = {papers/vidtplus.pdf},
   html          = {https://arxiv.org/abs/2204.07962},
   code          = {https://github.com/naver-ai/vidt},
   arxiv         = {2204.07962},
@@ -148,6 +158,7 @@
   address   = {New York, NY, USA},
   html      = {https://doi.org/10.1145/3491102.3502023},
   doi       = {10.1145/3491102.3502023},
+  pdf       = {papers/pncsim.pdf},
   abstract  = {The simulation of user behavior with deep reinforcement learning agents has shown some recent success. However, the inverse problem, that is, inferring the free parameters of the simulator from observed user behaviors, remains challenging to solve. This is because the optimization of the new action policy of the simulated agent, which is required whenever the model parameters change, is computationally impractical. In this study, we introduce a network modulation technique that can obtain a generalized policy that immediately adapts to the given model parameters. Further, we demonstrate that the proposed technique improves the efficiency of user simulator-based inference by eliminating the need to obtain an action policy for novel model parameters. We validated our approach using the latest user simulator for point-and-click behavior. Consequently, we succeeded in inferring the user’s cognitive parameters and intrinsic reward settings with less than 1/1000 computational power to those of existing methods.},
   booktitle = {40th Conference on Human Factors in Computing Systems (CHI 2022)},
   articleno = {38},
@@ -178,6 +189,7 @@
   pages     = {1--19},
   html      = {https://link.springer.com/chapter/10.1007/978-3-031-20074-8_1},
   arxiv     = {https://arxiv.org/abs/2204.03359},
+  pdf       = {papers/eccvcap.pdf},
   abbr      = {ECCV},
   abstract  = {Image-Text matching (ITM) is a common task for evaluating the quality of Vision and Language (VL) models. However, existing ITM benchmarks have a significant limitation. They have many missing correspondences, originating from the data construction process itself. For example, a caption is only matched with one image although the caption can be matched with other similar images and vice versa. To correct the massive false negatives, we construct the Extended COCO Validation (ECCV) Caption dataset by supplying the missing associations with machine and human annotators. We employ five state-of-the-art ITM models with diverse properties for our annotation process. Our dataset provides {\$}{\$}{\backslash}times {\$}{\$}{\texttimes}3.6 positive image-to-caption associations and {\$}{\$}{\backslash}times {\$}{\$}{\texttimes}8.5 caption-to-image associations compared to the original MS-COCO. We also propose to use an informative ranking-based metric mAP@R, rather than the popular Recall@K (R@K). We re-evaluate the existing 25 VL models on existing and proposed benchmarks. Our findings are that the existing benchmarks, such as COCO 1K R@K, COCO 5K R@K, CxC R@1 are highly correlated with each other, while the rankings change when we shift to the ECCV mAP@R. Lastly, we delve into the effect of the bias introduced by the choice of machine annotator. Source code and dataset are available at https://github.com/naver-ai/eccv-caption},
   isbn      = {978-3-031-20074-8},
@@ -195,6 +207,7 @@
   url       = {https://bmvc2022.mpi-inf.mpg.de/0844.pdf},
   abbr      = {BMVC},
   arxiv     = {2210.08819},
+  pdf       = {papers/densealignuniform.pdf},
   code      = {https://github.com/SuperSupermoon/DenseCL-analysis},
   abstract  = {Recently, dense contrastive learning has shown superior performance on dense prediction tasks compared to instance-level contrastive learning. Despite its supremacy, the properties of dense contrastive representations have not yet been carefully studied. Therefore, we analyze the theoretical ideas of dense contrastive learning using a standard CNN and straightforward feature matching scheme rather than propose a new complex method. Inspired by the analysis of the properties of instance-level contrastive representations through the lens of alignment and uniformity on the hypersphere, we employ and extend the same lens for the dense contrastive representations to analyze their underexplored properties. We discover the core principle in constructing a positive pair of dense features and empirically proved its validity. Also, we introduces a new scalar metric that summarizes the correlation between alignment-and-uniformity and downstream performance. Using this metric, we study various facets of densely learned contrastive representations such as how the correlation changes over single- and multi-object datasets or linear evaluation and dense prediction tasks.}
 }
@@ -208,6 +221,7 @@
   archiveprefix = {arXiv},
   primaryclass  = {cs.IR},
   abbr          = {ACL},
+  pdf           = {papers/lmrec.pdf},
   abstract      = {Recent studies have proposed unified user modeling frameworks that leverage user behavior data from various applications. Many of them benefit from utilizing users' behavior sequences as plain texts, representing rich information in any domain or system without losing generality. Hence, a question arises: Can language modeling for user history corpus help improve recommender systems? While its versatile usability has been widely investigated in many domains, its applications to recommender systems still remain underexplored. We show that language modeling applied directly to task-specific user histories achieves excellent results on diverse recommendation tasks. Also, leveraging additional task-agnostic user histories delivers significant performance benefits. We further demonstrate that our approach can provide promising transfer learning capabilities for a broad spectrum of real-world recommender systems, even on unseen domains and services.}
 }
 
@@ -219,6 +233,7 @@
   arxiv         = {2212.04114},
   archiveprefix = {arXiv},
   primaryclass  = {cs.CV},
+  pdf           = {papers/ggem.pdf},
   abstract      = {Vision Transformer (ViT) extracts the final representation from either class token or an average of all patch tokens, following the architecture of Transformer in Natural Language Processing (NLP) or Convolutional Neural Networks (CNNs) in computer vision. However, studies for the best way of aggregating the patch tokens are still limited to average pooling, while widely-used pooling strategies, such as max and GeM pooling, can be considered. Despite their effectiveness, the existing pooling strategies do not consider the architecture of ViT and the channel-wise difference in the activation maps, aggregating the crucial and trivial channels with the same importance. In this paper, we present Group Generalized Mean (GGeM) pooling as a simple yet powerful pooling strategy for ViT. GGeM divides the channels into groups and computes GeM pooling with a shared pooling parameter per group. As ViT groups the channels via a multi-head attention mechanism, grouping the channels by GGeM leads to lower head-wise dependence while amplifying important channels on the activation maps. Exploiting GGeM shows 0.1%p to 0.7%p performance boosts compared to the baselines and achieves state-of-the-art performance for ViT-Base and ViT-Large models in ImageNet-1K classification task. Moreover, GGeM outperforms the existing pooling strategies on image retrieval and multi-modal representation learning tasks, demonstrating the superiority of GGeM for a variety of tasks. GGeM is a simple algorithm in that only a few lines of code are necessary for implementation.}
 }
 
@@ -230,6 +245,7 @@
   archiveprefix = {arXiv},
   primaryclass  = {eess.IV},
   abbr          = {CHIL},
+  pdf           = {papers/unixgen.pdf},
   booktitle     = {The 5th Annual Conference on Health, Inference, and Learning (CHIL 2024)},
   abstract      = {Generated synthetic data in medical research can substitute privacy and security-sensitive data with a large-scale curated dataset, reducing data collection and annotation costs. As part of this effort, we propose UniXGen, a unified chest X-ray and report generation model, with the following contributions. First, we design a unified model for bidirectional chest X-ray and report generation by adopting a vector quantization method to discretize chest X-rays into discrete visual tokens and formulating both tasks as sequence generation tasks. Second, we introduce several special tokens to generate chest X-rays with specific views that can be useful when the desired views are unavailable. Furthermore, UniXGen can flexibly take various inputs from single to multiple views to take advantage of the additional findings available in other X-ray views. We adopt an efficient transformer for computational and memory efficiency to handle the long-range input sequence of multi-view chest X-rays with high resolution and long paragraph reports. In extensive experiments, we show that our unified model has a synergistic effect on both generation tasks, as opposed to training only the task-specific models. We also find that view-specific special tokens can distinguish between different views and properly generate specific views even if they do not exist in the dataset, and utilizing multi-view chest X-rays can faithfully capture the abnormal findings in the additional X-rays. The source code is publicly available at: https://github.com/ttumyche/UniXGen},
   code          = {https://github.com/ttumyche/UniXGen}
@@ -243,6 +259,7 @@
   archiveprefix = {arXiv},
   primaryclass  = {cs.CV},
   abbr          = {ICCV},
+  pdf           = {papers/seit.pdf},
   booktitle     = {19th International Conference on Computer Vision (ICCV 2023)},
   abstract      = {We need billion-scale images to achieve more generalizable and ground-breaking vision models, as well as massive dataset storage to ship the images (e.g., the LAION-4B dataset needs 240TB storage space). However, it has become challenging to deal with unlimited dataset storage with limited storage infrastructure. A number of storage-efficient training methods have been proposed to tackle the problem, but they are rarely scalable or suffer from severe damage to performance. In this paper, we propose a storage-efficient training strategy for vision classifiers for large-scale datasets (e.g., ImageNet) that only uses 1024 tokens per instance without using the raw level pixels; our token storage only needs <1% of the original JPEG-compressed raw pixels. We also propose token augmentations and a Stem-adaptor module to make our approach able to use the same architecture as pixel-based approaches with only minimal modifications on the stem layer and the carefully tuned optimization settings. Our experimental results on ImageNet-1k show that our method significantly outperforms other storage-efficient training methods with a large gap. We further show the effectiveness of our method in other practical scenarios, storage-efficient pre-training, and continual learning. Code is available at https://github.com/naver-ai/seit},
   code          = {https://github.com/naver-ai/seit}
@@ -257,6 +274,7 @@
   archiveprefix = {arXiv},
   primaryclass  = {cs.CV},
   abbr          = {TMLR},
+  pdf           = {papers/compodiff.pdf},
   booktitle     = {41st Conference on Computer Vision and Pattern Recognition (CVPR 2024, Workshop on Synthetic Data for Computer Vision)},
   abstract      = {This paper proposes a novel diffusion-based model, CompoDiff, for solving Composed Image Retrieval (CIR) with latent diffusion and presents a newly created dataset of 18 million reference images, conditions, and corresponding target image triplets to train the model. CompoDiff not only achieves a new zero-shot state-of-the-art on a CIR benchmark such as FashionIQ but also enables a more versatile CIR by accepting various conditions, such as negative text and image mask conditions, which are unavailable with existing CIR methods. In addition, the CompoDiff features are on the intact CLIP embedding space so that they can be directly used for all existing models exploiting the CLIP space. The code and dataset used for the training, and the pre-trained weights are available at https://github.com/navervision/CompoDiff},
   code          = {https://github.com/navervision/CompoDiff}
@@ -270,6 +288,7 @@
   html      = {https://openreview.net/forum?id=azCKuYyS74},
   code      = {https://github.com/naver-ai/cl-vs-mim},
   arxiv     = {2305.00729},
+  pdf       = {papers/sslanalysis.pdf},
   abbr      = {ICLR},
   abstract  = {We present a comparative study on how and why contrastive learning (CL) and masked image modeling (MIM) differ in their representations and in their performance of downstream tasks. In particular, we demonstrate that self-supervised Vision Transformers (ViTs) have the following properties: (1) CL trains self-attentions to capture longer-range global patterns than MIM, such as the shape of an object, especially in the later layers of the ViT architecture. This CL property helps ViTs linearly separate images in their representation spaces. However, it also makes the self-attentions collapse into homogeneity for all query tokens and heads. Such homogeneity of self-attention reduces the diversity of representations, worsening scalability and dense prediction performance. (2) CL utilizes the low-frequency signals of the representations, but MIM utilizes high-frequencies. Since low- and high-frequency information respectively represent shapes and textures, CL is more shape-oriented and MIM more texture-oriented. (3) CL plays a crucial role in the later layers, while MIM mainly focuses on the early layers. Upon these analyses, we find that CL and MIM can complement each other and observe that even the simplest harmonization can help leverage the advantages of both methods. The code is available at https://github.com/naver-ai/cl-vs-mim.}
 }
@@ -282,6 +301,7 @@
   arxiv         = {2309.10328},
   archiveprefix = {arXiv},
   primaryclass  = {cs.HC},
+  pdf           = {papers/app2app.pdf},
   abbr          = {ICML-W},
   abstract      = {Extracting semantic representations from mobile user interfaces (UI) and using the representations for designers' decision-making processes have shown the potential to be effective computational design support tools. Current approaches rely on machine learning models trained on small-sized mobile UI datasets to extract semantic vectors and use screenshot-to-screenshot comparison to retrieve similar-looking UIs given query screenshots. However, the usability of these methods is limited because they are often not open-sourced and have complex training pipelines for practitioners to follow, and are unable to perform screenshot set-to-set (i.e., app-to-app) retrieval. To this end, we (1) employ visual models trained with large web-scale images and test whether they could extract a UI representation in a zero-shot way and outperform existing specialized models, and (2) use mathematically founded methods to enable app-to-app retrieval and design consistency analysis. Our experiments show that our methods not only improve upon previous retrieval models but also enable multiple new applications.}
 }
@@ -297,6 +317,7 @@
   abbr          = {ICML},
   code          = {https://github.com/G-JWLEE/STELLA_code},
   html          = {https://cl-stella.github.io},
+  pdf           = {papers/stella.pdf},
   booktitle     = {41st International Conference on Machine Learnings (ICML 2024)},
   abstract      = {Continuously learning a variety of audio-video semantics over time is crucial for audio-related reasoning tasks in our ever-evolving world. However, this is a nontrivial problem and poses two critical challenges: sparse spatio-temporal correlation between audio-video pairs and multimodal correlation overwriting that forgets audio-video relations. To tackle this problem, we propose a new continual audio-video pre-training method with two novel ideas: (1) Localized Patch Importance Scoring: we introduce a multimodal encoder to determine the importance score for each patch, emphasizing semantically intertwined audio-video patches. (2) Replay-guided Correlation Assessment: to reduce the corruption of previously learned audiovisual knowledge due to drift, we propose to assess the correlation of the current patches on the past steps to identify the patches exhibiting high correlations with the past steps. Based on the results from the two ideas, we perform probabilistic patch selection for effective continual audio-video pre-training. Experimental validation on multiple benchmarks shows that our method achieves a 3.69%p of relative performance gain in zero-shot retrieval tasks compared to strong continual learning baselines, while reducing memory consumption by ~45%.}
 }
@@ -311,6 +332,7 @@
   abbr          = {CVPR},
   booktitle     = {41st Conference on Computer Vision and Pattern Recognition (CVPR 2024)},
   code          = {https://github.com/navervision/lincir},
+  pdf           = {papers/lincir.pdf},
   abstract      = {Composed image retrieval (CIR) task takes a composed query of image and text, aiming to search relative images for both conditions. Conventional CIR approaches need a training dataset composed of triplets of query image, query text, and target image, which is very expensive to collect. Several recent works have worked on the zero-shot (ZS) CIR paradigm to tackle the issue without using pre-collected triplets. However, the existing ZS-CIR methods show limited backbone scalability and generalizability due to the lack of diversity of the input texts during training. We propose a novel CIR framework, only using language for its training. Our LinCIR (Language-only training for CIR) can be trained only with text datasets by a novel self-supervision named self-masking projection (SMP). We project the text latent embedding to the token embedding space and construct a new text by replacing the keyword tokens of the original text. Then, we let the new and original texts have the same latent embedding vector. With this simple strategy, LinCIR is surprisingly efficient and highly effective; LinCIR with CLIP ViT-G backbone is trained in 48 minutes and shows the best ZS-CIR performances on four different CIR benchmarks, CIRCO, GeneCIS, FashionIQ, and CIRR, even outperforming supervised method on FashionIQ. Code is available at https://github.com/navervision/lincir}
 }
 
@@ -324,6 +346,7 @@
   primaryclass  = {cs.CV},
   abbr          = {ECCV Oral},
   code          = {https://github.com/naver-ai/hype},
+  pdf           = {papers/hype.pdf},
   selected      = {true},
   abstract      = {In an era where the volume of data drives the effectiveness of self-supervised learning, the specificity and clarity of data semantics play a crucial role in model training. Addressing this, we introduce HYPerbolic Entailment filtering (HYPE), a novel methodology designed to meticulously extract modality-wise meaningful and well-aligned data from extensive, noisy image-text pair datasets. Our approach leverages hyperbolic embeddings and the concept of entailment cones to evaluate and filter out samples with meaningless or underspecified semantics, focusing on enhancing the specificity of each data sample. HYPE not only demonstrates a significant improvement in filtering efficiency but also sets a new state-of-the-art in the DataComp benchmark when combined with existing filtering techniques. This breakthrough showcases the potential of HYPE to refine the data selection process, thereby contributing to the development of more accurate and efficient self-supervised learning models. Additionally, the image specificity ϵi can be independently applied to induce an image-only dataset from an image-text or image-only data pool for training image-only self-supervised models and showed superior performance when compared to the dataset induced by CLIP score.}
 }
@@ -336,6 +359,7 @@
   archiveprefix = {arXiv},
   primaryclass  = {cs.CV},
   url           = {https://arxiv.org/abs/2406.09188},
+  pdf           = {papers/rtd.pdf},
   abstract      = {Composed Image Retrieval (CIR) aims to retrieve a target image based on a reference image and conditioning text, enabling controllable searches. Due to the expensive dataset construction cost for CIR triplets, a zero-shot (ZS) CIR setting has been actively studied to eliminate the need for human-collected triplet datasets. The mainstream of ZS-CIR employs an efficient projection module that projects a CLIP image embedding to the CLIP text token embedding space, while fixing the CLIP encoders. Using the projected image embedding, these methods generate image-text composed features by using the pre-trained text encoder. However, their CLIP image and text encoders suffer from the task discrepancy between the pre-training task (text ↔ image) and the target CIR task (image + text ↔ image). Conceptually, we need expensive triplet samples to reduce the discrepancy, but we use cheap text triplets instead and update the text encoder. To that end, we introduce the Reducing Task Discrepancy of text encoders for Composed Image Retrieval (RTD), a plug-and-play training scheme for the text encoder that enhances its capability using a novel target-anchored text contrastive learning. We also propose two additional techniques to improve the proposed learning scheme: a hard negatives-based refined batch sampling strategy and a sophisticated concatenation scheme. Integrating RTD into the state-of-the-art projection-based ZS-CIR methods significantly improves performance across various datasets and backbones, demonstrating its efficiency and generalizability.}
 }
 
@@ -348,6 +372,7 @@
   abbr          = {AAAI},
   primaryclass  = {cs.CV},
   url           = {https://arxiv.org/abs/2412.18404},
+  pdf           = {papers/clip4dm.pdf},
   abstract      = {Recent vision-language foundation models still frequently produce outputs misaligned with their inputs, evidenced by object hallucination in captioning and prompt misalignment in the text-to-image generation model. Recent studies have explored methods for identifying misaligned elements, aiming not only to enhance interpretability but also to improve model performance. However, current approaches primarily rely on large foundation models in a zero-shot manner or fine-tuned models with human annotations, which limits scalability due to significant computational costs. This work proposes a novel approach, dubbed CLIP4DM, for detecting dense misalignments from pre-trained CLIP, specifically focusing on pinpointing misaligned words between image and text. We carefully revamp the gradient-based attribution computation method, enabling negative gradient of individual text tokens to indicate misalignment. We also propose F-CLIPScore, which aggregates misaligned attributions with a global alignment score. We evaluate our method on various dense misalignment detection benchmarks, covering various image and text domains and misalignment types. Our method demonstrates state-of-the-art performance among zero-shot models and competitive performance with fine-tuned models while maintaining superior efficiency. Our qualitative examples show that our method has a unique strength to detect entity-level objects, intangible objects, and attributes that can not be easily detected for existing works. We conduct ablation studies and analyses to highlight the strengths and limitations of our approach. Our code is publicly available at https://github.com/naver-ai/CLIP4DM.}
 }
 
@@ -361,5 +386,6 @@
   primaryclass  = {cs.CV},
   url           = {https://arxiv.org/abs/2410.18857},
   code          = {https://github.com/naver-ai/prolip},
-  abstract      = {Vision-language models (VLMs) embed aligned image-text pairs into a joint space but often rely on deterministic embeddings, assuming a one-to-one correspondence between images and texts. This oversimplifies real-world relationships, which are inherently many-to-many, with multiple captions describing a single image and vice versa. We introduce Probabilistic Language-Image Pre-training (ProLIP), the first probabilistic VLM pre-trained on a billion-scale image-text dataset using only probabilistic objectives, achieving a strong zero-shot capability (e.g., 74.6% ImageNet zero-shot accuracy with ViT-B/16). ProLIP efficiently estimates uncertainty by an "uncertainty token" without extra parameters. We also introduce a novel inclusion loss that enforces distributional inclusion relationships between image-text pairs and between original and masked inputs. Experiments demonstrate that, by leveraging uncertainty estimates, ProLIP benefits downstream tasks and aligns with intuitive notions of uncertainty, e.g., shorter texts being more uncertain and more general inputs including specific ones. Utilizing text uncertainties, we further improve ImageNet accuracy from 74.6% to 75.8% (under a few-shot setting), supporting the practical advantages of our probabilistic approach. The code is available at https://github.com/naver-ai/prolip}
+  abstract      = {Vision-language models (VLMs) embed aligned image-text pairs into a joint space but often rely on deterministic embeddings, assuming a one-to-one correspondence between images and texts. This oversimplifies real-world relationships, which are inherently many-to-many, with multiple captions describing a single image and vice versa. We introduce Probabilistic Language-Image Pre-training (ProLIP), the first probabilistic VLM pre-trained on a billion-scale image-text dataset using only probabilistic objectives, achieving a strong zero-shot capability (e.g., 74.6% ImageNet zero-shot accuracy with ViT-B/16). ProLIP efficiently estimates uncertainty by an "uncertainty token" without extra parameters. We also introduce a novel inclusion loss that enforces distributional inclusion relationships between image-text pairs and between original and masked inputs. Experiments demonstrate that, by leveraging uncertainty estimates, ProLIP benefits downstream tasks and aligns with intuitive notions of uncertainty, e.g., shorter texts being more uncertain and more general inputs including specific ones. Utilizing text uncertainties, we further improve ImageNet accuracy from 74.6% to 75.8% (under a few-shot setting), supporting the practical advantages of our probabilistic approach. The code is available at https://github.com/naver-ai/prolip},
+  pdf           = {papers/prolip.pdf}
 }
