@@ -2,13 +2,13 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Wonjae Kim # the website title (if blank, full name will be used instead)
+title: Wonjae (Dan) Kim # the website title (if blank, full name will be used instead)
 first_name: Wonjae
-middle_name: 
+middle_name: (Dan)
 last_name: Kim
 email: contact@wonjae.kim
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Wonjae Kim
+  Wonjae (Dan) Kim
 footer_text: >
 
 url:  # the base hostname & protocol for your site
