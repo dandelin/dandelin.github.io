@@ -4,12 +4,8 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
+      <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+      {{ site.last_name }} / 김<span class="font-weight-bold">원재</span>
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
   </header>
@@ -42,9 +38,7 @@ layout: default
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
+      <h2>news</h2>
       {% include news.liquid limit=true %}
     {% endif %}
 

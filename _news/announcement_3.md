@@ -1,8 +1,7 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2020-08-20
 inline: true
-related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+One ECCV-2020 <a href="https://sites.google.com/view/task-cv2020/program">TASK-CV workshop</a> oral paper: <a href="https://arxiv.org/abs/2009.04170">Diversified Mutual Deep Metric Learning (DM2)</a>.
