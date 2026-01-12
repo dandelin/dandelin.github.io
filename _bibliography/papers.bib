@@ -182,7 +182,7 @@
                and Farinella, Giovanni Maria
                and Hassner, Tal},
   title     = {ECCV Caption: Correcting False Negatives by Collecting Machine-and-Human-verified Image-Caption Associations for MS-COCO},
-  booktitle = {17th European Conference on Computer Vision (ECCV 2022)},
+  booktitle = {16th European Conference on Computer Vision (ECCV 2022)},
   year      = {2022},
   publisher = {Springer Nature Switzerland},
   address   = {Cham},
@@ -237,13 +237,11 @@
   abstract      = {Vision Transformer (ViT) extracts the final representation from either class token or an average of all patch tokens, following the architecture of Transformer in Natural Language Processing (NLP) or Convolutional Neural Networks (CNNs) in computer vision. However, studies for the best way of aggregating the patch tokens are still limited to average pooling, while widely-used pooling strategies, such as max and GeM pooling, can be considered. Despite their effectiveness, the existing pooling strategies do not consider the architecture of ViT and the channel-wise difference in the activation maps, aggregating the crucial and trivial channels with the same importance. In this paper, we present Group Generalized Mean (GGeM) pooling as a simple yet powerful pooling strategy for ViT. GGeM divides the channels into groups and computes GeM pooling with a shared pooling parameter per group. As ViT groups the channels via a multi-head attention mechanism, grouping the channels by GGeM leads to lower head-wise dependence while amplifying important channels on the activation maps. Exploiting GGeM shows 0.1%p to 0.7%p performance boosts compared to the baselines and achieves state-of-the-art performance for ViT-Base and ViT-Large models in ImageNet-1K classification task. Moreover, GGeM outperforms the existing pooling strategies on image retrieval and multi-modal representation learning tasks, demonstrating the superiority of GGeM for a variety of tasks. GGeM is a simple algorithm in that only a few lines of code are necessary for implementation.}
 }
 
-@misc{lee2023unixgen,
+@inproceedings{lee2023unixgen,
   title         = {Vision-Language Generative Model for View-Specific Chest X-ray Generation},
   author        = {Hyungyung Lee and Da Young Lee and Wonjae Kim and Jin-Hwa Kim and Tackeun Kim and Jihang Kim and Leonard Sunwoo and Edward Choi},
   year          = {2024},
   arxiv         = {2302.12172},
-  archiveprefix = {arXiv},
-  primaryclass  = {eess.IV},
   abbr          = {CHIL},
   pdf           = {papers/unixgen.pdf},
   booktitle     = {The 5th Annual Conference on Health, Inference, and Learning (CHIL 2024)},
@@ -251,13 +249,11 @@
   code          = {https://github.com/ttumyche/UniXGen}
 }
 
-@misc{park2023seit,
+@inproceedings{park2023seit,
   title         = {SeiT: Storage-Efficient Vision Training with Tokens Using 1% of Pixel Storage},
   author        = {Song Park* and Sanghyuk Chun* and Byeongho Heo and Wonjae Kim and Sangdoo Yun},
   year          = {2023},
   arxiv         = {2303.11114},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.CV},
   abbr          = {ICCV},
   pdf           = {papers/seit.pdf},
   booktitle     = {19th International Conference on Computer Vision (ICCV 2023)},
@@ -266,16 +262,14 @@
 }
 
 
-@misc{gu2023compodiff,
+@inproceedings{gu2023compodiff,
   title         = {CompoDiff: Versatile Composed Image Retrieval With Latent Diffusion},
   author        = {Geonmo Gu* and Sanghyuk Chun* and Wonjae Kim and HeeJae Jun and Yoohoon Kang and Sangdoo Yun},
   year          = {2024},
   arxiv         = {2303.11916},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.CV},
   abbr          = {TMLR},
   pdf           = {papers/compodiff.pdf},
-  booktitle     = {41st Conference on Computer Vision and Pattern Recognition (CVPR 2024, Workshop on Synthetic Data for Computer Vision)},
+  booktitle     = {Transactions on Machine Learning Research (TMLR 2024)},
   abstract      = {This paper proposes a novel diffusion-based model, CompoDiff, for solving Composed Image Retrieval (CIR) with latent diffusion and presents a newly created dataset of 18 million reference images, conditions, and corresponding target image triplets to train the model. CompoDiff not only achieves a new zero-shot state-of-the-art on a CIR benchmark such as FashionIQ but also enables a more versatile CIR by accepting various conditions, such as negative text and image mask conditions, which are unavailable with existing CIR methods. In addition, the CompoDiff features are on the intact CLIP embedding space so that they can be directly used for all existing models exploiting the CLIP space. The code and dataset used for the training, and the pre-trained weights are available at https://github.com/navervision/CompoDiff},
   code          = {https://github.com/navervision/CompoDiff}
 }
@@ -307,28 +301,24 @@
 }
 
 
-@misc{lee2024stella,
+@inproceedings{lee2024stella,
   title         = {STELLA: Continual Audio-Video Pre-training with Spatio-Temporal Localized Alignment},
   author        = {Jaewoo Lee* and Jaehong Yoon* and Wonjae Kim and Yunji Kim and Sung Ju Hwang},
   year          = {2024},
   arxiv         = {2310.08204},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.CV},
   abbr          = {ICML},
   code          = {https://github.com/G-JWLEE/STELLA_code},
   html          = {https://cl-stella.github.io},
   pdf           = {papers/stella.pdf},
-  booktitle     = {41st International Conference on Machine Learnings (ICML 2024)},
+  booktitle     = {41st International Conference on Machine Learning (ICML 2024)},
   abstract      = {Continuously learning a variety of audio-video semantics over time is crucial for audio-related reasoning tasks in our ever-evolving world. However, this is a nontrivial problem and poses two critical challenges: sparse spatio-temporal correlation between audio-video pairs and multimodal correlation overwriting that forgets audio-video relations. To tackle this problem, we propose a new continual audio-video pre-training method with two novel ideas: (1) Localized Patch Importance Scoring: we introduce a multimodal encoder to determine the importance score for each patch, emphasizing semantically intertwined audio-video patches. (2) Replay-guided Correlation Assessment: to reduce the corruption of previously learned audiovisual knowledge due to drift, we propose to assess the correlation of the current patches on the past steps to identify the patches exhibiting high correlations with the past steps. Based on the results from the two ideas, we perform probabilistic patch selection for effective continual audio-video pre-training. Experimental validation on multiple benchmarks shows that our method achieves a 3.69%p of relative performance gain in zero-shot retrieval tasks compared to strong continual learning baselines, while reducing memory consumption by ~45%.}
 }
 
-@misc{gu2024languageonly,
+@inproceedings{gu2024languageonly,
   title         = {Language-only Efficient Training of Zero-shot Composed Image Retrieval},
   author        = {Geonmo Gu* and Sanghyuk Chun* and Wonjae Kim and Yoohoon Kang and Sangdoo Yun},
   year          = {2024},
   arxiv         = {2312.01998},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.CV},
   abbr          = {CVPR},
   booktitle     = {41st Conference on Computer Vision and Pattern Recognition (CVPR 2024)},
   code          = {https://github.com/navervision/lincir},
@@ -336,14 +326,12 @@
   abstract      = {Composed image retrieval (CIR) task takes a composed query of image and text, aiming to search relative images for both conditions. Conventional CIR approaches need a training dataset composed of triplets of query image, query text, and target image, which is very expensive to collect. Several recent works have worked on the zero-shot (ZS) CIR paradigm to tackle the issue without using pre-collected triplets. However, the existing ZS-CIR methods show limited backbone scalability and generalizability due to the lack of diversity of the input texts during training. We propose a novel CIR framework, only using language for its training. Our LinCIR (Language-only training for CIR) can be trained only with text datasets by a novel self-supervision named self-masking projection (SMP). We project the text latent embedding to the token embedding space and construct a new text by replacing the keyword tokens of the original text. Then, we let the new and original texts have the same latent embedding vector. With this simple strategy, LinCIR is surprisingly efficient and highly effective; LinCIR with CLIP ViT-G backbone is trained in 48 minutes and shows the best ZS-CIR performances on four different CIR benchmarks, CIRCO, GeneCIS, FashionIQ, and CIRR, even outperforming supervised method on FashionIQ. Code is available at https://github.com/navervision/lincir}
 }
 
-@misc{kim2024hype,
+@inproceedings{kim2024hype,
   title         = {HYPE: Hyperbolic Entailment Filtering for Underspecified Images and Texts},
   author        = {Wonjae Kim and Sanghyuk Chun and Taekyung Kim and Dongyoon Han and Sangdoo Yun},
   year          = {2024},
   arxiv         = {2404.17507},
-  booktitle     = {19th European Conference on Computer Vision (ECCV 2024)},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.CV},
+  booktitle     = {17th European Conference on Computer Vision (ECCV 2024)},
   abbr          = {ECCV Oral},
   code          = {https://github.com/naver-ai/hype},
   pdf           = {papers/hype.pdf},
@@ -351,40 +339,36 @@
   abstract      = {In an era where the volume of data drives the effectiveness of self-supervised learning, the specificity and clarity of data semantics play a crucial role in model training. Addressing this, we introduce HYPerbolic Entailment filtering (HYPE), a novel methodology designed to meticulously extract modality-wise meaningful and well-aligned data from extensive, noisy image-text pair datasets. Our approach leverages hyperbolic embeddings and the concept of entailment cones to evaluate and filter out samples with meaningless or underspecified semantics, focusing on enhancing the specificity of each data sample. HYPE not only demonstrates a significant improvement in filtering efficiency but also sets a new state-of-the-art in the DataComp benchmark when combined with existing filtering techniques. This breakthrough showcases the potential of HYPE to refine the data selection process, thereby contributing to the development of more accurate and efficient self-supervised learning models. Additionally, the image specificity ϵi can be independently applied to induce an image-only dataset from an image-text or image-only data pool for training image-only self-supervised models and showed superior performance when compared to the dataset induced by CLIP score.}
 }
 
-@misc{byun2024reducingtaskdiscrepancytext,
-  title         = {Reducing Task Discrepancy of Text Encoders for Zero-Shot Composed Image Retrieval},
+@inproceedings{byun2025reducingtaskdiscrepancytext,
+  title         = {An Efficient Post-hoc Framework for Reducing Task Discrepancy of Text Encoders for Composed Image Retrieval},
   author        = {Jaeseok Byun and Seokhyeon Jeong and Wonjae Kim and Sanghyuk Chun and Taesup Moon},
-  year          = {2024},
+  year          = {2025},
+  booktitle     = {20th International Conference on Computer Vision (ICCV 2025)},
+  abbr          = {ICCV},
   arxiv         = {2406.09188},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.CV},
-  url           = {https://arxiv.org/abs/2406.09188},
+  code          = {https://github.com/jaeseokbyun/RTD},
   pdf           = {papers/rtd.pdf},
   abstract      = {Composed Image Retrieval (CIR) aims to retrieve a target image based on a reference image and conditioning text, enabling controllable searches. Due to the expensive dataset construction cost for CIR triplets, a zero-shot (ZS) CIR setting has been actively studied to eliminate the need for human-collected triplet datasets. The mainstream of ZS-CIR employs an efficient projection module that projects a CLIP image embedding to the CLIP text token embedding space, while fixing the CLIP encoders. Using the projected image embedding, these methods generate image-text composed features by using the pre-trained text encoder. However, their CLIP image and text encoders suffer from the task discrepancy between the pre-training task (text ↔ image) and the target CIR task (image + text ↔ image). Conceptually, we need expensive triplet samples to reduce the discrepancy, but we use cheap text triplets instead and update the text encoder. To that end, we introduce the Reducing Task Discrepancy of text encoders for Composed Image Retrieval (RTD), a plug-and-play training scheme for the text encoder that enhances its capability using a novel target-anchored text contrastive learning. We also propose two additional techniques to improve the proposed learning scheme: a hard negatives-based refined batch sampling strategy and a sophisticated concatenation scheme. Integrating RTD into the state-of-the-art projection-based ZS-CIR methods significantly improves performance across various datasets and backbones, demonstrating its efficiency and generalizability.}
 }
 
-@misc{nam2024extractfreedensemisalignment,
+@inproceedings{nam2024extractfreedensemisalignment,
   title         = {Extract Free Dense Misalignment from CLIP},
   author        = {JeongYeon Nam and Jinbae Im and Wonjae Kim and Taeho Kil},
   year          = {2025},
   arxiv         = {2412.18404},
-  archiveprefix = {arXiv},
   abbr          = {AAAI},
-  primaryclass  = {cs.CV},
-  url           = {https://arxiv.org/abs/2412.18404},
+  booktitle     = {39th AAAI Conference on Artificial Intelligence (AAAI 2025)},
   pdf           = {papers/clip4dm.pdf},
   abstract      = {Recent vision-language foundation models still frequently produce outputs misaligned with their inputs, evidenced by object hallucination in captioning and prompt misalignment in the text-to-image generation model. Recent studies have explored methods for identifying misaligned elements, aiming not only to enhance interpretability but also to improve model performance. However, current approaches primarily rely on large foundation models in a zero-shot manner or fine-tuned models with human annotations, which limits scalability due to significant computational costs. This work proposes a novel approach, dubbed CLIP4DM, for detecting dense misalignments from pre-trained CLIP, specifically focusing on pinpointing misaligned words between image and text. We carefully revamp the gradient-based attribution computation method, enabling negative gradient of individual text tokens to indicate misalignment. We also propose F-CLIPScore, which aggregates misaligned attributions with a global alignment score. We evaluate our method on various dense misalignment detection benchmarks, covering various image and text domains and misalignment types. Our method demonstrates state-of-the-art performance among zero-shot models and competitive performance with fine-tuned models while maintaining superior efficiency. Our qualitative examples show that our method has a unique strength to detect entity-level objects, intangible objects, and attributes that can not be easily detected for existing works. We conduct ablation studies and analyses to highlight the strengths and limitations of our approach. Our code is publicly available at https://github.com/naver-ai/CLIP4DM.}
 }
 
-@misc{chun2024probabilisticlanguageimagepretraining,
+@inproceedings{chun2024probabilisticlanguageimagepretraining,
   title         = {Probabilistic Language-Image Pre-Training},
   author        = {Sanghyuk Chun and Wonjae Kim and Song Park and Sangdoo Yun},
-  year          = {2024},
+  year          = {2025},
   arxiv         = {2410.18857},
-  archiveprefix = {arXiv},
   abbr          = {ICLR},
-  primaryclass  = {cs.CV},
-  url           = {https://arxiv.org/abs/2410.18857},
+  booktitle     = {13th International Conference on Learning Representations (ICLR 2025)},
   code          = {https://github.com/naver-ai/prolip},
   abstract      = {Vision-language models (VLMs) embed aligned image-text pairs into a joint space but often rely on deterministic embeddings, assuming a one-to-one correspondence between images and texts. This oversimplifies real-world relationships, which are inherently many-to-many, with multiple captions describing a single image and vice versa. We introduce Probabilistic Language-Image Pre-training (ProLIP), the first probabilistic VLM pre-trained on a billion-scale image-text dataset using only probabilistic objectives, achieving a strong zero-shot capability (e.g., 74.6% ImageNet zero-shot accuracy with ViT-B/16). ProLIP efficiently estimates uncertainty by an "uncertainty token" without extra parameters. We also introduce a novel inclusion loss that enforces distributional inclusion relationships between image-text pairs and between original and masked inputs. Experiments demonstrate that, by leveraging uncertainty estimates, ProLIP benefits downstream tasks and aligns with intuitive notions of uncertainty, e.g., shorter texts being more uncertain and more general inputs including specific ones. Utilizing text uncertainties, we further improve ImageNet accuracy from 74.6% to 75.8% (under a few-shot setting), supporting the practical advantages of our probabilistic approach. The code is available at https://github.com/naver-ai/prolip},
   pdf           = {papers/prolip.pdf}
