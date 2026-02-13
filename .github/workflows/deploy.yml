@@ -20,6 +20,8 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+          PAGES_REPO_NWO: dandelin/dandelin.github.io
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy to master
         uses: peaceiris/actions-gh-pages@v4
