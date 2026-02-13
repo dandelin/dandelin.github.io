@@ -12,4 +12,4 @@ group :jekyll_plugins do
 end
 
 gem "faraday-retry", "~> 2.1"
-gem "nokogiri"
+gem "nokogiri", "~> 1.10.0"
