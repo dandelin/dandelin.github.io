@@ -7,6 +7,18 @@ giscus_comments: true
 published: true
 ---
 
+<ul class="nav nav-tabs" id="langTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="en-tab" data-toggle="tab" href="#en" role="tab">English</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="ko-tab" data-toggle="tab" href="#ko" role="tab">한국어</a>
+  </li>
+</ul>
+
+<div class="tab-content" id="langTabContent">
+<div class="tab-pane fade show active" id="en" role="tabpanel" markdown="1">
+
 ## How the World Breaks Monopolies, and Why Different Assets Break Differently
 
 ### A Strange Thought Experiment
@@ -119,9 +131,8 @@ The takeaway is simple. **The lower the cost of changing, the faster a monopoly 
 
 **Second, we can distinguish real moats from fake ones.** When investing, ask whether an asset's "dominant position" sits on a foundation of high changing costs, or on fragile ground the public can abandon at any moment. The scarcity premium on NFTs is a mirage built on a surface where the cost of changing is zero. Real moats exist only on foundations of high effective reset cost.
 
----
-
----
+</div>
+<div class="tab-pane fade" id="ko" role="tabpanel" markdown="1">
 
 ## 세상은 독점을 어떻게 부수는가, 그리고 왜 자산마다 부서지는 방식이 다른가
 
@@ -234,3 +245,6 @@ The takeaway is simple. **The lower the cost of changing, the faster a monopoly 
 **첫째, 폭발의 시점을 가늠할 수 있습니다.** 어떤 시장에서 독점이 진행되고 있다면, "대중의 누적된 고통"과 "그 시스템의 바꾸는 비용"을 비교해보세요. 고통이 비용에 근접하고 있다면 변화가 임박한 겁니다.
 
 **둘째, 진짜 해자와 가짜 해자를 구별할 수 있습니다.** 투자할 때, 어떤 자산의 "독점적 지위"가 높은 바꾸는 비용 위에 서 있는지, 아니면 대중이 언제든 떠날 수 있는 허약한 기반 위에 있는지를 봐야 합니다. NFT의 희소성 프리미엄은 바꾸는 비용이 0인 곳 위에 세워진 신기루입니다. 진짜 해자는 오직 높은 바꾸는 비용 위에서만 존재합니다.
+
+</div>
+</div>
