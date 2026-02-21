@@ -23,7 +23,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I lead the Embedding & Search team at [TwelveLabs](https://www.twelvelabs.io), where we build multimodal foundation models for video understanding. I'm the first author of [ViLT](https://github.com/dandelin/ViLT) (cited: {{ site.data.citations.papers['UpZ41EwAAAAJ:YsMSGLbcyi4C'].citations }}), one of the early works that shaped efficient vision-language architectures. Previously, I was a research scientist at [Naver AI LAB](https://naver-career.gitbook.io/en/teams/clova-cic) and [Kakao](https://www.kakaocorp.com/?lang=en), and I hold an [M.Sc.](http://hcil.snu.ac.kr/people/wonjae-kim) and [B.Sc.](https://cse.snu.ac.kr/en) from Seoul National University.
+I lead the Embedding & Search team at [TwelveLabs](https://www.twelvelabs.io), where we build multimodal foundation models for video understanding. I'm the first author of [ViLT](https://github.com/dandelin/ViLT) <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:YsMSGLbcyi4C" style="font-size: 0.85em; color: var(--global-text-color-light);">(cited: {{ site.data.citations.papers['UpZ41EwAAAAJ:YsMSGLbcyi4C'].citations }})</a>, one of the early works that shaped efficient vision-language architectures. Previously, I was a research scientist at [Naver AI LAB](https://naver-career.gitbook.io/en/teams/clova-cic) and [Kakao](https://www.kakaocorp.com/?lang=en), and I hold an [M.Sc.](http://hcil.snu.ac.kr/people/wonjae-kim) and [B.Sc.](https://cse.snu.ac.kr/en) from Seoul National University.
 
 My current research focuses on:
 
