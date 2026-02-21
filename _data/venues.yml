@@ -1,9 +1,74 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"NeurIPS":
+  color: "#8B008B"
+  url: https://neurips.cc/
 
-"PhysRev":
-  url: https://journals.aps.org/
+"NeurIPS-W":
+  color: "#C070C0"
 
-"Vision":
-  color: "#009f36"
+"ICML":
+  color: "#E74C3C"
+  url: https://icml.cc/
+
+"ICML Long talk":
+  color: "#E74C3C"
+  url: https://icml.cc/
+
+"ICML-W":
+  color: "#E88888"
+
+"ICLR":
+  color: "#2980B9"
+  url: https://iclr.cc/
+
+"ECCV":
+  color: "#27AE60"
+  url: https://eccv.ecva.net/
+
+"ECCV Oral":
+  color: "#27AE60"
+  url: https://eccv.ecva.net/
+
+"ECCV-W":
+  color: "#70C070"
+
+"CVPR":
+  color: "#F39C12"
+  url: https://cvpr.thecvf.com/
+
+"CVPR-W":
+  color: "#F0C060"
+
+"ICCV":
+  color: "#1ABC9C"
+  url: https://iccv2023.thecvf.com/
+
+"CHI":
+  color: "#8E44AD"
+  url: https://chi.acm.org/
+
+"ACL":
+  color: "#D35400"
+  url: https://www.aclweb.org/
+
+"AAAI":
+  color: "#0000CD"
+  url: https://aaai.org/
+
+"BMVC":
+  color: "#008080"
+
+"CHIL":
+  color: "#4682B4"
+
+"TMLR":
+  color: "#6B8E23"
+  url: https://jmlr.org/tmlr/
+
+"PacificVis":
+  color: "#4169E1"
+
+"Entropy":
+  color: "#808080"
+
+"Thesis":
+  color: "#333333"
