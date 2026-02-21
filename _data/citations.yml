@@ -1,0 +1,119 @@
+metadata:
+  last_updated: '2026-02-21'
+papers:
+  UpZ41EwAAAAJ:2osOgNQ5qMEC:
+    citations: 11
+    title: 'Learning Dynamics of Attention: Human Prior for Interpretable Machine Reasoning'
+    year: '2019'
+  UpZ41EwAAAAJ:3fE2CSJIrl8C:
+    citations: 6
+    title: Group generalized mean pooling for vision transformer
+    year: '2022'
+  UpZ41EwAAAAJ:4DMP91E08xMC:
+    citations: 109
+    title: Language-only training of zero-shot composed image retrieval
+    year: '2024'
+  UpZ41EwAAAAJ:4JMBOYKVnBMC:
+    citations: 8
+    title: Lifelong Audio-video Masked Autoencoder with Forget-robust Localized Alignments
+    year: '2023'
+  UpZ41EwAAAAJ:4TOpqqG69KYC:
+    citations: 114
+    title: 'Compodiff: Versatile composed image retrieval with latent diffusion'
+    year: '2023'
+  UpZ41EwAAAAJ:8k81kl-MbHgC:
+    citations: 6
+    title: Correlation between alignment-uniformity and performance of dense contrastive representations
+    year: '2022'
+  UpZ41EwAAAAJ:9yKSN-GCB0IC:
+    citations: 6
+    title: Discrete Infomax Codes for Supervised Representation Learning
+    year: '2019'
+  UpZ41EwAAAAJ:BqipwSGYUEgC:
+    citations: 0
+    title: Computational Approaches for App-to-App Retrieval and Design Consistency Check
+    year: '2025'
+  UpZ41EwAAAAJ:JV2RwH3_ST0C:
+    citations: 2
+    title: Extract free dense misalignment from CLIP
+    year: '2025'
+  UpZ41EwAAAAJ:KlAtU1dfN6UC:
+    citations: 145
+    title: What Do Self-Supervised Vision Transformers Learn?
+    year: '2023'
+  UpZ41EwAAAAJ:LkGwnXOMwfcC:
+    citations: 7
+    title: Conditional generation of periodic signals with fourier-based decoder
+    year: '2021'
+  UpZ41EwAAAAJ:MXK_kJrjxJIC:
+    citations: 8
+    title: 'Pivotal role of language modeling in recommender systems: Enriching task-specific and task-agnostic representation learning'
+    year: '2023'
+  UpZ41EwAAAAJ:RHpTSmoSYBkC:
+    citations: 13
+    title: An Efficient Post-hoc Framework for Reducing Task Discrepancy of Text Encoders for Composed Image Retrieval
+    year: '2025'
+  UpZ41EwAAAAJ:TFP_iSt0sucC:
+    citations: 16
+    title: Probabilistic language-image pre-training
+    year: '2024'
+  UpZ41EwAAAAJ:TQgYirikUcIC:
+    citations: 21
+    title: 'Hype: Hyperbolic entailment filtering for underspecified images and texts'
+    year: '2024'
+  UpZ41EwAAAAJ:Tyk-4Ss8FVUC:
+    citations: 11
+    title: Diversified mutual learning for deep metric learning
+    year: '2020'
+  UpZ41EwAAAAJ:UebtZRa9Y70C:
+    citations: 64
+    title: 'Eccv caption: Correcting false negatives by collecting machine-and-human-verified image-caption associations for ms-coco'
+    year: '2022'
+  UpZ41EwAAAAJ:WF5omc3nYNoC:
+    citations: 1
+    title: 'SwiftTuna: Incrementally exploring large-scale multidimensional data'
+    year: '2016'
+  UpZ41EwAAAAJ:YOwf2qJgpHMC:
+    citations: 14
+    title: 'Seit: Storage-efficient vision training with tokens using 1% of pixel storage'
+    year: '2023'
+  UpZ41EwAAAAJ:YsMSGLbcyi4C:
+    citations: 2632
+    title: 'Vilt: Vision-and-language transformer without convolution or region supervision'
+    year: '2021'
+  UpZ41EwAAAAJ:Zph67rFs4hoC:
+    citations: 27
+    title: Unified chest x-ray and radiology report generation model with multi-view chest x-rays
+    year: '2023'
+  UpZ41EwAAAAJ:_FxGoFyzp5QC:
+    citations: 152
+    title: 'Vidt: An efficient and effective fully transformer-based object detector'
+    year: '2021'
+  UpZ41EwAAAAJ:blknAaTinKkC:
+    citations: 1
+    title: Emergence of text readability in vision language models
+    year: '2025'
+  UpZ41EwAAAAJ:eQOLeE2rZwMC:
+    citations: 12
+    title: 'Swifttuna: Responsive and incremental visual exploration of large-scale multidimensional data'
+    year: '2017'
+  UpZ41EwAAAAJ:hqOjcs7Dif8C:
+    citations: 27
+    title: An extendable, efficient and effective transformer-based object detector
+    year: '2022'
+  UpZ41EwAAAAJ:mVmsd5A6BfQC:
+    citations: 20
+    title: Vision-language generative model for view-specific chest x-ray generation
+    year: '2023'
+  UpZ41EwAAAAJ:qxL8FJ1GzNcC:
+    citations: 6
+    title: Computational approaches for app-to-app retrieval and design consistency check
+    year: '2023'
+  UpZ41EwAAAAJ:roLk4NBRz8UC:
+    citations: 25
+    title: Speeding up inference with user simulators through policy modulation
+    year: '2022'
+  UpZ41EwAAAAJ:u-x6o8ySG0sC:
+    citations: 225
+    title: 'Chartsense: Interactive data extraction from chart images'
+    year: '2017'
