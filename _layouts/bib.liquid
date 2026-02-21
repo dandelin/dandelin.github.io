@@ -157,6 +157,10 @@
       {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
     {% elsif thesis contains entry.type %}
       {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
+    {% elsif entry.booktitle %}
+      {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
+    {% elsif entry.journal %}
+      {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
@@ -323,7 +327,7 @@
               role="button"
             >
               {% assign citation_count = 0 %}
-              {% assign scholar_id_key = site.scholar_userid | append: ':' | append: entry.google_scholar_id %}
+              {% assign scholar_id_key = site.data.socials.scholar_userid | append: ':' | append: entry.google_scholar_id %}
               {% assign publication_key = entry.google_scholar_id %}
 
               {% if site.data.citations.papers[scholar_id_key] %}
