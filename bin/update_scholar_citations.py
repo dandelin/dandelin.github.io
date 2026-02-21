@@ -60,6 +60,7 @@ def get_scholar_citations() -> None:
                 f"Warning: Could not read existing citation data from {OUTPUT_FILE}: {e}. The file may be missing or corrupted."
             )
 
+    existing_data = None
     citation_data = {"metadata": {"last_updated": today}, "papers": {}}
 
     scholarly.set_timeout(15)
