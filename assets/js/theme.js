@@ -1,5 +1,7 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
+let isInitialLoad = true;
+
 // Toggle through light, dark, and system theme settings.
 let toggleThemeSetting = () => {
   let themeSetting = determineThemeSetting();
@@ -25,7 +27,10 @@ let setThemeSetting = (themeSetting) => {
 let applyTheme = () => {
   let theme = determineComputedTheme();
 
-  transTheme();
+  if (!isInitialLoad) {
+    transTheme();
+  }
+  isInitialLoad = false;
   setHighlight(theme);
   setGiscusTheme(theme);
   setSearchTheme(theme);

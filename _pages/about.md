@@ -23,12 +23,14 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a lead research scientist at <a href="https://www.twelvelabs.io">TwelveLabs</a>.
-Prior to joining TwelveLabs, I worked as a research scientist at <a href="https://naver-career.gitbook.io/en/teams/clova-cic">Naver AI LAB</a> and <a href="https://www.kakaocorp.com/?lang=en">Kakao</a>.
-I completed my <a href="http://hcil.snu.ac.kr/people/wonjae-kim">M.Sc.</a> and <a href="https://cse.snu.ac.kr/en">B.Sc.</a> in computer science and engineering at Seoul National University.
+I lead the Embedding & Search team at [TwelveLabs](https://www.twelvelabs.io), where we build multimodal foundation models for video understanding. I'm the first author of [ViLT](https://github.com/dandelin/ViLT), one of the early works that shaped efficient vision-language architectures. Previously, I was a research scientist at [Naver AI LAB](https://naver-career.gitbook.io/en/teams/clova-cic) and [Kakao](https://www.kakaocorp.com/?lang=en), and I hold an [M.Sc.](http://hcil.snu.ac.kr/people/wonjae-kim) and [B.Sc.](https://cse.snu.ac.kr/en) from Seoul National University.
 
-I am interested in the following research topics:
+My current research focuses on:
 
-- Multimodal Representation Learning
-- Self-supervised Representation Learning
-- Human-Computer Interaction & Information Visualization
+- Multimodal Representation Learning (video, audio, text)
+- Large-scale Embedding & Search Systems
+- User Behavior Modeling for Search
+
+---
+
+**We're Hiring!** I'm building a research team at TwelveLabs where your models ship to thousands of customers within months. We're tackling joint embedding spaces across modalities and containerized asset search—problems that go beyond simple retrieval to true semantic understanding of video structure. If you want to see your work create real-world impact at scale, [grab a coffee chat](https://calendar.app.google/RFWg71Zb3GED9nkeA) with me. I'm looking for scientists and engineers who are excited to push video-language AI from idea to production. [Join us in Seoul →](https://jobs.ashbyhq.com/twelve-labs/38e8e1c9-bf91-449c-b64a-c3f481099801)
