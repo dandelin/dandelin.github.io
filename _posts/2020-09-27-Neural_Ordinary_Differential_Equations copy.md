@@ -8,6 +8,7 @@ description: "Neural ODE 논문 정리"
 ---
 
 ### Good Old Neural Nets
+
 다양한 파라미터화된 함수들의 조합을 우리는 뉴럴 네트워크라고 부릅니다 : $u \mapsto f_S \circ \cdots f_0(u) := \phi_S(u)$.
 그런데 여기서 함수들의 갯수가 $S$개가 아니라 무한개라면 어떻게 될까요?
 함수가 무한개여도 어떤 함수를 먼저 적용할지는 순서가 정해져있으며, 이러한 성질은 실수체 $\mathbb{R}$의 성질과 매우 흡사합니다.
@@ -37,12 +38,15 @@ description: "Neural ODE 논문 정리"
 ### Enforcing Stability
 
 #### Neural ODE
+
 $\dot{x} = f(u, x(s), w(s))$; $x(0)=u$; $\hat{y}=x(S)$; $s \in [0, S]$. 여기서 Neural ODE란 $f$, 더 광의적으로는 $f$가 기술하는 시스템을 의미합니다.
 
 #### Well-Posedness
+
 $f$가 립슈이츠, 즉 $d_Y(f(x), f(x')) \le Kd_X(x, x')$라면, 모든 시작점 $u$에 대해서 상태 (솔루션) $x$는 유일하게 정해집니다.
 
 #### Stable Neural Flow
+
 스테이블 뉴럴 플로우 $\epsilon$은 다음을 만족하는 NODE입니다: $\dot{x}=-\partial_{x} \epsilon(u, x(s), w(s))$.
 랴푸노프 안정성 테스트를 해봅시다.
 $(\partial_{x} \epsilon)^2$은 $\mathbb{R}^{n_x}$ 에서 항상 양수이므로, 랴푸노프 대상 $V(x)$로 쓰일 수 있습니다.
@@ -50,47 +54,21 @@ $\dot{V}(x) = V'(x) \dot{x} = 2(\partial_{x} \epsilon) * (-\partial_{x} \epsilon
 즉 $\lim{s \to \inf}$일 때 $\phi_s (w, u) \in M$입니다.
 
 #### Energy
+
 머신러닝 컨텍스트에서 에너지라는 말이 쓰인다면, 그건 어떤 양<sub>quantity</sub>이며, 그 값의 보존이 명시적으로 드러나있는 경우입니다.
 물리학의 에너지 보존 법칙에서 따온 말이죠.
 스테이블 뉴럴 플로우 $\epsilon$은 이 에너지의 앞 글자를 따왔습니다.
 
 #### Port-Hamiltonian Model
+
 행렬 $A(x)$를 계수로 사용하여 $\dot{x} = A(x)\partial_{x} \epsilon(u, x, w)$를 정의하고, $A(x) + A^T(x) ≺ 0$ ($≺$는 좌항의 모든 인자가 우항보다 작음을 의미합니다.)라면, 이는 스테이블 뉴럴 플로우에 조금 더 다양성을 부여해 줄 수 있겠지요.
 $A(x)$를 구조행렬<sub>structure matrix</sub>로 보면, $x$를 포트-해밀토니언 시스템으로 볼 수 있습니다.
 
 #### Second-Order Model
+
 $x$를 둘로 쪼개서 볼까요? $x := (q, p)$; $p, q \in \mathbb{R}^{n_v}$; $n_v = \frac{n_x}{2}$.
 그럼 다음 $p$와 $q$에 대한 시스템을 정의합니다.
 (1) $\dot{q} = p$, (2) $\dot{p} = -\alpha p - \partial_{q} \epsilon(u, q(s), w(s))$.
 이렇게 되면 토탈 에너지 함수 $\phi(q, p) = \frac{1}{2} p^T p + \epsilon(q, w)$를 정의하고,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 [^1]: 인풋이 조금 변해도 아웃풋이 크게 변하는 경우를 뜻합니다.

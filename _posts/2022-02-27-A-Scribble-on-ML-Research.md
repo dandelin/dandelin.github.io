@@ -11,7 +11,7 @@ published: false
 
 ### 연구
 
-연구라는 단어는 *어떤 일이나 사물에 대하여서 깊이 있게 조사하고 생각하여 진리를 따져 보는 일*, research라는 단어는 *a careful study of a subject, especially in order to discover new facts or information about it*라는 사전적 의미가 있다.
+연구라는 단어는 _어떤 일이나 사물에 대하여서 깊이 있게 조사하고 생각하여 진리를 따져 보는 일_, research라는 단어는 *a careful study of a subject, especially in order to discover new facts or information about it*라는 사전적 의미가 있다.
 한국어 단어와 영어 단어의 뉘앙스가 다른 것은 당연한 현상이고, 언어는 문화를 녹인것이기에 뉘앙스가 완전히 같은 단어가 다른 문화권에서 존재하기가 훨씬 어려운 일이다.
 각설하고 두 문화권에서 공통적으로 드러나는 의미는 *대상에 대한 깊이있는 고찰*이다.
 그런데 우리는 살아가면서 엄청나게 많은 것들에 깊이있는 고찰을 하기 때문에 이 정의대로라면 사실 연구라는 것은 그렇게 특별한 것이 아니다.

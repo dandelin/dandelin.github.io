@@ -99,15 +99,15 @@ This is the most efficient and most brutal form of reset. No anger, no fight, ju
 
 ### The Big Picture: Why These Differences Exist
 
-| Asset | Cost of Changing | Planning Horizon | Form of Explosion | Speed |
-|:---|:---|:---|:---|:---|
-| Land / Real Estate | Extremely high | Decades | Revolution, seizure | Decades |
-| Dollar | Medium (can print) | Years | New issuance, inflation | Months |
-| Government Bonds | Medium (can re-issue) | Years | New issuance, restructuring, default | Months to years |
-| Corporate Bonds | Medium-high | Years | Refinancing, bankruptcy | Months to years |
-| Corporations / Platforms | Medium (rule change) | Years | Antitrust breakup, paradigm migration | Years |
-| Bitcoin | Tech: low / Social: high | Months | Hard fork (usually fails) | Weeks to months |
-| Memecoins / NFTs | Near zero | Days | Indifference | Instant |
+| Asset                    | Cost of Changing         | Planning Horizon | Form of Explosion                     | Speed           |
+| :----------------------- | :----------------------- | :--------------- | :------------------------------------ | :-------------- |
+| Land / Real Estate       | Extremely high           | Decades          | Revolution, seizure                   | Decades         |
+| Dollar                   | Medium (can print)       | Years            | New issuance, inflation               | Months          |
+| Government Bonds         | Medium (can re-issue)    | Years            | New issuance, restructuring, default  | Months to years |
+| Corporate Bonds          | Medium-high              | Years            | Refinancing, bankruptcy               | Months to years |
+| Corporations / Platforms | Medium (rule change)     | Years            | Antitrust breakup, paradigm migration | Years           |
+| Bitcoin                  | Tech: low / Social: high | Months           | Hard fork (usually fails)             | Weeks to months |
+| Memecoins / NFTs         | Near zero                | Days             | Indifference                          | Instant         |
 
 The takeaway is simple. **The lower the cost of changing, the faster a monopoly collapses. The higher the cost, the longer it endures before ending in a bigger explosion.** And the structure of that cost is determined by whether the asset is physical, institutional, or digital.
 

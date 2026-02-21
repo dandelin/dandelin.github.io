@@ -13,16 +13,19 @@
 ## Architecture & Key Decisions
 
 ### upstream 추적 가능한 구조
+
 - upstream al-folio의 **레이아웃/includes/sass 파일은 수정하지 않음** → `git merge upstream/main` 시 충돌 최소화
 - 개인화는 `_config.yml` 값 변경, `_data/*.yml`, `_pages/about.md` 본문, `_bibliography/papers.bib`에만 집중
 - 예상 충돌 파일: `_config.yml`, `_data/socials.yml` (단순 값 충돌)
 
 ### 댓글 시스템
+
 - **Giscus** 사용 (Disqus에서 전환)
 - repo: `dandelin/dandelin.github.io`, category: `General`
 - 포스트 front matter에 `giscus_comments: true` 사용 (구 `comments: true` 아님)
 
 ### 한국어 이름 표시
+
 - `_pages/about.md`의 `subtitle` 필드: `김<b>원재</b> · ML/HCI Research Scientist`
 - upstream 파일 수정 없이 subtitle 방식으로 구현
 
@@ -45,17 +48,17 @@ assets/img/favicon.ico      # 파비콘
 CNAME                       # 커스텀 도메인
 ```
 
-## _config.yml Key Settings
+## \_config.yml Key Settings
 
 ```yaml
 first_name: Wonjae
 middle_name: (Dan)
 last_name: Kim
 url: https://wonjae.kim
-baseurl:                    # 빈값 (루트 서빙)
+baseurl: # 빈값 (루트 서빙)
 max_width: 800px
 google_analytics: UA-47120899-4
-imagemagick.enabled: false  # 로컬 빌드 편의 (CI에서는 imagemagick 설치됨)
+imagemagick.enabled: false # 로컬 빌드 편의 (CI에서는 imagemagick 설치됨)
 scholar.last_name: [Kim]
 scholar.first_name: [Wonjae]
 scholar.group_by: year
@@ -64,6 +67,7 @@ scholar.group_by: year
 ## Common Tasks
 
 ### upstream 업데이트
+
 ```bash
 git fetch upstream --tags
 git checkout main
@@ -72,16 +76,19 @@ git push origin main
 ```
 
 ### 새 논문 추가
+
 1. `_bibliography/papers.bib`에 BibTeX 추가 (abbr, pdf, html, abstract, selected 필드)
 2. PDF를 `assets/pdf/papers/`에 추가
 3. `_data/venues.yml`에 새 학회 약어가 있으면 추가
 
 ### 새 블로그 포스트 추가
+
 - `_posts/YYYY-MM-DD-title.md` 생성
 - front matter: `layout: post`, `title`, `date`, `description`, `giscus_comments: true`
 - 비공개: `published: false` 추가
 
 ### 새 뉴스 추가
+
 - `_news/announcement_N.md` (다음 번호)
 - front matter: `layout: post`, `date`, `inline: true`
 
@@ -92,6 +99,7 @@ git push origin main
 - 결과물 `_site/` → `gh-pages` 브랜치에 배포
 
 ### 로컬 빌드 (선택)
+
 ```bash
 bundle install
 bundle exec jekyll serve

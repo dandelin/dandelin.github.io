@@ -8,7 +8,7 @@ published: true
 ---
 
 **온화한 특이점**  
-_원문: 2025년 6월 11일 06:12 [The Gentle Singularity](https://blog.samaltman.com/the-gentle-singularity)_  
+_원문: 2025년 6월 11일 06:12 [The Gentle Singularity](https://blog.samaltman.com/the-gentle-singularity)_
 
 글 | Sam Altman
 

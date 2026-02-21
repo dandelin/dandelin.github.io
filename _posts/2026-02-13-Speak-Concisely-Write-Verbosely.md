@@ -8,6 +8,7 @@ published: true
 ---
 
 ## 간결함의 황금률이 무너지는 순간
+
 ## The Moment the Golden Rule of Brevity Breaks
 
 "Omit needless words." William Strunk Jr.가 1919년에 남긴 이 문장은 한 세기가 넘도록 글쓰기의 제1원칙으로 군림해왔다. 불필요한 수식을 덜어내고, 문장을 압축하고, 핵심만 남기라. 이 원칙은 너무나 자명해서 의심의 대상조차 되지 못했다. 그런데 지금, 우리는 이 오래된 통념에 진지하게 물음표를 붙여야 하는 시점에 서 있다.
@@ -21,6 +22,7 @@ LLM agents have become foundational infrastructure in our lives. Summarizing ema
 ---
 
 ## 말하기와 글쓰기: 정반대의 인지 역학
+
 ## Speech and Writing: Opposite Cognitive Dynamics
 
 흥미롭게도, 인간의 두 가지 언어 양식인 말하기와 글쓰기는 정반대의 인지적 압력 아래 놓여 있다.
@@ -42,6 +44,7 @@ But now, the reader is no longer human alone.
 ---
 
 ## 에이전트라는 새로운 독자
+
 ## The Agent as a New Reader
 
 LLM 에이전트는 인간 독자와 정반대의 선호를 가진다. 에이전트에게 간결함은 미덕이 아니라 정보의 손실이다. "Q3 매출이 좋았다"는 문장보다 "Q3 매출은 전년 동기 대비 23% 증가한 4,200만 달러를 기록했으며, 이는 주로 APAC 지역의 신규 고객 확보와 기존 고객의 ARR 확대에 기인한다"는 문장이 에이전트에게는 압도적으로 유용하다. 에이전트는 맥락을 먹고 산다. 배경 정보, 조건절, 예외 사항, 수치의 출처와 산출 근거까지, 인간 독자가 "장황하다"고 느낄 수 있는 모든 것이 에이전트에게는 정확한 추론과 판단의 재료가 된다.
@@ -55,6 +58,7 @@ Here, a critical asymmetry emerges. Recovering missing context from concise writ
 ---
 
 ## "영어로 쓰라"는 규약의 해체
+
 ## Dismantling the "Write in English" Rule
 
 이 관점에서 다시 바라보면, 인간 독자를 전제로 만들어진 수많은 글쓰기 규약들이 그 근거를 잃어가고 있음을 알 수 있다. 대표적인 것이 글로벌 기업에서 흔히 볼 수 있는 "모든 문서는 영어로 작성하라"는 원칙이다.
@@ -92,6 +96,7 @@ The "write in English" rule was a trade: constrain the writer's expressiveness i
 ---
 
 ## 구조라는 이름의 족쇄
+
 ## The Shackles Called "Structure"
 
 언어의 문제만이 아니다. 글의 "구조" 역시 인간 독자 중심의 관성에 갇혀 있다.
@@ -117,6 +122,7 @@ This is not a flaw of Notion as a tool. It is a structural tension: when you opt
 ---
 
 ## Interactive Reading: 간결함을 "쓰는" 것에서 "찾는" 것으로
+
 ## Interactive Reading: From "Writing" Conciseness to "Finding" It
 
 이 모든 비대칭들, 간결함과 풍부함, 영어와 모국어, 시각적 구조와 의미적 연속성 사이의 긴장은 하나의 공통된 원인으로 수렴한다. 우리가 글쓰기의 모든 규약을 인간 독자만을 상정하고 설계해왔다는 사실이다.
@@ -142,6 +148,7 @@ This is qualitatively different from simple "AI summarization." AI summarization
 ---
 
 ## 새로운 리터러시
+
 ## A New Literacy
 
 이 전환은 "잘 쓴다"는 것의 정의를 바꾼다. 좋은 글은 더 이상 "군더더기 없이 영어로 정리된 글"이 아니다. 좋은 글은 "맥락이 풍부하여 다양한 언어, 다양한 해상도, 다양한 형식으로 읽힐 수 있는 글"이다. 작성자의 역량은 불필요한 문장을 잘라내는 데 있는 것이 아니라, 의미 있는 맥락을 빠짐없이 직조하는 데 있다.
@@ -160,6 +167,6 @@ Speak Concisely, Write Verbosely. Speak concisely still, for the listener is hum
 
 ---
 
-> *이 글은 한국어와 영어를 병행하여 작성되었다. 이 글이 주장하는 바에 따르면, 이것은 과도기의 산물이다. 아직 모든 독자가 에이전트와 함께 읽는 시대가 도래하지 않았기에, 작성자가 두 언어로 직접 쓰는 수고를 감수했다. 그리고 당신이 위에서 목격한 것처럼, 그 수고에도 불구하고 한국어 원문의 "질감"과 "결"은 영어에 온전히 도착하지 못했다. 이 글 자체가, 이 글이 끝내고자 하는 시대의 마지막 유물이다.*
+> _이 글은 한국어와 영어를 병행하여 작성되었다. 이 글이 주장하는 바에 따르면, 이것은 과도기의 산물이다. 아직 모든 독자가 에이전트와 함께 읽는 시대가 도래하지 않았기에, 작성자가 두 언어로 직접 쓰는 수고를 감수했다. 그리고 당신이 위에서 목격한 것처럼, 그 수고에도 불구하고 한국어 원문의 "질감"과 "결"은 영어에 온전히 도착하지 못했다. 이 글 자체가, 이 글이 끝내고자 하는 시대의 마지막 유물이다._
 >
-> *This essay was written in both Korean and English. By its own argument, this is an artifact of the transitional period. Because the era where every reader reads with an agent has not yet arrived, the author bore the labor of writing in two languages. And as you witnessed above, despite that labor, the "질감" and "결" of the Korean original did not fully arrive in English. This essay itself is the last relic of the very era it seeks to end.*
+> _This essay was written in both Korean and English. By its own argument, this is an artifact of the transitional period. Because the era where every reader reads with an agent has not yet arrived, the author bore the labor of writing in two languages. And as you witnessed above, despite that labor, the "질감" and "결" of the Korean original did not fully arrive in English. This essay itself is the last relic of the very era it seeks to end._

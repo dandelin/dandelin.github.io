@@ -72,10 +72,10 @@
 {% if site.enable_darkmode %}
   <!-- Dark Mode -->
   <script>
-    (function() {
-      var t = localStorage.getItem("theme");
-      if (t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-        document.documentElement.setAttribute("data-theme", "dark");
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
     })();
   </script>
