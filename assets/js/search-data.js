@@ -30,73 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-speak-concisely-write-verbosely",
-        
-          title: "Speak Concisely, Write Verbosely",
-        
-        description: "LLM 시대, 간결함의 황금률이 무너지는 순간",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/Speak-Concisely-Write-Verbosely/";
-          
-        },
-      },{id: "post-the-gentle-singularity",
-        
-          title: "The Gentle Singularity",
-        
-        description: "Sam Altman의 The Gentle Singularity 번역",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/The-gentle-singularity/";
-          
-        },
-      },{id: "post-deepseek-a-more-extreme-story-of-chinese-tech-idealism",
-        
-          title: "DeepSeek: A More Extreme Story of Chinese Tech Idealism",
-        
-        description: "DeepSeek 창업자 인터뷰 번역: 중국 기술적 이상주의 이야기",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/Deep-seek-interview/";
-          
-        },
-      },{id: "post-exploiting-contemporary-ml",
-        
-          title: "Exploiting Contemporary ML",
-        
-        description: "HCI 연구자를 위한 최신 ML 모델 활용 가이드",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2021/Exploiting_Contemporary_ML/";
-          
-        },
-      },{id: "post-tensor-2-einstein-notation-and-maps",
-        
-          title: "Tensor #2. Einstein Notation and Maps",
-        
-        description: "Tensor 시리즈 2편: 아인슈타인 표기법과 맵",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2019/tensor_2_einstein_notation_and_maps/";
-          
-        },
-      },{id: "post-tensor-1-elementary-vector-space",
-        
-          title: "Tensor #1. Elementary Vector Space",
-        
-        description: "Tensor 시리즈 1편: 벡터 스페이스의 기본 정의와 성질",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2019/tensor_1_elementary_vector_space/";
-          
-        },
-      },{id: "news-i-completed-my-m-sc-at-snu-and-joined-kakao",
+        },{id: "news-i-completed-my-m-sc-at-snu-and-joined-kakao",
           title: 'I completed my M.Sc. at SNU and joined Kakao.',
           description: "",
           section: "News",},{id: "news-one-neurips-2019-paper-dynamics-of-attention-for-focus-transition-daft",
@@ -172,55 +106,6 @@ ninja.data = [{
           title: 'TwelveLabs releases Marengo 3.0, a new standard for foundation models that understand the...',
           description: "",
           section: "News",},{
-        id: 'social-email',
-        title: 'email',
-        section: 'Socials',
-        handler: () => {
-          window.open("mailto:%63%6F%6E%74%61%63%74@%77%6F%6E%6A%61%65.%6B%69%6D", "_blank");
-        },
-      },{
-        id: 'social-github',
-        title: 'GitHub',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://github.com/dandelin", "_blank");
-        },
-      },{
-        id: 'social-x',
-        title: 'X',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://twitter.com/dandelin_kim", "_blank");
-        },
-      },{
-        id: 'social-linkedin',
-        title: 'LinkedIn',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.linkedin.com/in/wjk", "_blank");
-        },
-      },{
-        id: 'social-scholar',
-        title: 'Google Scholar',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://scholar.google.com/citations?user=UpZ41EwAAAAJ", "_blank");
-        },
-      },{
-        id: 'social-cv',
-        title: 'CV',
-        section: 'Socials',
-        handler: () => {
-          window.open("/assets/pdf/cv.pdf", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
-        },
-      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
