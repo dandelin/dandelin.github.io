@@ -16,6 +16,7 @@ footer_text: >
 keywords: machine-learning, research, multimodal, hci
 scholar_userid: UpZ41EwAAAAJ
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
+future: true # publish posts with future dates (GitHub Actions builds in UTC)
 icon: favicon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://wonjae.kim # the base hostname & protocol for your site
