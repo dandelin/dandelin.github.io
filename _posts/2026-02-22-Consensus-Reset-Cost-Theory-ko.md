@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "합의 리셋 비용 최적화 이론"
+title: "The Theory of Consensus Reset Cost Optimization"
 date: 2026-02-22
 description: "세상은 독점을 어떻게 부수는가, 그리고 왜 자산마다 부서지는 방식이 다른가"
 giscus_comments: true
