@@ -71,6 +71,14 @@
 
 {% if site.enable_darkmode %}
   <!-- Dark Mode -->
+  <script>
+    (function() {
+      var t = localStorage.getItem("theme");
+      if (t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
   <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
   <link
     defer
