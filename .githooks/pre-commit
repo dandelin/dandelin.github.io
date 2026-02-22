@@ -1,0 +1,10 @@
+#!/bin/sh
+# Pre-commit hook: run prettier on staged files
+
+STAGED=$(git diff --cached --name-only --diff-filter=ACM)
+if [ -z "$STAGED" ]; then
+  exit 0
+fi
+
+echo "$STAGED" | xargs npx prettier --write
+echo "$STAGED" | xargs git add

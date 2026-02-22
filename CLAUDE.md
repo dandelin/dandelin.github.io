@@ -72,6 +72,13 @@ scholar.group_by: year
 
 ## Common Tasks
 
+### 새 클론 후 초기 설정
+
+```bash
+bundle install
+git config core.hooksPath .githooks   # prettier pre-commit 훅 활성화
+```
+
 ### upstream 업데이트
 
 ```bash
