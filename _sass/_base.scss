@@ -4,6 +4,10 @@
 
 // Typography
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Helvetica Neue", Arial, sans-serif;
+}
+
 p,
 h1,
 h2,
@@ -20,7 +24,8 @@ strong {
 }
 
 hr {
-  border-top: 1px solid var(--global-divider-color);
+  border: 0;
+  border-top: 1px solid var(--global-divider-color) !important;
 }
 
 table {
@@ -250,7 +255,6 @@ ul.task-list input[type="checkbox"] {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
-  opacity: 0.95;
 }
 
 .navbar .dropdown-menu,
@@ -1525,4 +1529,35 @@ figure.cover {
 
 mjx-container[jax="CHTML"][display="true"] {
   overflow-x: auto;
+}
+
+// Tab content: hide stray elements from kramdown between tab-panes
+.tab-content > :not(.tab-pane) {
+  display: none;
+}
+
+// Blog post typography
+.post-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+  word-break: keep-all;
+
+  p {
+    margin-bottom: 1.4rem;
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  blockquote {
+    line-height: 1.7;
+  }
 }
