@@ -1,10 +1,30 @@
 #!/usr/bin/env python
 
 import os
+import signal
 import sys
-import yaml
 from datetime import datetime
+
+import yaml
 from scholarly import scholarly
+
+# Ensure print output appears immediately in CI (non-TTY) environments
+sys.stdout.reconfigure(line_buffering=True)
+
+# Graceful script-level timeout (4 minutes, inside the workflow's 240s limit)
+SCRIPT_TIMEOUT = 210
+
+
+def _timeout_handler(signum, frame):
+    print(
+        f"Script timed out after {SCRIPT_TIMEOUT}s. Google Scholar may be rate-limiting or blocking requests."
+    )
+    sys.exit(1)
+
+
+if hasattr(signal, "SIGALRM"):
+    signal.signal(signal.SIGALRM, _timeout_handler)
+    signal.alarm(SCRIPT_TIMEOUT)
 
 
 def load_scholar_user_id() -> str:
@@ -63,16 +83,31 @@ def get_scholar_citations() -> None:
     existing_data = None
     citation_data = {"metadata": {"last_updated": today}, "papers": {}}
 
-    scholarly.set_timeout(15)
-    scholarly.set_retries(3)
+    scholarly.set_timeout(10)
+    scholarly.set_retries(2)
+
+    # Try direct connection first, fall back to free proxy if it fails
     try:
+        print("Trying direct connection to Google Scholar...")
         author = scholarly.search_author_id(SCHOLAR_USER_ID)
-        author_data = scholarly.fill(author)
+        author_data = scholarly.fill(author, sections=["publications"])
     except Exception as e:
-        print(
-            f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e}. Please check your internet connection and Scholar user ID."
-        )
-        sys.exit(1)
+        print(f"Direct connection failed: {e}")
+        print("Retrying with free proxy...")
+        try:
+            from fp.fp import FreeProxy
+
+            proxy = FreeProxy(rand=True, timeout=5).get()
+            print(f"Using proxy: {proxy}")
+            scholarly.use_proxy(http=proxy, https=proxy)
+            author = scholarly.search_author_id(SCHOLAR_USER_ID)
+            author_data = scholarly.fill(author, sections=["publications"])
+        except Exception as e2:
+            print(
+                f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e2}. "
+                "Both direct and proxy connections failed."
+            )
+            sys.exit(1)
 
     if not author_data:
         print(
