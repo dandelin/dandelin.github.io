@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-02-21'
+  last_updated: '2026-03-02'
 papers:
   UpZ41EwAAAAJ:2osOgNQ5qMEC:
     citations: 11
@@ -14,11 +14,11 @@ papers:
     title: Language-only training of zero-shot composed image retrieval
     year: '2024'
   UpZ41EwAAAAJ:4JMBOYKVnBMC:
-    citations: 8
+    citations: 10
     title: Lifelong Audio-video Masked Autoencoder with Forget-robust Localized Alignments
     year: '2023'
   UpZ41EwAAAAJ:4TOpqqG69KYC:
-    citations: 114
+    citations: 116
     title: 'Compodiff: Versatile composed image retrieval with latent diffusion'
     year: '2023'
   UpZ41EwAAAAJ:8k81kl-MbHgC:
@@ -34,11 +34,11 @@ papers:
     title: Computational Approaches for App-to-App Retrieval and Design Consistency Check
     year: '2025'
   UpZ41EwAAAAJ:JV2RwH3_ST0C:
-    citations: 2
+    citations: 3
     title: Extract free dense misalignment from CLIP
     year: '2025'
   UpZ41EwAAAAJ:KlAtU1dfN6UC:
-    citations: 145
+    citations: 146
     title: What Do Self-Supervised Vision Transformers Learn?
     year: '2023'
   UpZ41EwAAAAJ:LkGwnXOMwfcC:
@@ -58,7 +58,7 @@ papers:
     title: Probabilistic language-image pre-training
     year: '2024'
   UpZ41EwAAAAJ:TQgYirikUcIC:
-    citations: 21
+    citations: 22
     title: 'Hype: Hyperbolic entailment filtering for underspecified images and texts'
     year: '2024'
   UpZ41EwAAAAJ:Tyk-4Ss8FVUC:
@@ -78,7 +78,7 @@ papers:
     title: 'Seit: Storage-efficient vision training with tokens using 1% of pixel storage'
     year: '2023'
   UpZ41EwAAAAJ:YsMSGLbcyi4C:
-    citations: 2632
+    citations: 2658
     title: 'Vilt: Vision-and-language transformer without convolution or region supervision'
     year: '2021'
   UpZ41EwAAAAJ:Zph67rFs4hoC:
@@ -86,7 +86,7 @@ papers:
     title: Unified chest x-ray and radiology report generation model with multi-view chest x-rays
     year: '2023'
   UpZ41EwAAAAJ:_FxGoFyzp5QC:
-    citations: 152
+    citations: 154
     title: 'Vidt: An efficient and effective fully transformer-based object detector'
     year: '2021'
   UpZ41EwAAAAJ:blknAaTinKkC:
@@ -114,6 +114,6 @@ papers:
     title: Speeding up inference with user simulators through policy modulation
     year: '2022'
   UpZ41EwAAAAJ:u-x6o8ySG0sC:
-    citations: 225
+    citations: 229
     title: 'Chartsense: Interactive data extraction from chart images'
     year: '2017'
