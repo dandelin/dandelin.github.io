@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-06'
+  last_updated: '2026-03-11'
 papers:
   UpZ41EwAAAAJ:2osOgNQ5qMEC:
     citations: 11
@@ -10,7 +10,7 @@ papers:
     title: Group generalized mean pooling for vision transformer
     year: '2022'
   UpZ41EwAAAAJ:4DMP91E08xMC:
-    citations: 111
+    citations: 113
     title: Language-only training of zero-shot composed image retrieval
     year: '2024'
   UpZ41EwAAAAJ:4JMBOYKVnBMC:
@@ -38,7 +38,7 @@ papers:
     title: Extract free dense misalignment from CLIP
     year: '2025'
   UpZ41EwAAAAJ:KlAtU1dfN6UC:
-    citations: 147
+    citations: 149
     title: What Do Self-Supervised Vision Transformers Learn?
     year: '2023'
   UpZ41EwAAAAJ:LkGwnXOMwfcC:
@@ -58,7 +58,7 @@ papers:
     title: Probabilistic language-image pre-training
     year: '2024'
   UpZ41EwAAAAJ:TQgYirikUcIC:
-    citations: 22
+    citations: 23
     title: 'Hype: Hyperbolic entailment filtering for underspecified images and texts'
     year: '2024'
   UpZ41EwAAAAJ:Tyk-4Ss8FVUC:
@@ -78,7 +78,7 @@ papers:
     title: 'Seit: Storage-efficient vision training with tokens using 1% of pixel storage'
     year: '2023'
   UpZ41EwAAAAJ:YsMSGLbcyi4C:
-    citations: 2664
+    citations: 2679
     title: 'Vilt: Vision-and-language transformer without convolution or region supervision'
     year: '2021'
   UpZ41EwAAAAJ:Zph67rFs4hoC:
@@ -114,6 +114,6 @@ papers:
     title: Speeding up inference with user simulators through policy modulation
     year: '2022'
   UpZ41EwAAAAJ:u-x6o8ySG0sC:
-    citations: 229
+    citations: 230
     title: 'Chartsense: Interactive data extraction from chart images'
     year: '2017'
