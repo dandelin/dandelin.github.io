@@ -11,20 +11,16 @@ from scholarly import scholarly, ProxyGenerator
 # Ensure print output appears immediately in CI (non-TTY) environments
 sys.stdout.reconfigure(line_buffering=True)
 
-# Graceful script-level timeout (4 minutes, inside the workflow's 240s limit)
-SCRIPT_TIMEOUT = 210
+# Per-attempt timeout (seconds). scholarly.set_timeout doesn't reliably prevent hangs.
+ATTEMPT_TIMEOUT = 60
 
 
-def _timeout_handler(signum, frame):
-    print(
-        f"Script timed out after {SCRIPT_TIMEOUT}s. Google Scholar may be rate-limiting or blocking requests."
-    )
-    sys.exit(1)
+class AttemptTimeout(Exception):
+    pass
 
 
-if hasattr(signal, "SIGALRM"):
-    signal.signal(signal.SIGALRM, _timeout_handler)
-    signal.alarm(SCRIPT_TIMEOUT)
+def _attempt_timeout_handler(signum, frame):
+    raise AttemptTimeout()
 
 
 def load_scholar_user_id() -> str:
@@ -64,7 +60,11 @@ def load_existing_data() -> dict | None:
 
 
 def fetch_author_data(attempt: int) -> dict | None:
-    """Fetch author data from Google Scholar, using proxy on retry."""
+    """Fetch author data from Google Scholar, using proxy on retry.
+
+    Each attempt is guarded by SIGALRM so a hanging connection
+    cannot block the entire script.
+    """
     if attempt == 0:
         print("Attempt 1: direct connection...")
     else:
@@ -80,14 +80,26 @@ def fetch_author_data(attempt: int) -> dict | None:
     scholarly.set_timeout(30)
     scholarly.set_retries(2)
 
+    # Set per-attempt alarm so a hung connection doesn't eat the whole budget
+    if hasattr(signal, "SIGALRM"):
+        signal.signal(signal.SIGALRM, _attempt_timeout_handler)
+        signal.alarm(ATTEMPT_TIMEOUT)
+
     try:
         author = scholarly.search_author_id(SCHOLAR_USER_ID)
         author_data = scholarly.fill(author, sections=["publications"])
+        if hasattr(signal, "SIGALRM"):
+            signal.alarm(0)  # cancel alarm on success
         if author_data and "publications" in author_data:
             return author_data
         print("  No publications found in author data.")
         return None
+    except AttemptTimeout:
+        print(f"  Timed out after {ATTEMPT_TIMEOUT}s.")
+        return None
     except Exception as e:
+        if hasattr(signal, "SIGALRM"):
+            signal.alarm(0)
         print(f"  Failed: {e}")
         return None
 
