@@ -3,10 +3,10 @@
 import os
 import signal
 import sys
-from datetime import datetime
-
+import time
 import yaml
-from scholarly import scholarly
+from datetime import datetime
+from scholarly import scholarly, ProxyGenerator
 
 # Ensure print output appears immediately in CI (non-TTY) environments
 sys.stdout.reconfigure(line_buffering=True)
@@ -31,132 +31,133 @@ def load_scholar_user_id() -> str:
     """Load the Google Scholar user ID from the configuration file."""
     config_file = "_data/socials.yml"
     if not os.path.exists(config_file):
-        print(
-            f"Configuration file {config_file} not found. Please ensure the file exists and contains your Google Scholar user ID."
-        )
+        print(f"Configuration file {config_file} not found.")
         sys.exit(1)
     try:
         with open(config_file, "r") as f:
             config = yaml.safe_load(f)
         scholar_user_id = config.get("scholar_userid")
         if not scholar_user_id:
-            print(
-                "No 'scholar_userid' found in the configuration file. Please add 'scholar_userid' to _data/socials.yml."
-            )
+            print("No 'scholar_userid' found in _data/socials.yml.")
             sys.exit(1)
         return scholar_user_id
     except yaml.YAMLError as e:
-        print(
-            f"Error parsing YAML file {config_file}: {e}. Please check the file for correct YAML syntax."
-        )
+        print(f"Error parsing YAML file {config_file}: {e}")
         sys.exit(1)
 
 
 SCHOLAR_USER_ID: str = load_scholar_user_id()
 OUTPUT_FILE: str = "_data/citations.yml"
+MAX_ATTEMPTS = 3
+
+
+def load_existing_data() -> dict | None:
+    """Load existing citation data if available."""
+    if not os.path.exists(OUTPUT_FILE):
+        return None
+    try:
+        with open(OUTPUT_FILE, "r") as f:
+            return yaml.safe_load(f)
+    except Exception as e:
+        print(f"Warning: Could not read {OUTPUT_FILE}: {e}")
+        return None
+
+
+def fetch_author_data(attempt: int) -> dict | None:
+    """Fetch author data from Google Scholar, using proxy on retry."""
+    if attempt == 0:
+        print("Attempt 1: direct connection...")
+    else:
+        print(f"Attempt {attempt + 1}: using free proxy...")
+        try:
+            pg = ProxyGenerator()
+            pg.FreeProxies()
+            scholarly.use_proxy(pg)
+        except Exception as e:
+            print(f"  Proxy setup failed: {e}")
+            return None
+
+    scholarly.set_timeout(30)
+    scholarly.set_retries(2)
+
+    try:
+        author = scholarly.search_author_id(SCHOLAR_USER_ID)
+        author_data = scholarly.fill(author, sections=["publications"])
+        if author_data and "publications" in author_data:
+            return author_data
+        print("  No publications found in author data.")
+        return None
+    except Exception as e:
+        print(f"  Failed: {e}")
+        return None
+
+
+def extract_citations(author_data: dict) -> dict:
+    """Extract citation data from author data."""
+    papers = {}
+    for pub in author_data["publications"]:
+        pub_id = pub.get("author_pub_id") or pub.get("pub_id")
+        if not pub_id:
+            continue
+        title = pub.get("bib", {}).get("title", "Unknown Title")
+        year = pub.get("bib", {}).get("pub_year", "Unknown Year")
+        citations = pub.get("num_citations", 0)
+        papers[pub_id] = {"title": title, "year": year, "citations": citations}
+        print(f"  {title} ({year}) - Citations: {citations}")
+    return papers
 
 
 def get_scholar_citations() -> None:
     """Fetch and update Google Scholar citation data."""
-    print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
+    print(f"Scholar ID: {SCHOLAR_USER_ID}")
     today = datetime.now().strftime("%Y-%m-%d")
+    existing_data = load_existing_data()
 
-    # Check if the output file was already updated today
-    if os.path.exists(OUTPUT_FILE):
-        try:
-            with open(OUTPUT_FILE, "r") as f:
-                existing_data = yaml.safe_load(f)
-            if (
-                existing_data
-                and "metadata" in existing_data
-                and "last_updated" in existing_data["metadata"]
-            ):
-                print(f"Last updated on: {existing_data['metadata']['last_updated']}")
-                if existing_data["metadata"]["last_updated"] == today:
-                    print("Citations data is already up-to-date. Skipping fetch.")
-                    return
-        except Exception as e:
-            print(
-                f"Warning: Could not read existing citation data from {OUTPUT_FILE}: {e}. The file may be missing or corrupted."
-            )
-
-    existing_data = None
-    citation_data = {"metadata": {"last_updated": today}, "papers": {}}
-
-    scholarly.set_timeout(10)
-    scholarly.set_retries(2)
-
-    # Try direct connection first, fall back to free proxy if it fails
-    try:
-        print("Trying direct connection to Google Scholar...")
-        author = scholarly.search_author_id(SCHOLAR_USER_ID)
-        author_data = scholarly.fill(author, sections=["publications"])
-    except Exception as e:
-        print(f"Direct connection failed: {e}")
-        print("Retrying with free proxy...")
-        try:
-            from fp.fp import FreeProxy
-
-            proxy = FreeProxy(rand=True, timeout=5).get()
-            print(f"Using proxy: {proxy}")
-            scholarly.use_proxy(http=proxy, https=proxy)
-            author = scholarly.search_author_id(SCHOLAR_USER_ID)
-            author_data = scholarly.fill(author, sections=["publications"])
-        except Exception as e2:
-            print(
-                f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e2}. "
-                "Both direct and proxy connections failed."
-            )
-            sys.exit(1)
-
-    if not author_data:
-        print(
-            f"Could not fetch author data for user ID '{SCHOLAR_USER_ID}'. Please verify the Scholar user ID and try again."
-        )
-        sys.exit(1)
-
-    if "publications" not in author_data:
-        print(f"No publications found in author data for user ID '{SCHOLAR_USER_ID}'.")
-        sys.exit(1)
-
-    for pub in author_data["publications"]:
-        try:
-            pub_id = pub.get("pub_id") or pub.get("author_pub_id")
-            if not pub_id:
-                print(
-                    f"Warning: No ID found for publication: {pub.get('bib', {}).get('title', 'Unknown')}. This publication will be skipped."
-                )
-                continue
-
-            title = pub.get("bib", {}).get("title", "Unknown Title")
-            year = pub.get("bib", {}).get("pub_year", "Unknown Year")
-            citations = pub.get("num_citations", 0)
-
-            print(f"Found: {title} ({year}) - Citations: {citations}")
-
-            citation_data["papers"][pub_id] = {
-                "title": title,
-                "year": year,
-                "citations": citations,
-            }
-        except Exception as e:
-            print(
-                f"Error processing publication '{pub.get('bib', {}).get('title', 'Unknown')}': {e}. This publication will be skipped."
-            )
-
-    # Compare new data with existing data
-    if existing_data and existing_data.get("papers") == citation_data["papers"]:
-        print("No changes in citation data. Skipping file update.")
+    # Skip if already updated today
+    if (
+        existing_data
+        and existing_data.get("metadata", {}).get("last_updated") == today
+    ):
+        print(f"Already updated today ({today}). Skipping.")
         return
 
+    # Try fetching with retries
+    author_data = None
+    for attempt in range(MAX_ATTEMPTS):
+        author_data = fetch_author_data(attempt)
+        if author_data:
+            break
+        if attempt < MAX_ATTEMPTS - 1:
+            wait = 5 * (attempt + 1)
+            print(f"  Waiting {wait}s before retry...")
+            time.sleep(wait)
+
+    if not author_data:
+        if existing_data:
+            print(
+                f"All {MAX_ATTEMPTS} attempts failed. Keeping existing data from {existing_data.get('metadata', {}).get('last_updated', 'unknown')}."
+            )
+            return
+        else:
+            print(f"All {MAX_ATTEMPTS} attempts failed and no existing data.")
+            sys.exit(1)
+
+    # Extract and compare
+    print("Extracting citation data...")
+    papers = extract_citations(author_data)
+
+    if existing_data and existing_data.get("papers") == papers:
+        print("No changes in citation data.")
+        return
+
+    # Write updated data
+    citation_data = {"metadata": {"last_updated": today}, "papers": papers}
     try:
         with open(OUTPUT_FILE, "w") as f:
             yaml.dump(citation_data, f, width=1000, sort_keys=True)
         print(f"Citation data saved to {OUTPUT_FILE}")
     except Exception as e:
-        print(
-            f"Error writing citation data to {OUTPUT_FILE}: {e}. Please check file permissions and disk space."
-        )
+        print(f"Error writing to {OUTPUT_FILE}: {e}")
         sys.exit(1)
 
 
