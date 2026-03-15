@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-11'
+  last_updated: '2026-03-15'
 papers:
   UpZ41EwAAAAJ:2osOgNQ5qMEC:
     citations: 11
@@ -10,7 +10,7 @@ papers:
     title: Group generalized mean pooling for vision transformer
     year: '2022'
   UpZ41EwAAAAJ:4DMP91E08xMC:
-    citations: 113
+    citations: 114
     title: Language-only training of zero-shot composed image retrieval
     year: '2024'
   UpZ41EwAAAAJ:4JMBOYKVnBMC:
@@ -18,7 +18,7 @@ papers:
     title: Lifelong Audio-video Masked Autoencoder with Forget-robust Localized Alignments
     year: '2023'
   UpZ41EwAAAAJ:4TOpqqG69KYC:
-    citations: 117
+    citations: 118
     title: 'Compodiff: Versatile composed image retrieval with latent diffusion'
     year: '2023'
   UpZ41EwAAAAJ:8k81kl-MbHgC:
@@ -34,7 +34,7 @@ papers:
     title: Computational Approaches for App-to-App Retrieval and Design Consistency Check
     year: '2025'
   UpZ41EwAAAAJ:JV2RwH3_ST0C:
-    citations: 3
+    citations: 4
     title: Extract free dense misalignment from CLIP
     year: '2025'
   UpZ41EwAAAAJ:KlAtU1dfN6UC:
@@ -58,7 +58,7 @@ papers:
     title: Probabilistic language-image pre-training
     year: '2024'
   UpZ41EwAAAAJ:TQgYirikUcIC:
-    citations: 23
+    citations: 22
     title: 'Hype: Hyperbolic entailment filtering for underspecified images and texts'
     year: '2024'
   UpZ41EwAAAAJ:Tyk-4Ss8FVUC:
@@ -78,7 +78,7 @@ papers:
     title: 'Seit: Storage-efficient vision training with tokens using 1% of pixel storage'
     year: '2023'
   UpZ41EwAAAAJ:YsMSGLbcyi4C:
-    citations: 2679
+    citations: 2686
     title: 'Vilt: Vision-and-language transformer without convolution or region supervision'
     year: '2021'
   UpZ41EwAAAAJ:Zph67rFs4hoC:
@@ -114,6 +114,6 @@ papers:
     title: Speeding up inference with user simulators through policy modulation
     year: '2022'
   UpZ41EwAAAAJ:u-x6o8ySG0sC:
-    citations: 230
+    citations: 232
     title: 'Chartsense: Interactive data extraction from chart images'
     year: '2017'
