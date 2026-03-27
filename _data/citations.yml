@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-23'
+  last_updated: '2026-03-27'
 papers:
   UpZ41EwAAAAJ:2osOgNQ5qMEC:
     citations: 11
@@ -38,7 +38,7 @@ papers:
     title: Extract free dense misalignment from CLIP
     year: '2025'
   UpZ41EwAAAAJ:KlAtU1dfN6UC:
-    citations: 151
+    citations: 152
     title: What Do Self-Supervised Vision Transformers Learn?
     year: '2023'
   UpZ41EwAAAAJ:LkGwnXOMwfcC:
@@ -66,7 +66,7 @@ papers:
     title: Diversified mutual learning for deep metric learning
     year: '2020'
   UpZ41EwAAAAJ:UebtZRa9Y70C:
-    citations: 64
+    citations: 65
     title: 'Eccv caption: Correcting false negatives by collecting machine-and-human-verified image-caption associations for ms-coco'
     year: '2022'
   UpZ41EwAAAAJ:WF5omc3nYNoC:
@@ -78,7 +78,7 @@ papers:
     title: 'Seit: Storage-efficient vision training with tokens using 1% of pixel storage'
     year: '2023'
   UpZ41EwAAAAJ:YsMSGLbcyi4C:
-    citations: 2713
+    citations: 2720
     title: 'Vilt: Vision-and-language transformer without convolution or region supervision'
     year: '2021'
   UpZ41EwAAAAJ:Zph67rFs4hoC:
@@ -86,7 +86,7 @@ papers:
     title: Unified chest x-ray and radiology report generation model with multi-view chest x-rays
     year: '2023'
   UpZ41EwAAAAJ:_FxGoFyzp5QC:
-    citations: 156
+    citations: 157
     title: 'Vidt: An efficient and effective fully transformer-based object detector'
     year: '2021'
   UpZ41EwAAAAJ:blknAaTinKkC:
