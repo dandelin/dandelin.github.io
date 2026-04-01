@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-27'
+  last_updated: '2026-04-01'
 papers:
   UpZ41EwAAAAJ:2osOgNQ5qMEC:
     citations: 11
@@ -10,7 +10,7 @@ papers:
     title: Group generalized mean pooling for vision transformer
     year: '2022'
   UpZ41EwAAAAJ:4DMP91E08xMC:
-    citations: 117
+    citations: 118
     title: Language-only training of zero-shot composed image retrieval
     year: '2024'
   UpZ41EwAAAAJ:4JMBOYKVnBMC:
@@ -18,7 +18,7 @@ papers:
     title: Lifelong Audio-video Masked Autoencoder with Forget-robust Localized Alignments
     year: '2023'
   UpZ41EwAAAAJ:4TOpqqG69KYC:
-    citations: 118
+    citations: 120
     title: 'Compodiff: Versatile composed image retrieval with latent diffusion'
     year: '2023'
   UpZ41EwAAAAJ:8k81kl-MbHgC:
@@ -54,7 +54,7 @@ papers:
     title: An Efficient Post-hoc Framework for Reducing Task Discrepancy of Text Encoders for Composed Image Retrieval
     year: '2025'
   UpZ41EwAAAAJ:TFP_iSt0sucC:
-    citations: 16
+    citations: 17
     title: Probabilistic language-image pre-training
     year: '2024'
   UpZ41EwAAAAJ:TQgYirikUcIC:
@@ -78,7 +78,7 @@ papers:
     title: 'Seit: Storage-efficient vision training with tokens using 1% of pixel storage'
     year: '2023'
   UpZ41EwAAAAJ:YsMSGLbcyi4C:
-    citations: 2720
+    citations: 2723
     title: 'Vilt: Vision-and-language transformer without convolution or region supervision'
     year: '2021'
   UpZ41EwAAAAJ:Zph67rFs4hoC:
