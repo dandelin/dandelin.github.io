@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-04-06'
+  last_updated: '2026-04-29'
 papers:
   UpZ41EwAAAAJ:2osOgNQ5qMEC:
     citations: 11
@@ -10,7 +10,7 @@ papers:
     title: Group generalized mean pooling for vision transformer
     year: '2022'
   UpZ41EwAAAAJ:4DMP91E08xMC:
-    citations: 121
+    citations: 130
     title: Language-only training of zero-shot composed image retrieval
     year: '2024'
   UpZ41EwAAAAJ:4JMBOYKVnBMC:
@@ -18,11 +18,11 @@ papers:
     title: Lifelong Audio-video Masked Autoencoder with Forget-robust Localized Alignments
     year: '2023'
   UpZ41EwAAAAJ:4TOpqqG69KYC:
-    citations: 122
+    citations: 127
     title: 'Compodiff: Versatile composed image retrieval with latent diffusion'
     year: '2023'
   UpZ41EwAAAAJ:8k81kl-MbHgC:
-    citations: 6
+    citations: 7
     title: Correlation between alignment-uniformity and performance of dense contrastive representations
     year: '2022'
   UpZ41EwAAAAJ:9yKSN-GCB0IC:
@@ -38,7 +38,7 @@ papers:
     title: Extract free dense misalignment from CLIP
     year: '2025'
   UpZ41EwAAAAJ:KlAtU1dfN6UC:
-    citations: 152
+    citations: 154
     title: What Do Self-Supervised Vision Transformers Learn?
     year: '2023'
   UpZ41EwAAAAJ:LkGwnXOMwfcC:
@@ -78,7 +78,7 @@ papers:
     title: 'Seit: Storage-efficient vision training with tokens using 1% of pixel storage'
     year: '2023'
   UpZ41EwAAAAJ:YsMSGLbcyi4C:
-    citations: 2735
+    citations: 2779
     title: 'Vilt: Vision-and-language transformer without convolution or region supervision'
     year: '2021'
   UpZ41EwAAAAJ:Zph67rFs4hoC:
@@ -86,7 +86,7 @@ papers:
     title: Unified chest x-ray and radiology report generation model with multi-view chest x-rays
     year: '2023'
   UpZ41EwAAAAJ:_FxGoFyzp5QC:
-    citations: 157
+    citations: 159
     title: 'Vidt: An efficient and effective fully transformer-based object detector'
     year: '2021'
   UpZ41EwAAAAJ:blknAaTinKkC:
@@ -102,7 +102,7 @@ papers:
     title: An extendable, efficient and effective transformer-based object detector
     year: '2022'
   UpZ41EwAAAAJ:mVmsd5A6BfQC:
-    citations: 20
+    citations: 22
     title: Vision-language generative model for view-specific chest x-ray generation
     year: '2023'
   UpZ41EwAAAAJ:qxL8FJ1GzNcC:
@@ -110,10 +110,10 @@ papers:
     title: Computational approaches for app-to-app retrieval and design consistency check
     year: '2023'
   UpZ41EwAAAAJ:roLk4NBRz8UC:
-    citations: 25
+    citations: 27
     title: Speeding up inference with user simulators through policy modulation
     year: '2022'
   UpZ41EwAAAAJ:u-x6o8ySG0sC:
-    citations: 233
+    citations: 237
     title: 'Chartsense: Interactive data extraction from chart images'
     year: '2017'
