@@ -1,6 +1,17 @@
 name: Deploy site
 
 on:
+  # Auto-deploy when the citation updater (or any other workflow that pushes to
+  # main via GITHUB_TOKEN) completes. workflow_run sidesteps GitHub's "tokens
+  # don't trigger workflows" restriction so _data/citations.yml updates land
+  # on the published site without manual intervention.
+  workflow_run:
+    workflows:
+      - Update Google Scholar Citations
+    types:
+      - completed
+    branches:
+      - main
   push:
     branches:
       - master
@@ -68,6 +79,9 @@ jobs:
   deploy:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
+    # Skip when triggered by a failed Update Google Scholar Citations run.
+    # Other trigger types (push, pull_request, workflow_dispatch) always pass.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
