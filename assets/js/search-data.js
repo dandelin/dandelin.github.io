@@ -105,6 +105,9 @@ ninja.data = [{
           section: "News",},{id: "news-twelvelabs-releases-marengo-3-0-a-new-standard-for-foundation-models-that-understand-the-world-in-all-its-complexity",
           title: 'TwelveLabs releases Marengo 3.0, a new standard for foundation models that understand the...',
           description: "",
+          section: "News",},{id: "news-twelvelabs-launches-pegasus-1-5-a-state-of-the-art-video-language-model-for-understanding-and-reasoning-over-long-form-video",
+          title: 'TwelveLabs launches Pegasus 1.5, a state-of-the-art video-language model for understanding and reasoning over...',
+          description: "",
           section: "News",},{
       id: 'light-theme',
       title: 'Change theme to light',
