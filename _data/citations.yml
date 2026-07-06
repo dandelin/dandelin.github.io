@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-01'
+  last_updated: '2026-07-06'
 papers:
   UpZ41EwAAAAJ:2osOgNQ5qMEC:
     citations: 11
@@ -102,7 +102,7 @@ papers:
     title: An extendable, efficient and effective transformer-based object detector
     year: '2022'
   UpZ41EwAAAAJ:mVmsd5A6BfQC:
-    citations: 24
+    citations: 89
     title: Vision-language generative model for view-specific chest x-ray generation
     year: '2023'
   UpZ41EwAAAAJ:qxL8FJ1GzNcC:
