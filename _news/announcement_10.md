@@ -4,4 +4,4 @@ date: 2022-12-01
 inline: true
 ---
 
-One BMVC-2022 paper: <a href="https://bmvc2022.mpi-inf.mpg.de/844/">Correlation between Alignment-Uniformity and Performance of Dense Contrastive Representations</a>.
+One BMVC-2022 paper: <a href="https://arxiv.org/abs/2210.08819">Correlation between Alignment-Uniformity and Performance of Dense Contrastive Representations</a>.

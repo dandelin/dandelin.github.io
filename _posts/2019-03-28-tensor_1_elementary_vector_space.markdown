@@ -3,6 +3,7 @@ layout: post
 title: "Tensor #1. Elementary Vector Space"
 date: 2019-03-28
 description: "Tensor 시리즈 1편: 벡터 스페이스의 기본 정의와 성질"
+math: true
 giscus_comments: true
 ---
 

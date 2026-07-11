@@ -238,7 +238,6 @@ Understanding al-folio's technology stack will help you better customize and ext
   - `jekyll-paginate-v2`: Handles pagination for blog posts and archives
   - `jekyll-feed`: Generates an Atom (RSS-like) feed for your content
   - `jekyll-toc`: Automatically generates table of contents for pages with headers
-  - `jekyll-jupyter-notebook`: Integrates Jupyter notebooks into your site
   - `jekyll-tabs`: Adds tabbed content support
   - `jemoji`: Converts emoji shortcodes to emoji images
   - `jekyll-minifier`: Minifies HTML, CSS, and JavaScript for better performance
@@ -711,7 +710,6 @@ exclude:
   - _pages/blog.md
   - _posts/
   - _projects/?_project.md
-  - assets/jupyter/blog.ipynb
 ```
 
 Here is a list of the main components that you may want to delete, and how to do it. Don't forget if you delete a page to update the `nav_order` of the remaining pages.

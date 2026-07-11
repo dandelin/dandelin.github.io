@@ -2,6 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
+description: Notes and essays by Wonjae Kim on machine learning, research, technology, and society.
 nav: true
 nav_order: 1
 pagination:
@@ -179,7 +180,7 @@ pagination:
 </div>
 
   <div class="col-sm-3">
-    <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="image">
+    <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="Thumbnail for {{ post.title }}">
   </div>
 </div>
 {% endif %}

@@ -3,10 +3,11 @@ layout: about
 title: about
 permalink: /
 subtitle: 김<b>원재</b> · ML/HCI Research Scientist
+description: Wonjae (Dan) Kim leads the Embedding & Search team at TwelveLabs and researches multimodal representation learning, embedding, and search systems.
 
 profile:
   align: right
-  image: prof_pic5.jpg
+  image: profile/prof_pic5.jpg
   image_circular: false # crops the image to make it circular
 
 selected_papers: true # includes a list of papers marked as "selected={true}"

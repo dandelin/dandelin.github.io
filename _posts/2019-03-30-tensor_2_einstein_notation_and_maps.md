@@ -3,6 +3,7 @@ layout: post
 title: "Tensor #2. Einstein Notation and Maps"
 date: 2019-03-30
 description: "Tensor 시리즈 2편: 아인슈타인 표기법과 맵"
+math: true
 giscus_comments: true
 ---
 

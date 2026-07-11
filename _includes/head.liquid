@@ -3,12 +3,7 @@
 
 <!-- Bootstrap & MDB -->
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">
-<link
-  rel="stylesheet"
-  href="{{ site.third_party_libraries.mdb.url.css }}"
-  integrity="{{ site.third_party_libraries.mdb.integrity.css }}"
-  crossorigin="anonymous"
->
+<link rel="stylesheet" href="{{ '/assets/css/mdb.min.css' | relative_url | bust_file_cache }}">
 
 {% if page.pretty_table %}
   <!-- Bootstrap Table -->
@@ -24,21 +19,30 @@
 <!-- Fonts & Icons -->
 <link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
 <link defer rel="stylesheet" href="{{ '/assets/css/scholar-icons.css' | relative_url | bust_file_cache }}">
-<link
-  defer
-  rel="stylesheet"
-  type="text/css"
-  href="{{ site.third_party_libraries.google_fonts.url.fonts }}"
->
+
+{% if page.layout == 'post' %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" type="text/css" href="{{ site.third_party_libraries.google_fonts.url.fonts }}">
+{% endif %}
+
+{% if site.enable_google_analytics %}
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+{% endif %}
 
 <!-- Code Syntax Highlighting -->
-<link
-  defer
-  rel="stylesheet"
-  href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url | bust_file_cache }}"
-  media=""
-  id="highlight_theme_light"
->
+{% assign needs_code_highlighting = false %}
+{% if page.layout == 'post' or page.code_diff or page.pseudocode %}
+  {% assign needs_code_highlighting = true %}
+{% endif %}
+{% if needs_code_highlighting %}
+  <link
+    rel="stylesheet"
+    href="{{ '/assets/css/jekyll-pygments-themes-github.css' | relative_url | bust_file_cache }}"
+    media=""
+    id="highlight_theme_light"
+  >
+{% endif %}
 
 {% if page.toc and page.toc.sidebar %}
   <!-- Sidebar Table of Contents -->
@@ -66,7 +70,7 @@
 {% elsif site.icon != blank %}
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 {% if site.enable_darkmode %}
@@ -79,16 +83,19 @@
       }
     })();
   </script>
-  <script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
-  <link
-    defer
-    rel="stylesheet"
-    href="{{ '/assets/css/jekyll-pygments-themes-native.css' | relative_url | bust_file_cache }}"
-    media="none"
-    id="highlight_theme_dark"
-  >
+  <script defer src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
+  {% if needs_code_highlighting %}
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/jekyll-pygments-themes-native.css' | relative_url | bust_file_cache }}"
+      media="none"
+      id="highlight_theme_dark"
+    >
+  {% endif %}
   <script>
-    initTheme();
+    document.addEventListener('DOMContentLoaded', function () {
+      initTheme();
+    });
   </script>
 {% endif %}
 

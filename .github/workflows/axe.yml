@@ -1,15 +1,9 @@
 name: Axe accessibility testing
 
 on:
-  # if you want to run this on every push uncomment the following lines
-  # push:
-  #   branches:
-  #     - master
-  #     - main
-  # pull_request:
-  #   branches:
-  #     - master
-  #     - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       url:
@@ -32,7 +26,7 @@ jobs:
           ruby-version: "3.2.2"
           bundler-cache: true
       - name: Update _config.yml ⚙️
-        uses: fjogeleit/yaml-update-action@main
+        uses: fjogeleit/yaml-update-action@dffe9a5223d84653c13374032382f6bb5de8e5ef
         with:
           commitChange: false
           valueFile: "_config.yml"
@@ -44,7 +38,6 @@ jobs:
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade jupyter
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
@@ -71,4 +64,13 @@ jobs:
           npm install -g @axe-core/cli
           npm install -g http-server
           http-server _site/ &
-          axe --chromedriver-path $(npm root -g)/chromedriver/bin/chromedriver http://localhost:8080/${{ github.event.inputs.url || env.URL }} --load-delay=1500 --exit
+          if [ -n "${{ github.event.inputs.url || env.URL }}" ]; then
+            axe --chromedriver-path $(npm root -g)/chromedriver/bin/chromedriver "http://localhost:8080/${{ github.event.inputs.url || env.URL }}" --load-delay=1500 --exit
+          else
+            axe --chromedriver-path $(npm root -g)/chromedriver/bin/chromedriver \
+              http://localhost:8080/ \
+              http://localhost:8080/blog/ \
+              http://localhost:8080/publications/ \
+              http://localhost:8080/cv/ \
+              --load-delay=1500 --exit
+          fi

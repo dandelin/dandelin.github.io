@@ -45,7 +45,7 @@ _pages/blog.md              # 블로그 목록
 _pages/news.md              # 뉴스 전체 목록
 assets/pdf/papers/          # 논문 PDF 27개
 assets/pdf/cv.pdf           # CV
-assets/img/prof_pic5.jpg    # 현재 사용 중인 프로필 사진
+assets/img/profile/prof_pic5.jpg    # 현재 사용 중인 프로필 사진
 assets/img/favicon.ico      # 파비콘
 CNAME                       # 커스텀 도메인
 ```
