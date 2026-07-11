@@ -59,6 +59,7 @@ jobs:
             --exclude '^https://ieeexplore\.ieee\.org/'
             --exclude '^https://psycnet\.apa\.org/'
             --exclude '^https://cse\.snu\.ac\.kr/'
+            --exclude '^https://scholar\.google\.com/'
             --verbose --no-progress
             './_pages/**/*.md'
             './_posts/**/*.md'
