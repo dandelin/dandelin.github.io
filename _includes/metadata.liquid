@@ -17,7 +17,6 @@
 {% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
 {% assign metadata_description = page.description | default: site.description %}
 {% assign metadata_image = page.og_image | default: site.og_image | absolute_url %}
-{% assign profile_image = site.profile_image | default: site.og_image | absolute_url %}
 
 <!-- Standard metadata -->
 <meta charset="utf-8">
@@ -58,10 +57,7 @@
   <!-- OpenGraph -->
   <meta property="og:site_name" content="{{ title }}">
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
-  <meta
-    property="og:title"
-    content="{% if page.url == '/' %}{{ title }}{% elsif page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}"
-  >
+  <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
@@ -71,7 +67,7 @@
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.url == '/' %}{{ title }}{% elsif page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   {% if page.og_image or site.og_image %}
     <meta name="twitter:image" content="{{ metadata_image }}">
@@ -244,7 +240,7 @@
           "name": {{ author_name | strip | jsonify }},
           "alternateName": "Dan Kim",
           "description": {{ metadata_description | strip | jsonify }},
-          "image": {{ profile_image | jsonify }},
+          "image": {{ metadata_image | jsonify }},
           "sameAs": {{ sameaslinks | jsonify }}
         }
       }

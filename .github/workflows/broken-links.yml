@@ -53,7 +53,6 @@ jobs:
           args: >-
             --user-agent 'curl/7.54'
             --exclude-path _pages/404.md
-            --exclude-path _pages/about.md
             --exclude-path _pages/blog.md
             --exclude-path _pages/cv.md
             --exclude '^https://dl\.acm\.org/'
