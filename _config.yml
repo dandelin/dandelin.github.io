@@ -9,7 +9,7 @@ last_name: Kim
 contact_note: >
 
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Wonjae (Dan) Kim is a research scientist working on multimodal representation learning, large-scale embedding, and search systems.
+  Wonjae (Dan) Kim is a Lead Research Scientist at TwelveLabs working on multimodal representation learning, large-scale retrieval, and video search systems.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.

@@ -4,7 +4,7 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 3
-description: Curriculum vitae of Wonjae (Dan) Kim, research scientist working on multimodal representation learning, embedding, and search.
+description: Curriculum vitae of Wonjae (Dan) Kim, Lead Research Scientist at TwelveLabs working on multimodal representation learning, large-scale retrieval, and video search systems.
 ---
 
 <object

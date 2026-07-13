@@ -27,7 +27,7 @@
 
 ### 한국어 이름 표시
 
-- `_pages/about.md`의 `subtitle` 필드: `김<b>원재</b> · ML/HCI Research Scientist`
+- `_pages/about.md`의 `subtitle` 필드: `김<b>원재</b> · Lead Research Scientist · Multimodal AI`
 - upstream 파일 수정 없이 subtitle 방식으로 구현
 
 ## Directory Structure
