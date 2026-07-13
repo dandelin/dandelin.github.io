@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: 김<b>원재</b> · ML/HCI Research Scientist
-description: Wonjae (Dan) Kim leads the Embedding & Search team at TwelveLabs and researches multimodal representation learning, embedding, and search systems.
+description: Wonjae (Dan) Kim leads the Embedding & Search team at TwelveLabs and works on multimodal representation learning, large-scale retrieval, and video search systems.
 
 profile:
   align: right
@@ -24,7 +24,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I lead the Embedding & Search team at [TwelveLabs](https://www.twelvelabs.io), where we build multimodal foundation models for video understanding. I'm the first author of [ViLT](https://github.com/dandelin/ViLT) <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UpZ41EwAAAAJ&citation_for_view=UpZ41EwAAAAJ:YsMSGLbcyi4C" style="font-size: 0.85em; color: var(--global-text-color-light);">(cited: {{ site.data.citations.papers['UpZ41EwAAAAJ:YsMSGLbcyi4C'].citations }})</a>, one of the early works that shaped efficient vision-language architectures. Previously, I was a research scientist at [Naver AI LAB](https://naver-career.gitbook.io/en/teams/clova-cic) and [Kakao](https://www.kakaocorp.com/?lang=en), and I hold an [M.Sc.](http://hcil.snu.ac.kr/people/wonjae-kim) and [B.Sc.](https://cse.snu.ac.kr/en) from Seoul National University.
+I lead the Embedding & Search team at [TwelveLabs](https://www.twelvelabs.io), where we build multimodal foundation models and search systems for video understanding. I work on multimodal representation learning, large-scale retrieval, and production search.
+
+I'm the first author of [ViLT](https://github.com/dandelin/ViLT) <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UpZ41EwAAAAJ&citation_for_view=UpZ41EwAAAAJ:YsMSGLbcyi4C" style="font-size: 0.85em; color: var(--global-text-color-light);">(cited: {{ site.data.citations.papers['UpZ41EwAAAAJ:YsMSGLbcyi4C'].citations }})</a>, an early work on efficient vision-language modeling. Previously, I was a research scientist at [Naver AI LAB](https://naver-career.gitbook.io/en/teams/clova-cic) and [Kakao](https://www.kakaocorp.com/?lang=en), and I hold an [M.Sc.](http://hcil.snu.ac.kr/people/wonjae-kim) and [B.Sc.](https://cse.snu.ac.kr/en) from Seoul National University.
 
 My current research focuses on:
 
@@ -32,6 +34,8 @@ My current research focuses on:
 - Large-scale Embedding & Search Systems
 - User Behavior Modeling for Search
 
+I also write about information, AI tools, and coordination. Recent essays include [Speak Concisely, Write Verbosely](https://wonjae.kim/blog/2026/Speak-Concisely-Write-Verbosely/) and [The Theory of Consensus Reset Cost Optimization](https://wonjae.kim/blog/2026/Consensus-Reset-Cost-Theory/).
+
 ---
 
-**We're Hiring!** I'm building a research team at TwelveLabs where your models ship to thousands of customers within months. We're tackling joint embedding spaces across modalities and containerized asset search—problems that go beyond simple retrieval to true semantic understanding of video structure. If you want to see your work create real-world impact at scale, [grab a coffee chat](https://calendar.app.google/RFWg71Zb3GED9nkeA) with me. I'm looking for scientists and engineers who are excited to push video-language AI from idea to production. [Join us in Seoul →](https://jobs.ashbyhq.com/twelve-labs/38e8e1c9-bf91-449c-b64a-c3f481099801)
+At TwelveLabs, we're hiring researchers and engineers to work on multimodal embeddings and video search. [Open role in Seoul →](https://jobs.ashbyhq.com/twelve-labs/38e8e1c9-bf91-449c-b64a-c3f481099801) · [Coffee chat](https://calendar.app.google/RFWg71Zb3GED9nkeA)
