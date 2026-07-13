@@ -20,7 +20,7 @@ description: Wonjae (Dan) Kim is a multimodal AI researcher and research leader 
     <div class="home-actions" aria-label="Explore Wonjae Kim's work">
       <a class="home-button home-button--primary" href="#research">Explore research</a>
       <a class="home-button" href="#ideas">Read the ideas</a>
-      <a class="home-text-link" href="{{ '/cv/' | relative_url }}">View CV <span aria-hidden="true">↗</span></a>
+      <a class="home-text-link" href="/cv/">View CV <span aria-hidden="true">↗</span></a>
     </div>
     <ul class="home-proof" aria-label="Selected credentials">
       <li>ViLT co-first author</li>
@@ -125,7 +125,7 @@ description: Wonjae (Dan) Kim is a multimodal AI researcher and research leader 
   </div>
 
   <p class="home-section__after">
-    <a class="home-text-link" href="{{ '/publications/' | relative_url }}">See all publications <span aria-hidden="true">→</span></a>
+    <a class="home-text-link" href="/publications/">See all publications <span aria-hidden="true">→</span></a>
   </p>
 </section>
 
@@ -147,13 +147,13 @@ description: Wonjae (Dan) Kim is a multimodal AI researcher and research leader 
       <div>
         <p class="home-card__topline"><span>Reading in the agent era</span><span>2026</span></p>
         <h3>
-          <a href="{{ '/blog/2026/Speak-Concisely-Write-Verbosely/' | relative_url }}">Speak Concisely, Write Verbosely</a>
+          <a href="/blog/2026/Speak-Concisely-Write-Verbosely/">Speak Concisely, Write Verbosely</a>
         </h3>
         <p>
           When agents become readers, “omit needless words” stops being a universal rule. Rich source context and
           interactive transformation can coexist.
         </p>
-        <a class="home-text-link" href="{{ '/blog/2026/Speak-Concisely-Write-Verbosely/' | relative_url }}">
+        <a class="home-text-link" href="/blog/2026/Speak-Concisely-Write-Verbosely/">
           Read the essay <span aria-hidden="true">→</span>
         </a>
       </div>
@@ -164,13 +164,13 @@ description: Wonjae (Dan) Kim is a multimodal AI researcher and research leader 
       <div>
         <p class="home-card__topline"><span>Systems &amp; coordination</span><span>2026</span></p>
         <h3>
-          <a href="{{ '/blog/2026/Consensus-Reset-Cost-Theory/' | relative_url }}">The Theory of Consensus Reset Cost</a>
+          <a href="/blog/2026/Consensus-Reset-Cost-Theory/">The Theory of Consensus Reset Cost</a>
         </h3>
         <p>
           A framework for understanding how networks resist monopoly, and why the cost of rewriting consensus changes
           across physical, institutional, and digital assets.
         </p>
-        <a class="home-text-link" href="{{ '/blog/2026/Consensus-Reset-Cost-Theory/' | relative_url }}">
+        <a class="home-text-link" href="/blog/2026/Consensus-Reset-Cost-Theory/">
           Read the essay <span aria-hidden="true">→</span>
         </a>
       </div>
@@ -179,7 +179,7 @@ description: Wonjae (Dan) Kim is a multimodal AI researcher and research leader 
   </div>
 
   <p class="home-section__after">
-    <a class="home-text-link" href="{{ '/blog/' | relative_url }}">Browse all notes and essays <span aria-hidden="true">→</span></a>
+    <a class="home-text-link" href="/blog/">Browse all notes and essays <span aria-hidden="true">→</span></a>
   </p>
 </section>
 
