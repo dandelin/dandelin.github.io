@@ -38,7 +38,9 @@ _data/socials.yml           # 소셜 링크 (email, github, twitter, linkedin, s
 _data/venues.yml            # 학회 약어→색상 매핑 (NeurIPS, ICML, ECCV 등 20개)
 _news/announcement_*.md     # 뉴스 항목 (25개, inline layout)
 _posts/*.md                 # 블로그 포스트 (9개, 한국어 다수)
-_pages/about.md             # 메인 페이지 (프로필, 뉴스, selected papers, latest posts)
+_pages/about.md             # 메인 페이지 (연구·시스템·아이디어 큐레이션)
+_layouts/home.liquid        # 전용 홈페이지 레이아웃
+_sass/_home.scss            # 홈페이지 전용 반응형·다크모드 스타일
 _pages/publications.md      # 논문 목록 (group_by: year 자동 그룹핑)
 _pages/cv.md                # CV (PDF 임베드, /cv/ 경로)
 _pages/blog.md              # 블로그 목록
@@ -46,6 +48,7 @@ _pages/news.md              # 뉴스 전체 목록
 assets/pdf/papers/          # 논문 PDF 27개
 assets/pdf/cv.pdf           # CV
 assets/img/profile/prof_pic5.jpg    # 현재 사용 중인 프로필 사진
+assets/img/og/wonjae-kim-social-card.png # 사이트 기본 소셜 미리보기
 assets/img/favicon.ico      # 파비콘
 CNAME                       # 커스텀 도메인
 ```
@@ -129,6 +132,9 @@ bundle exec jekyll serve
 - **다크모드 테이블 FOUC 수정:** `_sass/_themes.scss` — `html[data-theme="dark"] .table { color: var(--global-text-color) }`
 - **다크모드 초기화:** `_includes/head.liquid` — inline script로 `data-theme` 즉시 설정
 - **CV 임베드:** `_pages/cv.md` — redirect 제거, PDF `<embed>` 사용
+- **홈페이지 서사:** `_layouts/home.liquid`, `_pages/about.md`, `_sass/_home.scss` — 연구·시스템·아이디어를 한 흐름으로 큐레이션
+- **소셜 미리보기:** `assets/img/og/wonjae-kim-social-card.png` — 홈페이지 색과 문안을 반영한 1200×630 카드
+- **구조화 데이터 프로필 사진:** `_includes/metadata.liquid` — OG 카드와 별도로 `profile_image`를 Person 이미지에 사용
 
 ## Notes
 
