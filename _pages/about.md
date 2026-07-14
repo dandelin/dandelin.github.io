@@ -38,4 +38,4 @@ I also write about information, AI tools, and coordination. Recent essays includ
 
 ---
 
-At TwelveLabs, we're hiring researchers and engineers to work on multimodal embeddings and video search. [Open role in Seoul →](https://jobs.ashbyhq.com/twelve-labs/38e8e1c9-bf91-449c-b64a-c3f481099801) · [Coffee chat](https://calendar.app.google/RFWg71Zb3GED9nkeA)
+At TwelveLabs, we're hiring researchers and engineers to work on multimodal embeddings and video search. [Open role in Seoul →](https://jobs.ashbyhq.com/twelve-labs?locationId=15aa3bf5-61a4-4ab8-9f26-1b2e63750c25) · [Coffee chat](https://calendar.app.google/RFWg71Zb3GED9nkeA)
