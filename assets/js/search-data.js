@@ -108,6 +108,9 @@ ninja.data = [{
           section: "News",},{id: "news-twelvelabs-launches-pegasus-1-5-a-state-of-the-art-video-language-model-for-understanding-and-reasoning-over-long-form-video",
           title: 'TwelveLabs launches Pegasus 1.5, a state-of-the-art video-language model for understanding and reasoning over...',
           description: "",
+          section: "News",},{id: "news-we-launched-marengo-3-5-a-video-native-multimodal-embedding-model-built-around-the-temporal-structure-of-video",
+          title: 'We launched Marengo 3.5, a video-native multimodal embedding model built around the temporal...',
+          description: "",
           section: "News",},{
       id: 'light-theme',
       title: 'Change theme to light',
