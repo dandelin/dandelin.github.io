@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: 김<b>원재</b> · Lead Research Scientist · Multimodal AI
-description: Wonjae (Dan) Kim leads the Marengo & Search team at TwelveLabs and works on multimodal representation learning, large-scale retrieval, and video search systems.
+description: Wonjae (Dan) Kim leads the Marengo & Search team at TwelveLabs and works on video-native multimodal representation learning, large-scale retrieval, and search systems.
 
 profile:
   align: right
@@ -24,13 +24,13 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-At [TwelveLabs](https://www.twelvelabs.io), I lead the Marengo & Search team, which develops multimodal embeddings and video search systems. I work on multimodal representation learning, large-scale retrieval, and production search.
+At [TwelveLabs](https://www.twelvelabs.io), I lead the Marengo & Search team, where we build video-native multimodal representations and search systems. Most recently, we launched [Marengo 3.5](https://www.twelvelabs.io/blog/marengo-3.5-built-for-the-structure-of-video), a multimodal embedding model designed around the temporal structure of video.
 
 I'm a co-first author of [ViLT](https://github.com/dandelin/ViLT) <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=UpZ41EwAAAAJ&citation_for_view=UpZ41EwAAAAJ:YsMSGLbcyi4C" style="font-size: 0.85em; color: var(--global-text-color-light);">(cited: {{ site.data.citations.papers['UpZ41EwAAAAJ:YsMSGLbcyi4C'].citations }})</a>, an early work on efficient vision-language modeling. Previously, I was a research scientist at [Naver AI LAB](https://naver-career.gitbook.io/en/teams/clova-cic) and [Kakao](https://www.kakaocorp.com/?lang=en), and I hold an [M.Sc.](http://hcil.snu.ac.kr/people/wonjae-kim) and [B.Sc.](https://cse.snu.ac.kr/en) from Seoul National University.
 
 My current research focuses on:
 
-- Multimodal Representation Learning (video, audio, text)
+- Video-native Multimodal Representation Learning (video, audio, image, text, documents)
 - Large-scale Embedding & Search Systems
 - User Behavior Modeling for Search
 
