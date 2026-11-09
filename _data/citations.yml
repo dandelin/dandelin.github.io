@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-11-04'
+  last_updated: '2026-11-09'
 papers:
   UpZ41EwAAAAJ:2osOgNQ5qMEC:
     citations: 12
     title: 'Learning Dynamics of Attention: Human Prior for Interpretable Machine Reasoning'
     year: '2019'
   UpZ41EwAAAAJ:3fE2CSJIrl8C:
-    citations: 7
+    citations: 10
     title: Group generalized mean pooling for vision transformer
     year: '2022'
   UpZ41EwAAAAJ:4DMP91E08xMC:
@@ -106,7 +106,7 @@ papers:
     title: An extendable, efficient and effective transformer-based object detector
     year: '2022'
   UpZ41EwAAAAJ:mVmsd5A6BfQC:
-    citations: 110
+    citations: 123
     title: Vision-language generative model for view-specific chest x-ray generation
     year: '2023'
   UpZ41EwAAAAJ:qxL8FJ1GzNcC:
