@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-11-16'
+  last_updated: '2026-11-18'
 papers:
   UpZ41EwAAAAJ:2osOgNQ5qMEC:
     citations: 12
     title: 'Learning Dynamics of Attention: Human Prior for Interpretable Machine Reasoning'
     year: '2019'
   UpZ41EwAAAAJ:3fE2CSJIrl8C:
-    citations: 10
+    citations: 12
     title: Group generalized mean pooling for vision transformer
     year: '2022'
   UpZ41EwAAAAJ:4DMP91E08xMC:
@@ -38,7 +38,7 @@ papers:
     title: An Efficient Post-hoc Framework for Reducing Task Discrepancy of Text Encoders for Composed Image Retrieval
     year: '2024'
   UpZ41EwAAAAJ:JV2RwH3_ST0C:
-    citations: 5
+    citations: 7
     title: Extract free dense misalignment from CLIP
     year: '2025'
   UpZ41EwAAAAJ:KlAtU1dfN6UC:
@@ -94,7 +94,7 @@ papers:
     title: 'Vidt: An efficient and effective fully transformer-based object detector'
     year: '2021'
   UpZ41EwAAAAJ:blknAaTinKkC:
-    citations: 1
+    citations: 2
     title: Emergence of text readability in vision language models
     year: '2025'
   UpZ41EwAAAAJ:eQOLeE2rZwMC:
@@ -106,7 +106,7 @@ papers:
     title: An extendable, efficient and effective transformer-based object detector
     year: '2022'
   UpZ41EwAAAAJ:mVmsd5A6BfQC:
-    citations: 146
+    citations: 201
     title: Vision-language generative model for view-specific chest x-ray generation
     year: '2023'
   UpZ41EwAAAAJ:qxL8FJ1GzNcC:
