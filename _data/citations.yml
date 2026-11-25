@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-11-23'
+  last_updated: '2026-11-25'
 papers:
   UpZ41EwAAAAJ:2osOgNQ5qMEC:
     citations: 12
@@ -98,7 +98,7 @@ papers:
     title: Emergence of text readability in vision language models
     year: '2025'
   UpZ41EwAAAAJ:eQOLeE2rZwMC:
-    citations: 14
+    citations: 15
     title: 'Swifttuna: Responsive and incremental visual exploration of large-scale multidimensional data'
     year: '2017'
   UpZ41EwAAAAJ:hqOjcs7Dif8C:
